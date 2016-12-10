@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-10T09:43:36.123Z</updated>
+  <updated>2016-12-10T11:54:46.038Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过mcmctree预测物种分化时间</title>
+    <link href="http://yoursite.com/2016/12/10/mcmctree/"/>
+    <id>http://yoursite.com/2016/12/10/mcmctree/</id>
+    <published>2016-12-10T11:54:46.036Z</published>
+    <updated>2016-12-10T11:54:46.038Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文通过<a href="http://abacus.gene.ucl.ac.uk/software/MCMCtree.Tutorials.pdf" target="_blank" rel="external">Dr.Yang</a>的教程进行学习，并记录学习结果，具体步骤如下：</p>
+<h2 id="1-准备物种树（树文件mtDNApri-trees）"><a href="#1-准备物种树（树文件mtDNApri-trees）" class="headerlink" title="1. 准备物种树（树文件mtDNApri.trees）"></a>1. 准备物种树（树文件<a href="">mtDNApri.trees</a>）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">7 1</div><div class="line">((((human, (chimpanzee, bonobo)) <span class="string">'&gt;.06&lt;.08'</span>, gorilla),(orangutan, sumatran)) <span class="string">'&gt;.12&lt;.16'</span>, gibbon);</div></pre></td></tr></table></figure>
+<p>1.1 第一列：7表示物种数目；1表示树文件的数目<br>1.2 树文件格式为newick<br>1.3 ‘&gt;.06&lt;.08’表示化石时间，单位为百万年，100Myr，所以该化石矫正点表示human和chimp的共同祖先出现于6Myr-8Myr之间。<br>1.4 树根部也需要化石时间，若根部无法查找到化石时间，则需要配置文件中设定RootAge参数，具体见配置文件的设定。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文通过&lt;a href=&quot;http://abacus.gene.ucl.ac.uk/software/MCMCtree.Tutorials.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dr.Yang&lt;/a&gt;的教程进行学习，并记录学习结果，具体步骤
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
