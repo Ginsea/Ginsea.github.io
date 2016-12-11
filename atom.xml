@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-11T06:14:53.019Z</updated>
+  <updated>2016-12-11T06:23:48.751Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,18 @@
     <link href="http://yoursite.com/2016/12/11/scholar_search/"/>
     <id>http://yoursite.com/2016/12/11/scholar_search/</id>
     <published>2016-12-11T06:07:38.000Z</published>
-    <updated>2016-12-11T06:14:53.019Z</updated>
+    <updated>2016-12-11T06:23:48.751Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="1-学术文献检索"><a href="#1-学术文献检索" class="headerlink" title="1. 学术文献检索"></a>1. 学术文献检索</h1><h2 id="1-1-科学引文索引"><a href="#1-1-科学引文索引" class="headerlink" title="1.1 科学引文索引"></a>1.1 科学引文索引</h2><p><a href="http://scholar.google.com" target="_blank" rel="external">谷歌学术</a><br><a href="http://xueshu.baidu.com/" target="_blank" rel="external">百度学术</a></p>
+    <content type="html"><![CDATA[<h1 id="1-学术文献检索"><a href="#1-学术文献检索" class="headerlink" title="1. 学术文献检索"></a>1. 学术文献检索</h1><h2 id="1-1-科学引文-SCI-索引"><a href="#1-1-科学引文-SCI-索引" class="headerlink" title="1.1 科学引文(SCI)索引"></a>1.1 科学引文(SCI)索引</h2><h3 id="谷歌学术"><a href="#谷歌学术" class="headerlink" title="谷歌学术"></a><a href="http://scholar.google.com" target="_blank" rel="external">谷歌学术</a></h3><ol>
+<li>通过更改hosts访问谷歌（<a href="https://laod.cn/hosts/2016-google-hosts.html" target="_blank" rel="external">点击查看</a>）</li>
+<li>键入关键词检索文件，以”RNA-seq”为例。<br><img src="/images/Picture1.png" alt=""></li>
+</ol>
+<p><a href="http://xueshu.baidu.com/" target="_blank" rel="external">百度学术</a><br><a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="external">NCBI</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1-学术文献检索&quot;&gt;&lt;a href=&quot;#1-学术文献检索&quot; class=&quot;headerlink&quot; title=&quot;1. 学术文献检索&quot;&gt;&lt;/a&gt;1. 学术文献检索&lt;/h1&gt;&lt;h2 id=&quot;1-1-科学引文索引&quot;&gt;&lt;a href=&quot;#1-1-科学引文索引&quot; class
+      &lt;h1 id=&quot;1-学术文献检索&quot;&gt;&lt;a href=&quot;#1-学术文献检索&quot; class=&quot;headerlink&quot; title=&quot;1. 学术文献检索&quot;&gt;&lt;/a&gt;1. 学术文献检索&lt;/h1&gt;&lt;h2 id=&quot;1-1-科学引文-SCI-索引&quot;&gt;&lt;a href=&quot;#1-1-科学引文-SCI
     
     </summary>
     
