@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-11T06:07:38.000Z</updated>
+  <updated>2016-12-11T06:14:53.019Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,18 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>科技论文的检索与获取</title>
     <link href="http://yoursite.com/2016/12/11/scholar_search/"/>
     <id>http://yoursite.com/2016/12/11/scholar_search/</id>
     <published>2016-12-11T06:07:38.000Z</published>
-    <updated>2016-12-11T06:07:38.000Z</updated>
+    <updated>2016-12-11T06:14:53.019Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="1-学术文献检索"><a href="#1-学术文献检索" class="headerlink" title="1. 学术文献检索"></a>1. 学术文献检索</h1><h2 id="1-1-科学引文索引"><a href="#1-1-科学引文索引" class="headerlink" title="1.1 科学引文索引"></a>1.1 科学引文索引</h2><p><a href="http://scholar.google.com" target="_blank" rel="external">谷歌学术</a><br><a href="http://xueshu.baidu.com/" target="_blank" rel="external">百度学术</a></p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;h1 id=&quot;1-学术文献检索&quot;&gt;&lt;a href=&quot;#1-学术文献检索&quot; class=&quot;headerlink&quot; title=&quot;1. 学术文献检索&quot;&gt;&lt;/a&gt;1. 学术文献检索&lt;/h1&gt;&lt;h2 id=&quot;1-1-科学引文索引&quot;&gt;&lt;a href=&quot;#1-1-科学引文索引&quot; class
     
     </summary>
     
