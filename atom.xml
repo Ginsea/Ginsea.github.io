@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.biopython.club/"/>
-  <updated>2016-12-22T11:54:34.558Z</updated>
+  <updated>2016-12-11T06:45:12.514Z</updated>
   <id>http://www.biopython.club/</id>
   
   <author>
@@ -16,10 +16,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>科技论文的检索与获取</title>
+    <link href="http://www.biopython.club/2016/12/22/scholar_search/"/>
+    <id>http://www.biopython.club/2016/12/22/scholar_search/</id>
+    <published>2016-12-22T13:07:39.143Z</published>
+    <updated>2016-12-11T06:45:12.514Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-学术文献检索"><a href="#1-学术文献检索" class="headerlink" title="1. 学术文献检索"></a>1. 学术文献检索</h2><h3 id="1-1-科学引文-SCI-索引"><a href="#1-1-科学引文-SCI-索引" class="headerlink" title="1.1 科学引文(SCI)索引"></a>1.1 科学引文(SCI)索引</h3><h4 id="谷歌学术"><a href="#谷歌学术" class="headerlink" title="谷歌学术"></a><a href="http://scholar.google.com" target="_blank" rel="external">谷歌学术</a></h4><ol>
+<li><h5 id="1-通过更改hosts访问谷歌（点击查看）"><a href="#1-通过更改hosts访问谷歌（点击查看）" class="headerlink" title="1. 通过更改hosts访问谷歌（点击查看）"></a>1. 通过更改hosts访问谷歌（<a href="https://laod.cn/hosts/2016-google-hosts.html" target="_blank" rel="external">点击查看</a>）</h5></li>
+<li><h5 id="2-键入关键词检索文献，以”RNA-seq”为例。"><a href="#2-键入关键词检索文献，以”RNA-seq”为例。" class="headerlink" title="2. 键入关键词检索文献，以”RNA-seq”为例。"></a>2. 键入关键词检索文献，以”RNA-seq”为例。</h5>   <img src="/images/Picture1.png" alt=""><br>   在谷歌学术的左侧，多个选项可以让你对你的搜索结果进行过滤，比如你可以选择“2016年以来”选择只检索16年以来发表的学术文章。</li>
+<li><h5 id="3-点击”引用”按钮"><a href="#3-点击”引用”按钮" class="headerlink" title="3. 点击”引用”按钮"></a>3. 点击”引用”按钮</h5>   <img src="/images/P2.png" alt=""><br>   点击”Endnote”按钮，下对对应文献的.enw格式文件（可以为Endnote软件所识别）<h4 id="百度学术"><a href="#百度学术" class="headerlink" title="百度学术"></a><a href="http://xueshu.baidu.com/" target="_blank" rel="external">百度学术</a></h4></li>
+<li><h5 id="1-键入关键词检索文献"><a href="#1-键入关键词检索文献" class="headerlink" title="1. 键入关键词检索文献"></a>1. 键入关键词检索文献</h5>   <img src="/images/P3.png" alt=""><br>   <img src="/images/P4.png" alt=""></li>
+<li><h5 id="2-点击引用按钮"><a href="#2-点击引用按钮" class="headerlink" title="2. 点击引用按钮"></a>2. 点击引用按钮</h5>   <img src="/images/P5.png" alt=""><br>   与Google学术类似<br><a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="external">NCBI</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1-学术文献检索&quot;&gt;&lt;a href=&quot;#1-学术文献检索&quot; class=&quot;headerlink&quot; title=&quot;1. 学术文献检索&quot;&gt;&lt;/a&gt;1. 学术文献检索&lt;/h2&gt;&lt;h3 id=&quot;1-1-科学引文-SCI-索引&quot;&gt;&lt;a href=&quot;#1-1-科学引文-SCI
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>测序之后的基因组数据如何共享和存储</title>
     <link href="http://www.biopython.club/2016/12/22/genome/"/>
     <id>http://www.biopython.club/2016/12/22/genome/</id>
-    <published>2016-12-22T11:54:34.141Z</published>
+    <published>2016-12-22T13:06:58.413Z</published>
     <updated>2016-12-22T11:54:34.558Z</updated>
     
     <content type="html"><![CDATA[<p>本文翻译自英文博客<a href="http://www.yourgenome.org/" target="_blank" rel="external">Yourgenome</a>，查看原文请<a href="http://www.yourgenome.org/facts/how-are-sequenced-genomes-stored-and-shared" target="_blank" rel="external">点击</a>，感谢作者的无私奉献。</p>
@@ -47,56 +72,10 @@
   </entry>
   
   <entry>
-    <title>科技论文的检索与获取</title>
-    <link href="http://www.biopython.club/2016/12/11/scholar_search/"/>
-    <id>http://www.biopython.club/2016/12/11/scholar_search/</id>
-    <published>2016-12-11T06:07:38.000Z</published>
-    <updated>2016-12-11T06:45:12.514Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-学术文献检索"><a href="#1-学术文献检索" class="headerlink" title="1. 学术文献检索"></a>1. 学术文献检索</h2><h3 id="1-1-科学引文-SCI-索引"><a href="#1-1-科学引文-SCI-索引" class="headerlink" title="1.1 科学引文(SCI)索引"></a>1.1 科学引文(SCI)索引</h3><h4 id="谷歌学术"><a href="#谷歌学术" class="headerlink" title="谷歌学术"></a><a href="http://scholar.google.com" target="_blank" rel="external">谷歌学术</a></h4><ol>
-<li><h5 id="1-通过更改hosts访问谷歌（点击查看）"><a href="#1-通过更改hosts访问谷歌（点击查看）" class="headerlink" title="1. 通过更改hosts访问谷歌（点击查看）"></a>1. 通过更改hosts访问谷歌（<a href="https://laod.cn/hosts/2016-google-hosts.html" target="_blank" rel="external">点击查看</a>）</h5></li>
-<li><h5 id="2-键入关键词检索文献，以”RNA-seq”为例。"><a href="#2-键入关键词检索文献，以”RNA-seq”为例。" class="headerlink" title="2. 键入关键词检索文献，以”RNA-seq”为例。"></a>2. 键入关键词检索文献，以”RNA-seq”为例。</h5>   <img src="/images/Picture1.png" alt=""><br>   在谷歌学术的左侧，多个选项可以让你对你的搜索结果进行过滤，比如你可以选择“2016年以来”选择只检索16年以来发表的学术文章。</li>
-<li><h5 id="3-点击”引用”按钮"><a href="#3-点击”引用”按钮" class="headerlink" title="3. 点击”引用”按钮"></a>3. 点击”引用”按钮</h5>   <img src="/images/P2.png" alt=""><br>   点击”Endnote”按钮，下对对应文献的.enw格式文件（可以为Endnote软件所识别）<h4 id="百度学术"><a href="#百度学术" class="headerlink" title="百度学术"></a><a href="http://xueshu.baidu.com/" target="_blank" rel="external">百度学术</a></h4></li>
-<li><h5 id="1-键入关键词检索文献"><a href="#1-键入关键词检索文献" class="headerlink" title="1. 键入关键词检索文献"></a>1. 键入关键词检索文献</h5>   <img src="/images/P3.png" alt=""><br>   <img src="/images/P4.png" alt=""></li>
-<li><h5 id="2-点击引用按钮"><a href="#2-点击引用按钮" class="headerlink" title="2. 点击引用按钮"></a>2. 点击引用按钮</h5>   <img src="/images/P5.png" alt=""><br>   与Google学术类似<br><a href="https://www.ncbi.nlm.nih.gov/pubmed" target="_blank" rel="external">NCBI</a></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;1-学术文献检索&quot;&gt;&lt;a href=&quot;#1-学术文献检索&quot; class=&quot;headerlink&quot; title=&quot;1. 学术文献检索&quot;&gt;&lt;/a&gt;1. 学术文献检索&lt;/h2&gt;&lt;h3 id=&quot;1-1-科学引文-SCI-索引&quot;&gt;&lt;a href=&quot;#1-1-科学引文-SCI
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>个人简介</title>
-    <link href="http://www.biopython.club/2016/12/11/personal_intro/"/>
-    <id>http://www.biopython.club/2016/12/11/personal_intro/</id>
-    <published>2016-12-11T05:21:27.224Z</published>
-    <updated>2016-12-11T08:40:30.240Z</updated>
-    
-    <content type="html"><![CDATA[<p>半路出家的生信狗(<a href="https://scholar.google.com/citations?user=ooVqbKIAAAAJ&amp;hl=zh-CN" target="_blank" rel="external">Google Scholar</a>,<a href="www.github.com/ginsea">Github</a>)，爱民谣更爱代码，致力于高通量数据和遗传进化分析，在PAML软件的使用上略有心得。自学计算机编程语言，可以通过Python和R语言解决生物学问题。由于在入门时有高人相助，心存感激，虽然目前也是半瓶子水晃荡，但依然决心做一个生物信息的布道者，尽力将我熟识的知识告知有需要的同行，这便是我开创此博客的初衷。</p>
-<h4 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h4><p>ginseachen@hotmail.com</p>
-<h4 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h4><p>137933872</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;半路出家的生信狗(&lt;a href=&quot;https://scholar.google.com/citations?user=ooVqbKIAAAAJ&amp;amp;hl=zh-CN&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google Scholar&lt;/a&gt;,
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>通过mcmctree预测物种分化时间</title>
-    <link href="http://www.biopython.club/2016/12/10/mcmctree/"/>
-    <id>http://www.biopython.club/2016/12/10/mcmctree/</id>
-    <published>2016-12-10T11:54:46.036Z</published>
+    <link href="http://www.biopython.club/2016/12/22/mcmctree/"/>
+    <id>http://www.biopython.club/2016/12/22/mcmctree/</id>
+    <published>2016-12-22T13:06:46.627Z</published>
     <updated>2016-12-11T06:02:34.333Z</updated>
     
     <content type="html"><![CDATA[<p>本文通过<a href="http://abacus.gene.ucl.ac.uk/software/MCMCtree.Tutorials.pdf" target="_blank" rel="external">Dr.Yang</a>的教程进行学习，并记录学习结果，具体步骤如下：</p>

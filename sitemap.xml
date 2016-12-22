@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.biopython.club/biosoft/index.html</loc>
-    
-    <lastmod>2016-12-22T12:35:37.909Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.biopython.club/genome/index.html</loc>
-    
-    <lastmod>2016-12-22T12:35:29.164Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.biopython.club/python/index.html</loc>
     
     <lastmod>2016-12-22T12:35:10.278Z</lastmod>
@@ -44,21 +30,28 @@
   </url>
   
   <url>
-    <loc>http://www.biopython.club/2016/12/11/personal_intro/</loc>
-    
-    <lastmod>2016-12-11T08:40:30.240Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.biopython.club/2016/12/11/scholar_search/</loc>
+    <loc>http://www.biopython.club/2016/12/22/scholar_search/</loc>
     
     <lastmod>2016-12-11T06:45:12.514Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.biopython.club/2016/12/10/mcmctree/</loc>
+    <loc>http://www.biopython.club/other/scholar_search.html</loc>
+    
+    <lastmod>2016-12-11T06:45:12.514Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.biopython.club/2016/12/22/mcmctree/</loc>
+    
+    <lastmod>2016-12-11T06:02:34.333Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.biopython.club/biosoft/mcmctree.html</loc>
     
     <lastmod>2016-12-11T06:02:34.333Z</lastmod>
     
