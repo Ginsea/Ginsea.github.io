@@ -45,7 +45,7 @@
     <link href="http://www.biopython.club/2016/12/22/genome/"/>
     <id>http://www.biopython.club/2016/12/22/genome/</id>
     <published>2016-12-22T13:06:58.413Z</published>
-    <updated>2016-12-22T11:54:34.558Z</updated>
+    <updated>2016-12-22T13:16:21.435Z</updated>
     
     <content type="html"><![CDATA[<p>本文翻译自英文博客<a href="http://www.yourgenome.org/" target="_blank" rel="external">Yourgenome</a>，查看原文请<a href="http://www.yourgenome.org/facts/how-are-sequenced-genomes-stored-and-shared" target="_blank" rel="external">点击</a>，感谢作者的无私奉献。</p>
 <p>当一个物种基因组的测序、组装以及注释完成之后，需要将其以特定的格式进行共享，以方便其他研究者的数据获取。这一切数据存储和共享的工作可以通过一个数据库来实现，该数据库便是genome browser。</p>
@@ -68,6 +68,8 @@
     
     </summary>
     
+      <category term="Bioinfo" scheme="http://www.biopython.club/categories/Bioinfo/"/>
+    
     
   </entry>
   
@@ -76,7 +78,7 @@
     <link href="http://www.biopython.club/2016/12/22/mcmctree/"/>
     <id>http://www.biopython.club/2016/12/22/mcmctree/</id>
     <published>2016-12-22T13:06:46.627Z</published>
-    <updated>2016-12-11T06:02:34.333Z</updated>
+    <updated>2016-12-22T13:15:54.101Z</updated>
     
     <content type="html"><![CDATA[<p>本文通过<a href="http://abacus.gene.ucl.ac.uk/software/MCMCtree.Tutorials.pdf" target="_blank" rel="external">Dr.Yang</a>的教程进行学习，并记录学习结果，具体步骤如下：</p>
 <h2 id="1-准备物种树（树文件mtDNApri-trees）"><a href="#1-准备物种树（树文件mtDNApri-trees）" class="headerlink" title="1. 准备物种树（树文件mtDNApri.trees）"></a>1. 准备物种树（树文件mtDNApri.trees）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">7 1</div><div class="line">((((human, (chimpanzee, bonobo)) <span class="string">'&gt;.06&lt;.08'</span>, gorilla),(orangutan, sumatran)) <span class="string">'&gt;.12&lt;.16'</span>, gibbon);</div></pre></td></tr></table></figure>
@@ -94,6 +96,8 @@
       &lt;p&gt;本文通过&lt;a href=&quot;http://abacus.gene.ucl.ac.uk/software/MCMCtree.Tutorials.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dr.Yang&lt;/a&gt;的教程进行学习，并记录学习结果，具体步骤
     
     </summary>
+    
+      <category term="Biosoft" scheme="http://www.biopython.club/categories/Biosoft/"/>
     
     
   </entry>
