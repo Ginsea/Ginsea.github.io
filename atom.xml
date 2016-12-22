@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://www.biopython.club/"/>
   <updated>2016-12-22T11:54:34.558Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://www.biopython.club/</id>
   
   <author>
     <name>Ginsea Chen</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>测序之后的基因组数据如何共享和存储</title>
-    <link href="http://yoursite.com/2016/12/22/genome/"/>
-    <id>http://yoursite.com/2016/12/22/genome/</id>
+    <link href="http://www.biopython.club/2016/12/22/genome/"/>
+    <id>http://www.biopython.club/2016/12/22/genome/</id>
     <published>2016-12-22T11:54:34.141Z</published>
     <updated>2016-12-22T11:54:34.558Z</updated>
     
@@ -48,8 +48,8 @@
   
   <entry>
     <title>科技论文的检索与获取</title>
-    <link href="http://yoursite.com/2016/12/11/scholar_search/"/>
-    <id>http://yoursite.com/2016/12/11/scholar_search/</id>
+    <link href="http://www.biopython.club/2016/12/11/scholar_search/"/>
+    <id>http://www.biopython.club/2016/12/11/scholar_search/</id>
     <published>2016-12-11T06:07:38.000Z</published>
     <updated>2016-12-11T06:45:12.514Z</updated>
     
@@ -73,8 +73,8 @@
   
   <entry>
     <title>个人简介</title>
-    <link href="http://yoursite.com/2016/12/11/personal_intro/"/>
-    <id>http://yoursite.com/2016/12/11/personal_intro/</id>
+    <link href="http://www.biopython.club/2016/12/11/personal_intro/"/>
+    <id>http://www.biopython.club/2016/12/11/personal_intro/</id>
     <published>2016-12-11T05:21:27.224Z</published>
     <updated>2016-12-11T08:40:30.240Z</updated>
     
@@ -94,8 +94,8 @@
   
   <entry>
     <title>通过mcmctree预测物种分化时间</title>
-    <link href="http://yoursite.com/2016/12/10/mcmctree/"/>
-    <id>http://yoursite.com/2016/12/10/mcmctree/</id>
+    <link href="http://www.biopython.club/2016/12/10/mcmctree/"/>
+    <id>http://www.biopython.club/2016/12/10/mcmctree/</id>
     <published>2016-12-10T11:54:46.036Z</published>
     <updated>2016-12-11T06:02:34.333Z</updated>
     
