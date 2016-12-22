@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-11T06:45:12.514Z</updated>
+  <updated>2016-12-22T11:54:34.558Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测序之后的基因组数据如何共享和存储</title>
+    <link href="http://yoursite.com/2016/12/22/genome/"/>
+    <id>http://yoursite.com/2016/12/22/genome/</id>
+    <published>2016-12-22T11:54:34.141Z</published>
+    <updated>2016-12-22T11:54:34.558Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文翻译自英文博客<a href="http://www.yourgenome.org/" target="_blank" rel="external">Yourgenome</a>，查看原文请<a href="http://www.yourgenome.org/facts/how-are-sequenced-genomes-stored-and-shared" target="_blank" rel="external">点击</a>，感谢作者的无私奉献。</p>
+<p>当一个物种基因组的测序、组装以及注释完成之后，需要将其以特定的格式进行共享，以方便其他研究者的数据获取。这一切数据存储和共享的工作可以通过一个数据库来实现，该数据库便是genome browser。</p>
+<h2 id="什么是Genome-Browser？"><a href="#什么是Genome-Browser？" class="headerlink" title="什么是Genome Browser？"></a>什么是Genome Browser？</h2><ol>
+<li>Genome browser是一个在线的图形交互界面，用于展示基因组的信息；</li>
+<li>当科学家完成一个基因组测序以后，需要将其对应信息存储在一个数据库中，以便其能够较为便利的被全世界的大多数科学家获取。这些基因组数据主要通过Genome Browser查看；</li>
+<li>通过这样的方式使得基因组数据开源且容易获取，这极大的支持和推动了全世界科学研究的向前发展；</li>
+<li>常见的几种Genome Browser：<ul>
+<li><a href="http://asia.ensembl.org/index.html" target="_blank" rel="external">Ensembl</a>,由欧洲生物信息中心（EBI），欧洲分子生物学实验中心（EMBL）以及英国的Sanger中心共同开发和维护；</li>
+<li><a href="https://genome.ucsc.edu/" target="_blank" rel="external">UCSC</a>, 由美国西海岸的加利福尼亚大学开发和维护；</li>
+<li>美国国家生物信息中心（NCBI）的<a href="https://www.ncbi.nlm.nih.gov/mapview/" target="_blank" rel="external">map viewer</a>,</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文翻译自英文博客&lt;a href=&quot;http://www.yourgenome.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Yourgenome&lt;/a&gt;，查看原文请&lt;a href=&quot;http://www.yourgenome.org/facts
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>科技论文的检索与获取</title>
