@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.biopython.club/"/>
-  <updated>2016-12-24T02:46:52.868Z</updated>
+  <updated>2016-12-24T03:09:14.393Z</updated>
   <id>http://www.biopython.club/</id>
   
   <author>
@@ -16,11 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>通过Python处理生物学问题系列1</title>
+    <title>PAML与选择压力分析系列一</title>
+    <link href="http://www.biopython.club/2016/12/24/paml1/"/>
+    <id>http://www.biopython.club/2016/12/24/paml1/</id>
+    <published>2016-12-23T16:00:00.000Z</published>
+    <updated>2016-12-24T03:09:14.393Z</updated>
+    
+    <content type="html"><![CDATA[<p>本博客为系列博客，旨在介绍PAML软件的使用以及常规问题；<br>感谢Dr. Yang开发出如此好用的软件，向大牛致敬；</p>
+<hr>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>软件下载与安装</li>
+<li>数据准备</li>
+<li>软件运行</li>
+</ul>
+<hr>
+<h3 id="第一部分-软件的下载与安装"><a href="#第一部分-软件的下载与安装" class="headerlink" title="第一部分 软件的下载与安装"></a>第一部分 软件的下载与安装</h3><ul>
+<li>点击(<a href="http://abacus.gene.ucl.ac.uk/software/paml4.9c.tgz" target="_blank" rel="external">链接</a>)下载paml软件。</li>
+<li>通过winrar等解压软件对其进行解压。<br><img src="/images/P31.png" alt=""></li>
+<li>将bin文件添加至环境变量<br>windows中环境变量的添加方式请参见<a href="http://biopython.club/2016/12/24/python1/" target="_blank" rel="external">通过python解决生物学问题系列一</a></li>
+<li><p>Linux中的软件解析请参照下述命令进行:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">rm bin/*.exe</div><div class="line"><span class="built_in">cd</span> src</div><div class="line">make <span class="_">-f</span> Makefile</div><div class="line">ls <span class="_">-l</span>F</div><div class="line">rm *.o</div><div class="line">mv baseml basemlg codeml pamp evolver yn00 chi2 ../bin</div><div class="line"><span class="built_in">cd</span> ..</div><div class="line">ls <span class="_">-l</span>F bin</div><div class="line">bin/baseml</div><div class="line">bin/codeml</div><div class="line">bin/evolver</div></pre></td></tr></table></figure>
+</li>
+<li><p>将解析后的binary文件拷贝至linux系统中环境变量文件夹即可，环境变量查看命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="第二部分-数据准备"><a href="#第二部分-数据准备" class="headerlink" title="第二部分 数据准备"></a>第二部分 数据准备</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本博客为系列博客，旨在介绍PAML软件的使用以及常规问题；&lt;br&gt;感谢Dr. Yang开发出如此好用的软件，向大牛致敬；&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="PAML" scheme="http://www.biopython.club/categories/PAML/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>通过Python处理生物学问题系列一</title>
     <link href="http://www.biopython.club/2016/12/24/python1/"/>
     <id>http://www.biopython.club/2016/12/24/python1/</id>
     <published>2016-12-23T16:00:00.000Z</published>
-    <updated>2016-12-24T02:46:52.868Z</updated>
+    <updated>2016-12-24T02:49:54.662Z</updated>
     
     <content type="html"><![CDATA[<p>通过Python处理生物学问题为系列博客，旨在向一些志同道合的盆友共享一些有用的与生物信息有关的Python知识。</p>
 <hr>
@@ -193,7 +235,7 @@
     <link href="http://www.biopython.club/2016/12/22/mcmctree/"/>
     <id>http://www.biopython.club/2016/12/22/mcmctree/</id>
     <published>2016-12-22T13:06:46.627Z</published>
-    <updated>2016-12-22T13:15:54.101Z</updated>
+    <updated>2016-12-24T02:57:07.611Z</updated>
     
     <content type="html"><![CDATA[<p>本文通过<a href="http://abacus.gene.ucl.ac.uk/software/MCMCtree.Tutorials.pdf" target="_blank" rel="external">Dr.Yang</a>的教程进行学习，并记录学习结果，具体步骤如下：</p>
 <h2 id="1-准备物种树（树文件mtDNApri-trees）"><a href="#1-准备物种树（树文件mtDNApri-trees）" class="headerlink" title="1. 准备物种树（树文件mtDNApri.trees）"></a>1. 准备物种树（树文件mtDNApri.trees）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">7 1</div><div class="line">((((human, (chimpanzee, bonobo)) <span class="string">'&gt;.06&lt;.08'</span>, gorilla),(orangutan, sumatran)) <span class="string">'&gt;.12&lt;.16'</span>, gibbon);</div></pre></td></tr></table></figure>
@@ -212,7 +254,7 @@
     
     </summary>
     
-      <category term="Biosoft" scheme="http://www.biopython.club/categories/Biosoft/"/>
+      <category term="PAML" scheme="http://www.biopython.club/categories/PAML/"/>
     
     
   </entry>
