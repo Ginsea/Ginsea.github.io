@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.biopython.club/2016/12/22/scholar_search/</loc>
+    
+    <lastmod>2016-12-24T01:00:20.460Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.biopython.club/2016/12/22/python_readfasta/</loc>
     
     <lastmod>2016-12-22T14:36:05.924Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://www.biopython.club/2016/12/22/personal/</loc>
     
     <lastmod>2016-12-22T13:28:32.035Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.biopython.club/2016/12/22/scholar_search/</loc>
-    
-    <lastmod>2016-12-22T13:23:15.352Z</lastmod>
     
   </url>
   
