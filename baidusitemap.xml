@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://www.biopython.club/2016/12/24/paml1/</loc>
+    <lastmod>2016-12-25T01:57:26.211Z</lastmod>
+    <data>
+        <display>
+        <title>PAML与选择压力分析系列一</title>
+        <pubTime>2016-12-23T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PAML" url="http://www.biopython.club/categories/PAML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.biopython.club/2016/12/22/mcmctree/</loc>
+    <lastmod>2016-12-24T02:57:07.611Z</lastmod>
+    <data>
+        <display>
+        <title>通过mcmctree预测物种分化时间</title>
+        <pubTime>2016-12-22T13:06:46.627Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="PAML" url="http://www.biopython.club/categories/PAML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.biopython.club/2016/12/24/python1/</loc>
+    <lastmod>2016-12-24T02:49:54.662Z</lastmod>
+    <data>
+        <display>
+        <title>通过Python处理生物学问题系列一</title>
+        <pubTime>2016-12-23T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Python" url="http://www.biopython.club/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.biopython.club/2016/12/22/scholar_search/</loc>
+    <lastmod>2016-12-24T01:45:42.556Z</lastmod>
+    <data>
+        <display>
+        <title>科技论文的检索与获取</title>
+        <pubTime>2016-12-22T13:07:39.143Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Other" url="http://www.biopython.club/categories/Other/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.biopython.club/2016/12/22/python_readfasta/</loc>
+    <lastmod>2016-12-22T14:36:05.924Z</lastmod>
+    <data>
+        <display>
+        <title>一个简单的Python函数读取fasta文件</title>
+        <pubTime>2016-12-22T14:28:38.711Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Python" url="http://www.biopython.club/categories/Python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.biopython.club/2016/12/22/personal/</loc>
+    <lastmod>2016-12-22T13:28:32.035Z</lastmod>
+    <data>
+        <display>
+        <title>Personal Information</title>
+        <pubTime>2016-12-22T12:33:02.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="About" url="http://www.biopython.club/categories/About/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.biopython.club/2016/12/22/genome/</loc>
+    <lastmod>2016-12-22T13:16:21.435Z</lastmod>
+    <data>
+        <display>
+        <title>测序之后的基因组数据如何共享和存储</title>
+        <pubTime>2016-12-22T13:06:58.413Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Bioinfo" url="http://www.biopython.club/categories/Bioinfo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
