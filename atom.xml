@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.biopython.club/"/>
-  <updated>2016-12-25T01:57:26.211Z</updated>
+  <updated>2016-12-25T14:57:53.316Z</updated>
   <id>http://www.biopython.club/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://www.biopython.club/2016/12/25/test/"/>
+    <id>http://www.biopython.club/2016/12/25/test/</id>
+    <published>2016-12-25T14:56:46.450Z</published>
+    <updated>2016-12-25T14:57:53.316Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title:This is test</p>
+<h2 id="categories-test"><a href="#categories-test" class="headerlink" title="categories:test"></a>categories:test</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title:This is test&lt;/p&gt;
+&lt;h2 id=&quot;categories-test&quot;&gt;&lt;a href=&quot;#categories-test&quot; class=&quot;headerlink&quot; title=&quot;categories:test&quot;&gt;&lt;/a&gt;categories
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>PAML与选择压力分析系列一</title>
