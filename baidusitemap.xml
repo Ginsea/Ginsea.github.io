@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://www.biopython.club/2016/12/26/ncbi/</loc>
+    <lastmod>2016-12-26T14:33:56.855Z</lastmod>
+    <data>
+        <display>
+        <title>根据序列登录号从NCBI中批量下载序列</title>
+        <pubTime>2016-12-25T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Bioinfo" url="http://www.biopython.club/categories/Bioinfo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.biopython.club/2016/12/26/python2/</loc>
     <lastmod>2016-12-26T13:03:41.477Z</lastmod>
     <data>
