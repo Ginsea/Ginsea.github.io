@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>通过YN00软件计算两两序列间的Ka/Ks值 | Ginsea Chen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="&amp;#x5E8F;&amp;#x5217;&amp;#x6BD4;&amp;#x5BF9;1prank -d=input.fa +F -codon -f=paml -o=input #&amp;#x5BF9;&amp;#x5E8F;&amp;#x5217;&amp;#x8FDB;&amp;#x884C;&amp;#x6BD4;&amp;#x5BF9;&amp;#xFF0C;&amp;#x8F93;&amp;#x5165;&amp;#x4E3A;CDS&amp;#x5E8F;&amp;#x5217;
+input.fa&amp;#x4E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通过YN00软件计算两两序列间的Ka/Ks值">
+<meta property="og:url" content="http://www.biopython.club/2016/12/29/yn00/index.html">
+<meta property="og:site_name" content="Ginsea Chen">
+<meta property="og:description" content="&amp;#x5E8F;&amp;#x5217;&amp;#x6BD4;&amp;#x5BF9;1prank -d=input.fa +F -codon -f=paml -o=input #&amp;#x5BF9;&amp;#x5E8F;&amp;#x5217;&amp;#x8FDB;&amp;#x884C;&amp;#x6BD4;&amp;#x5BF9;&amp;#xFF0C;&amp;#x8F93;&amp;#x5165;&amp;#x4E3A;CDS&amp;#x5E8F;&amp;#x5217;
+input.fa&amp;#x4E">
+<meta property="og:updated_time" content="2016-12-29T12:18:41.116Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="通过YN00软件计算两两序列间的Ka/Ks值">
+<meta name="twitter:description" content="&amp;#x5E8F;&amp;#x5217;&amp;#x6BD4;&amp;#x5BF9;1prank -d=input.fa +F -codon -f=paml -o=input #&amp;#x5BF9;&amp;#x5E8F;&amp;#x5217;&amp;#x8FDB;&amp;#x884C;&amp;#x6BD4;&amp;#x5BF9;&amp;#xFF0C;&amp;#x8F93;&amp;#x5165;&amp;#x4E3A;CDS&amp;#x5E8F;&amp;#x5217;
+input.fa&amp;#x4E">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/PAML/">PAML</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-yn00" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        通过YN00软件计算两两序列间的Ka/Ks值
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2016/12/29/yn00/" class="article-date">
+    <time datetime="2016-12-28T16:00:00.000Z" itemprop="datePublished">2016-12-29</time>
+</a>
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h6 id="&#x5E8F;&#x5217;&#x6BD4;&#x5BF9;"><a href="#&#x5E8F;&#x5217;&#x6BD4;&#x5BF9;" class="headerlink" title="&#x5E8F;&#x5217;&#x6BD4;&#x5BF9;"></a>&#x5E8F;&#x5217;&#x6BD4;&#x5BF9;</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">prank <span class="_">-d</span>=input.fa +F -codon <span class="_">-f</span>=paml -o=input <span class="comment">#&#x5BF9;&#x5E8F;&#x5217;&#x8FDB;&#x884C;&#x6BD4;&#x5BF9;&#xFF0C;&#x8F93;&#x5165;&#x4E3A;CDS&#x5E8F;&#x5217;</span></div></pre></td></tr></table></figure>
+<p>input.fa&#x4E3A;fasta&#x683C;&#x5F0F;&#x7684;&#x8F93;&#x5165;&#x6587;&#x4EF6;<br>input.best.phy&#x4E3A;paml&#x683C;&#x5F0F;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;</p>
+<h6 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;yn00-ctl&#xFF09;&#x89E3;&#x6790;-&#x8BE5;&#x6587;&#x4EF6;&#x53EF;&#x5728;PAML&#x7684;&#x5B89;&#x88C5;&#x5305;&#x4E2D;&#x627E;&#x5230;"><a href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;yn00-ctl&#xFF09;&#x89E3;&#x6790;-&#x8BE5;&#x6587;&#x4EF6;&#x53EF;&#x5728;PAML&#x7684;&#x5B89;&#x88C5;&#x5305;&#x4E2D;&#x627E;&#x5230;" class="headerlink" title="&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;yn00.ctl&#xFF09;&#x89E3;&#x6790;,&#x8BE5;&#x6587;&#x4EF6;&#x53EF;&#x5728;PAML&#x7684;&#x5B89;&#x88C5;&#x5305;&#x4E2D;&#x627E;&#x5230;"></a>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;yn00.ctl&#xFF09;&#x89E3;&#x6790;,&#x8BE5;&#x6587;&#x4EF6;&#x53EF;&#x5728;PAML&#x7684;&#x5B89;&#x88C5;&#x5305;&#x4E2D;&#x627E;&#x5230;</h6><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">seqfile = /path/to/<span class="keyword">input</span>.best.phy * sequence data <span class="keyword">file</span> name</div><div class="line"><span class="keyword">outfile</span> = yn * main result <span class="keyword">file</span></div><div class="line">verbose = 0  * 1: detailed output (<span class="keyword">list</span> sequences), 0: concise output</div><div class="line">icode = 0    * 0:universal code; 1:mammalian mt; 2-10:see below</div><div class="line">weighting = 0  * weighting pathways between codons (0/1)?</div><div class="line">commonf3x4 = 0  * <span class="keyword">use</span> <span class="keyword">one</span> <span class="keyword">set</span> of codon freqs <span class="keyword">for</span> all pairs (0/1)?</div><div class="line"><span class="comment">*       ndata = 1</span></div><div class="line"><span class="comment">* Genetic codes: 0:universal, 1:mammalian mt., 2:yeast mt., 3:mold mt.,</span></div><div class="line"><span class="comment">* 4: invertebrate mt., 5: ciliate nuclear, 6: echinoderm mt.,</span></div><div class="line"><span class="comment">* 7: euplotid mt., 8: alternative yeast nu. 9: ascidian mt.,</span></div><div class="line"><span class="comment">* 10: blepharisma nu.</span></div><div class="line"><span class="comment">* These codes correspond to transl_table 1 to 11 of GENEBANK.</span></div></pre></td></tr></table></figure>
+<p>&#x53EA;&#x9700;&#x8981;&#x6539;&#x52A8;seqfile&#x53D8;&#x91CF;&#xFF0C;&#x5C06;paml&#x683C;&#x5F0F;&#x7684;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x8D4B;&#x4E88;&#x5B83;&#x5373;&#x53EF;</p>
+<h6 id="&#x8FD0;&#x884C;&#x8F6F;&#x4EF6;"><a href="#&#x8FD0;&#x884C;&#x8F6F;&#x4EF6;" class="headerlink" title="&#x8FD0;&#x884C;&#x8F6F;&#x4EF6;"></a>&#x8FD0;&#x884C;&#x8F6F;&#x4EF6;</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/usr/bin/bash</span></div><div class="line">yn00 yn00.ctl</div></pre></td></tr></table></figure>
+<h6 id="&#x7ED3;&#x679C;&#x89E3;&#x8BFB;&#xFF08;yn&#x6587;&#x4EF6;&#xFF09;"><a href="#&#x7ED3;&#x679C;&#x89E3;&#x8BFB;&#xFF08;yn&#x6587;&#x4EF6;&#xFF09;" class="headerlink" title="&#x7ED3;&#x679C;&#x89E3;&#x8BFB;&#xFF08;yn&#x6587;&#x4EF6;&#xFF09;"></a>&#x7ED3;&#x679C;&#x89E3;&#x8BFB;&#xFF08;yn&#x6587;&#x4EF6;&#xFF09;</h6><figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div></pre></td><td class="code"><pre><div class="line">YN00 /share/nas2/workdir/chenzx/project/BRD20160829_P01/Analysis/align/<span class="number">1.</span>best.phy</div><div class="line"></div><div class="line">ns =   <span class="number">2</span>	ls = <span class="number">409</span></div><div class="line"></div><div class="line">Codon position x base (<span class="number">3</span>x4) table <span class="keyword">for</span> each sequence.</div><div class="line"></div><div class="line">BRD.DBHC<span class="number">.28706</span>      </div><div class="line">position  <span class="number">1</span>:    T:<span class="number">0.18826</span>    C:<span class="number">0.17848</span>    A:<span class="number">0.27628</span>    G:<span class="number">0.35697</span></div><div class="line">position  <span class="number">2</span>:    T:<span class="number">0.29095</span>    C:<span class="number">0.23716</span>    A:<span class="number">0.25917</span>    G:<span class="number">0.21271</span></div><div class="line">position  <span class="number">3</span>:    T:<span class="number">0.19315</span>    C:<span class="number">0.34474</span>    A:<span class="number">0.15648</span>    G:<span class="number">0.30562</span></div><div class="line"></div><div class="line">BRD_DBQY20380       </div><div class="line">position  <span class="number">1</span>:    T:<span class="number">0.18826</span>    C:<span class="number">0.17848</span>    A:<span class="number">0.27628</span>    G:<span class="number">0.35697</span></div><div class="line">position  <span class="number">2</span>:    T:<span class="number">0.29095</span>    C:<span class="number">0.23716</span>    A:<span class="number">0.25917</span>    G:<span class="number">0.21271</span></div><div class="line">position  <span class="number">3</span>:    T:<span class="number">0.19071</span>    C:<span class="number">0.34719</span>    A:<span class="number">0.15648</span>    G:<span class="number">0.30562</span></div><div class="line"></div><div class="line">Average</div><div class="line">position  <span class="number">1</span>:    T:<span class="number">0.18826</span>    C:<span class="number">0.17848</span>    A:<span class="number">0.27628</span>    G:<span class="number">0.35697</span></div><div class="line">position  <span class="number">2</span>:    T:<span class="number">0.29095</span>    C:<span class="number">0.23716</span>    A:<span class="number">0.25917</span>    G:<span class="number">0.21271</span></div><div class="line">position  <span class="number">3</span>:    T:<span class="number">0.19193</span>    C:<span class="number">0.34597</span>    A:<span class="number">0.15648</span>    G:<span class="number">0.30562</span></div><div class="line"></div><div class="line">Codon usage <span class="keyword">for</span> each species</div><div class="line">----------------------------------------------------------------------</div><div class="line">Phe TTT   <span class="number">4</span>   <span class="number">4</span> | <span class="type">Ser</span> TCT   <span class="number">6</span>   <span class="number">6</span> | <span class="type">Tyr</span> TAT   <span class="number">1</span>   <span class="number">1</span> | <span class="type">Cys</span> TGT   <span class="number">4</span>   <span class="number">4</span></div><div class="line">    TTC  <span class="number">14</span>  <span class="number">14</span> |     <span class="type">TCC</span>   <span class="number">3</span>   <span class="number">3</span> |     <span class="type">TAC</span>   <span class="number">9</span>   <span class="number">9</span> |     <span class="type">TGC</span>  <span class="number">12</span>  <span class="number">12</span></div><div class="line">Leu TTA   <span class="number">1</span>   <span class="number">1</span> |     <span class="type">TCA</span>   <span class="number">4</span>   <span class="number">4</span> | <span class="type">*** TAA</span>   <span class="number">0</span>   <span class="number">0</span> | <span class="type">*** TGA</span>   <span class="number">0</span>   <span class="number">0</span></div><div class="line">    TTG   <span class="number">8</span>   <span class="number">8</span> |     <span class="type">TCG</span>   <span class="number">4</span>   <span class="number">4</span> |     <span class="type">TAG</span>   <span class="number">0</span>   <span class="number">0</span> | <span class="type">Trp</span> TGG   <span class="number">7</span>   <span class="number">7</span></div><div class="line">----------------------------------------------------------------------</div><div class="line">Leu CTT   <span class="number">6</span>   <span class="number">5</span> | <span class="type">Pro</span> CCT   <span class="number">7</span>   <span class="number">7</span> | <span class="type">His</span> CAT   <span class="number">1</span>   <span class="number">1</span> | <span class="type">Arg</span> CGT   <span class="number">1</span>   <span class="number">1</span></div><div class="line">    CTC   <span class="number">5</span>   <span class="number">6</span> |     <span class="type">CCC</span>   <span class="number">7</span>   <span class="number">7</span> |     <span class="type">CAC</span>   <span class="number">4</span>   <span class="number">4</span> |     <span class="type">CGC</span>   <span class="number">3</span>   <span class="number">3</span></div><div class="line">    CTA   <span class="number">3</span>   <span class="number">3</span> |     <span class="type">CCA</span>   <span class="number">5</span>   <span class="number">5</span> | <span class="type">Gln</span> CAA   <span class="number">2</span>   <span class="number">2</span> |     <span class="type">CGA</span>   <span class="number">2</span>   <span class="number">2</span></div><div class="line">    CTG  <span class="number">10</span>  <span class="number">10</span> |     <span class="type">CCG</span>   <span class="number">6</span>   <span class="number">6</span> |     <span class="type">CAG</span>   <span class="number">8</span>   <span class="number">8</span> |     <span class="type">CGG</span>   <span class="number">3</span>   <span class="number">3</span></div><div class="line">----------------------------------------------------------------------</div><div class="line">Ile ATT   <span class="number">6</span>   <span class="number">6</span> | <span class="type">Thr</span> ACT   <span class="number">4</span>   <span class="number">4</span> | <span class="type">Asn</span> AAT   <span class="number">3</span>   <span class="number">3</span> | <span class="type">Ser</span> AGT   <span class="number">2</span>   <span class="number">2</span></div><div class="line">    ATC   <span class="number">9</span>   <span class="number">9</span> |     <span class="type">ACC</span>  <span class="number">10</span>  <span class="number">10</span> |     <span class="type">AAC</span>  <span class="number">14</span>  <span class="number">14</span> |     <span class="type">AGC</span>   <span class="number">1</span>   <span class="number">1</span></div><div class="line">    ATA   <span class="number">8</span>   <span class="number">8</span> |     <span class="type">ACA</span>   <span class="number">4</span>   <span class="number">4</span> | <span class="type">Lys</span> AAA   <span class="number">5</span>   <span class="number">5</span> | <span class="type">Arg</span> AGA   <span class="number">2</span>   <span class="number">2</span></div><div class="line">Met ATG  <span class="number">15</span>  <span class="number">15</span> |     <span class="type">ACG</span>   <span class="number">7</span>   <span class="number">7</span> |     <span class="type">AAG</span>  <span class="number">13</span>  <span class="number">13</span> |     <span class="type">AGG</span>  <span class="number">10</span>  <span class="number">10</span></div><div class="line">----------------------------------------------------------------------</div><div class="line">Val GTT   <span class="number">8</span>   <span class="number">8</span> | <span class="type">Ala</span> GCT   <span class="number">7</span>   <span class="number">7</span> | <span class="type">Asp</span> GAT   <span class="number">6</span>   <span class="number">6</span> | <span class="type">Gly</span> GGT  <span class="number">13</span>  <span class="number">13</span></div><div class="line">    GTC   <span class="number">5</span>   <span class="number">5</span> |     <span class="type">GCC</span>  <span class="number">15</span>  <span class="number">15</span> |     <span class="type">GAC</span>  <span class="number">20</span>  <span class="number">20</span> |     <span class="type">GGC</span>  <span class="number">10</span>  <span class="number">10</span></div><div class="line">    GTA   <span class="number">5</span>   <span class="number">5</span> |     <span class="type">GCA</span>   <span class="number">6</span>   <span class="number">6</span> | <span class="type">Glu</span> GAA  <span class="number">11</span>  <span class="number">11</span> |     <span class="type">GGA</span>   <span class="number">6</span>   <span class="number">6</span></div><div class="line">    GTG  <span class="number">12</span>  <span class="number">12</span> |     <span class="type">GCG</span>   <span class="number">2</span>   <span class="number">2</span> |     <span class="type">GAG</span>   <span class="number">9</span>   <span class="number">9</span> |     <span class="type">GGG</span>  <span class="number">11</span>  <span class="number">11</span></div><div class="line">----------------------------------------------------------------------</div><div class="line"></div><div class="line"></div><div class="line">Sums</div><div class="line">------------------------------------------------------</div><div class="line">Phe TTT   <span class="number">8</span> | <span class="type">Ser</span> TCT  <span class="number">12</span> | <span class="type">Tyr</span> TAT   <span class="number">2</span> | <span class="type">Cys</span> TGT   <span class="number">8</span></div><div class="line">    TTC  <span class="number">28</span> |     <span class="type">TCC</span>   <span class="number">6</span> |     <span class="type">TAC</span>  <span class="number">18</span> |     <span class="type">TGC</span>  <span class="number">24</span></div><div class="line">Leu TTA   <span class="number">2</span> |     <span class="type">TCA</span>   <span class="number">8</span> | <span class="type">*** TAA</span>   <span class="number">0</span> | <span class="type">*** TGA</span>   <span class="number">0</span></div><div class="line">    TTG  <span class="number">16</span> |     <span class="type">TCG</span>   <span class="number">8</span> |     <span class="type">TAG</span>   <span class="number">0</span> | <span class="type">Trp</span> TGG  <span class="number">14</span></div><div class="line">------------------------------------------------------</div><div class="line">Leu CTT  <span class="number">11</span> | <span class="type">Pro</span> CCT  <span class="number">14</span> | <span class="type">His</span> CAT   <span class="number">2</span> | <span class="type">Arg</span> CGT   <span class="number">2</span></div><div class="line">    CTC  <span class="number">11</span> |     <span class="type">CCC</span>  <span class="number">14</span> |     <span class="type">CAC</span>   <span class="number">8</span> |     <span class="type">CGC</span>   <span class="number">6</span></div><div class="line">    CTA   <span class="number">6</span> |     <span class="type">CCA</span>  <span class="number">10</span> | <span class="type">Gln</span> CAA   <span class="number">4</span> |     <span class="type">CGA</span>   <span class="number">4</span></div><div class="line">    CTG  <span class="number">20</span> |     <span class="type">CCG</span>  <span class="number">12</span> |     <span class="type">CAG</span>  <span class="number">16</span> |     <span class="type">CGG</span>   <span class="number">6</span></div><div class="line">------------------------------------------------------</div><div class="line">Ile ATT  <span class="number">12</span> | <span class="type">Thr</span> ACT   <span class="number">8</span> | <span class="type">Asn</span> AAT   <span class="number">6</span> | <span class="type">Ser</span> AGT   <span class="number">4</span></div><div class="line">    ATC  <span class="number">18</span> |     <span class="type">ACC</span>  <span class="number">20</span> |     <span class="type">AAC</span>  <span class="number">28</span> |     <span class="type">AGC</span>   <span class="number">2</span></div><div class="line">    ATA  <span class="number">16</span> |     <span class="type">ACA</span>   <span class="number">8</span> | <span class="type">Lys</span> AAA  <span class="number">10</span> | <span class="type">Arg</span> AGA   <span class="number">4</span></div><div class="line">Met ATG  <span class="number">30</span> |     <span class="type">ACG</span>  <span class="number">14</span> |     <span class="type">AAG</span>  <span class="number">26</span> |     <span class="type">AGG</span>  <span class="number">20</span></div><div class="line">------------------------------------------------------</div><div class="line">Val GTT  <span class="number">16</span> | <span class="type">Ala</span> GCT  <span class="number">14</span> | <span class="type">Asp</span> GAT  <span class="number">12</span> | <span class="type">Gly</span> GGT  <span class="number">26</span></div><div class="line">    GTC  <span class="number">10</span> |     <span class="type">GCC</span>  <span class="number">30</span> |     <span class="type">GAC</span>  <span class="number">40</span> |     <span class="type">GGC</span>  <span class="number">20</span></div><div class="line">    GTA  <span class="number">10</span> |     <span class="type">GCA</span>  <span class="number">12</span> | <span class="type">Glu</span> GAA  <span class="number">22</span> |     <span class="type">GGA</span>  <span class="number">12</span></div><div class="line">    GTG  <span class="number">24</span> |     <span class="type">GCG</span>   <span class="number">4</span> |     <span class="type">GAG</span>  <span class="number">18</span> |     <span class="type">GGG</span>  <span class="number">22</span></div><div class="line">------------------------------------------------------</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">(A) Nei-Gojobori (<span class="number">1986</span>) method</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">Nei &amp; Gojobori <span class="number">1986.</span> dN/dS (dN, dS)</div><div class="line">(Note: This matrix is not used <span class="built_in">in</span> later <span class="keyword">ML</span>. analysis.</div><div class="line">Use runmode = <span class="number">-2</span> <span class="keyword">for</span> <span class="keyword">ML</span> pairwise comparison.)</div><div class="line"></div><div class="line">BRD.DBHC<span class="number">.28706</span>      </div><div class="line">BRD_DBQY20380       <span class="number">-1.0000</span> (<span class="number">0.0000</span> <span class="number">0.0034</span>)</div><div class="line"></div><div class="line"></div><div class="line">(B) Yang &amp; Nielsen (<span class="number">2000</span>) method</div><div class="line"></div><div class="line">Yang Z, Nielsen R (<span class="number">2000</span>) Estimating synonymous and nonsynonymous substitution rates under realistic evolutionary models. Mol. Biol. Evol. <span class="number">17</span>:<span class="number">32</span><span class="number">-43</span></div><div class="line"></div><div class="line">(equal weighting of pathways)</div><div class="line"></div><div class="line">seq. seq.     S       N        t   kappa   <span class="built_in">omega</span>     dN +- SE    dS +- SE</div><div class="line"></div><div class="line">   <span class="number">2</span>    <span class="number">1</span>   <span class="number">325.4</span>   <span class="number">901.6</span>   <span class="number">0.0025</span>  <span class="number">4.6000</span>  <span class="number">0.0000</span> <span class="number">-0.0000</span> +- <span class="number">0.0000</span>  <span class="number">0.0031</span> +- <span class="number">0.0031</span></div><div class="line"></div><div class="line"></div><div class="line">(C) LWL85, LPB93 &amp; LWLm methods</div><div class="line"></div><div class="line">Li W.-H., C.-I. Wu, Luo (<span class="number">1985</span>) A new method <span class="keyword">for</span> estimating synonymous and nonsynonymous rates of nucleotide substitutions considering the relative likelihood of nucleotide and codon changes. Mol. Biol. Evol. <span class="number">2</span>: <span class="number">150</span><span class="number">-174.</span></div><div class="line">Li W-H (<span class="number">1993</span>) Unbiased estimation of the rates of synonymous and nonsynonymous substitution. J. Mol. Evol. <span class="number">36</span>:<span class="number">96</span><span class="number">-99</span></div><div class="line">Pamilo P, Bianchi NO (<span class="number">1993</span>) Evolution of the Zfx and Zfy genes - rates and interdependence between the genes. Mol. Biol. Evol. <span class="number">10</span>:<span class="number">271</span><span class="number">-281</span></div><div class="line">Yang Z (<span class="number">2006</span>) Computational Molecular Evolution. Oxford University Press, Oxford. Eqs. <span class="number">2.12</span> &amp; <span class="number">2.13</span></div><div class="line"></div><div class="line"><span class="number">2</span> (BRD_DBQY20380) vs. <span class="number">1</span> (BRD.DBHC<span class="number">.28706</span>)</div><div class="line"></div><div class="line">L(i):      <span class="number">801.0</span>     <span class="number">226.0</span>     <span class="number">200.0</span>  <span class="built_in">sum</span>=   <span class="number">1227.0</span></div><div class="line">Ns(i):    <span class="number">0.0000</span>    <span class="number">0.0000</span>    <span class="number">1.0000</span>  <span class="built_in">sum</span>=   <span class="number">1.0000</span></div><div class="line">Nv(i):    <span class="number">0.0000</span>    <span class="number">0.0000</span>    <span class="number">0.0000</span>  <span class="built_in">sum</span>=   <span class="number">0.0000</span></div><div class="line">A(i):     <span class="number">0.0000</span>    <span class="number">0.0000</span>    <span class="number">0.0050</span></div><div class="line">B(i):    <span class="number">-0.0000</span>   <span class="number">-0.0000</span>   <span class="number">-0.0000</span></div><div class="line">LWL85:  dS =  <span class="number">0.0037</span> dN =  <span class="number">0.0000</span> w = <span class="number">0.0000</span> S =  <span class="number">275.3</span> N =  <span class="number">951.7</span></div><div class="line">LWL85m: dS =  <span class="number">0.0024</span> dN =  <span class="number">0.0000</span> w = <span class="number">0.0000</span> S =  <span class="number">426.0</span> N =  <span class="number">801.0</span> (rho = <span class="number">1.000</span>)</div><div class="line">LPB93:  dS =  <span class="number">0.0024</span> dN =  <span class="number">0.0000</span> w = <span class="number">0.0000</span></div></pre></td></tr></table></figure>
+<p>&#x5BF9;&#x5E94;&#x7684;dN,dS&#x503C;&#x8BF7;&#x89C1;<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">seq. seq.     S       N        t   kappa   omega     dN +- SE    dS +- SE</div><div class="line"></div><div class="line">   <span class="number">2</span>    <span class="number">1</span>   <span class="number">325.4</span>   <span class="number">901.6</span>   <span class="number">0.0025</span>  <span class="number">4.6000</span>  <span class="number">0.0000</span> <span class="number">-0.0000</span> +- <span class="number">0.0000</span>  <span class="number">0.0031</span> +- <span class="number">0.0031</span></div></pre></td></tr></table></figure></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://www.biopython.club/2016/12/29/yn00/" data-id="cixaccjny00008wu1e556uzup" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2016/12/29/yn00/" data-title="通过YN00软件计算两两序列间的Ka/Ks值" data-url="http://www.biopython.club/2016/12/29/yn00/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>seguir:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://scholar.google.com.hk/citations?user=ooVqbKIAAAAJ&hl=zh-CN" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/Ginsea" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/12/28/mpich2/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">antic</strong>
+        <p class="article-nav-title">MPI并行环境的搭建</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/29/yn00/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/PAML/">PAML</a></p>
+                            <p class="item-title"><a href="/2016/12/29/yn00/" class="title">通过YN00软件计算两两序列间的Ka/Ks值</a></p>
+                            <p class="item-date"><time datetime="2016-12-28T16:00:00.000Z" itemprop="datePublished">2016-12-29</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/28/mpich2/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Bioinfo/">Bioinfo</a></p>
+                            <p class="item-title"><a href="/2016/12/28/mpich2/" class="title">MPI并行环境的搭建</a></p>
+                            <p class="item-date"><time datetime="2016-12-27T16:00:00.000Z" itemprop="datePublished">2016-12-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/28/R1/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/R/">R</a></p>
+                            <p class="item-title"><a href="/2016/12/28/R1/" class="title">通过ggplot软件包绘制Ka、Ks散点图</a></p>
+                            <p class="item-date"><time datetime="2016-12-27T16:00:00.000Z" itemprop="datePublished">2016-12-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/27/python3/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2016/12/27/python3/" class="title">biopython的一些常见用法</a></p>
+                            <p class="item-date"><time datetime="2016-12-26T16:00:00.000Z" itemprop="datePublished">2016-12-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/12/26/python2/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2016/12/26/python2/" class="title">一个简单的python脚本剔除短序列</a></p>
+                            <p class="item-date"><time datetime="2016-12-25T16:00:00.000Z" itemprop="datePublished">2016-12-26</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/About/">About</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arxius</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">13</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://www.biobreeding.com.cn/">陕西博瑞德生物科技有限公司</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.hqu.edu.cn/">华侨大学</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2016 Ginsea Chen</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'ginsea'};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
