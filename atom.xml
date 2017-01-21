@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.biopython.club/"/>
-  <updated>2017-01-21T18:46:09.377Z</updated>
+  <updated>2017-01-21T19:13:29.260Z</updated>
   <id>http://www.biopython.club/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.biopython.club/2017/01/20/heatmap/"/>
     <id>http://www.biopython.club/2017/01/20/heatmap/</id>
     <published>2017-01-19T16:00:00.000Z</published>
-    <updated>2017-01-21T18:46:09.377Z</updated>
+    <updated>2017-01-21T19:13:29.260Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li><p>&#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data.txt,&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;</p>
@@ -35,7 +35,7 @@
 <li><p>&#x7ED8;&#x5236;&#x70ED;&#x56FE;</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">my_palette &lt;- colorRampPalette(c(<span class="string">&quot;red&quot;</span>, <span class="string">&quot;yellow&quot;</span>, <span class="string">&quot;green&quot;</span>))(n = <span class="number">299</span>) #&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EA2;&#x3001;&#x9EC4;&#x3001;&#x84DD;&#x7684;&#x989C;&#x8272;&#x677F;</div><div class="line">png(args[<span class="number">2</span>], width = <span class="number">5</span>*<span class="number">300</span>, height = <span class="number">5</span>*<span class="number">300</span>, res = <span class="number">300</span>, pointsize = <span class="number">8</span>) #&#x521B;&#x5EFA; &#x4E00;&#x4E2A;&#x7A7A;&#x767D;&#x7684;png&#x6587;&#x4EF6;</div><div class="line">heatmap<span class="number">.2</span>(data_matrix,cellnote = data_matrix,main = <span class="string">&quot;Correlation&quot;</span>,notecol=<span class="string">&quot;black&quot;</span>,density.info=<span class="string">&quot;none&quot;</span>,trace=<span class="string">&quot;none&quot;</span>,margins =c(<span class="number">12</span>,<span class="number">9</span>),col=my_palette,dendrogram=<span class="string">&quot;row&quot;</span>,Colv=<span class="string">&quot;NA&quot;</span>) #&#x7ED8;&#x5236;&#x70ED;&#x56FE;</div><div class="line">dev.off() #&#x5173;&#x95ED;png&#x6587;&#x4EF6;</div></pre></td></tr></table></figure>
 </li>
-<li><p>&#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;<br><img src="https://github.com/Ginsea/Notebook/blob/master/heat.png" alt=""></p>
+<li><p>&#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;<br><img src="http://ok5v9qf85.bkt.clouddn.com/heat.png" alt=""></p>
 </li>
 </ol>
 ]]></content>
@@ -412,28 +412,6 @@
   </entry>
   
   <entry>
-    <title>一个简单的python脚本剔除短序列</title>
-    <link href="http://www.biopython.club/2016/12/26/python2/"/>
-    <id>http://www.biopython.club/2016/12/26/python2/</id>
-    <published>2016-12-25T16:00:00.000Z</published>
-    <updated>2016-12-26T13:03:41.477Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="&#x8C03;&#x7528;biopython&#x6A21;&#x5757;&#xFF0C;&#x5254;&#x9664;fasta&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x77ED;&#x5E8F;&#x5217;&#xFF0C;&#x811A;&#x672C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;"><a href="#&#x8C03;&#x7528;biopython&#x6A21;&#x5757;&#xFF0C;&#x5254;&#x9664;fasta&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x77ED;&#x5E8F;&#x5217;&#xFF0C;&#x811A;&#x672C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;" class="headerlink" title="&#x8C03;&#x7528;biopython&#x6A21;&#x5757;&#xFF0C;&#x5254;&#x9664;fasta&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x77ED;&#x5E8F;&#x5217;&#xFF0C;&#x811A;&#x672C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;"></a>&#x8C03;&#x7528;biopython&#x6A21;&#x5757;&#xFF0C;&#x5254;&#x9664;fasta&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x77ED;&#x5E8F;&#x5217;&#xFF0C;&#x811A;&#x672C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="keyword">import</span> argparse</div><div class="line"><span class="keyword">import</span> os, sys</div><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">opt</span><span class="params">()</span>:</span></div><div class="line">  <span class="string">&apos;&apos;&apos;</span></div><div class="line">  &#x4F20;&#x9012;&#x53C2;&#x6570;</div><div class="line">  &apos;&apos;&apos;</div><div class="line">  parse = argparse.ArgumentParser(usage=<span class="string">&quot;%(prog)s&quot;</span>)</div><div class="line">  parse.add_argument(--inseqs,help=<span class="string">&quot;The input file with fasta format&quot;</span>)</div><div class="line">  parse.add_argument(--limlen,help=<span class="string">&quot;The limited length&quot;</span>)</div><div class="line">  <span class="keyword">return</span> parse.parse_args()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">  parse = opt() <span class="comment">#options</span></div><div class="line">  <span class="keyword">if</span> parse.inseqs == <span class="keyword">None</span> <span class="keyword">or</span> parse.limlen == <span class="keyword">None</span>:</div><div class="line">    os.system(<span class="string">&quot;python {0} -h&quot;</span>.format(sys.argv[<span class="number">0</span>]))</div><div class="line">    exit(<span class="string">&quot;Error, Incomplete options&quot;</span>)</div><div class="line"></div><div class="line">  inseqs = parse.inseqs</div><div class="line">  limlen = parse.limlen</div><div class="line"></div><div class="line">  out = open(<span class="string">&quot;{0}.lim&quot;</span>.format(os.path.splitext(os.path.basename(inseqs))[<span class="number">0</span>]),<span class="string">&quot;w&quot;</span>) <span class="comment">#create an empty file</span></div><div class="line"></div><div class="line">  <span class="keyword">for</span> seqs <span class="keyword">in</span> SeqIO.parse(inseqs,<span class="string">&quot;fasta&quot;</span>):</div><div class="line">    <span class="keyword">if</span> len(str(seqs.seq)) &lt;= limlen:</div><div class="line">      <span class="keyword">continue</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">      out.write(<span class="string">&quot;&gt;{0}\n{1}\n&quot;</span>.format(str(seqs.id),str(seqs.seq))) <span class="comment">#write seqs longer than limlen in empty file</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">&apos;__main__&apos;</span>:</div><div class="line">  main()</div></pre></td></tr></table></figure>
-<h6 id="&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;"><a href="#&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;" class="headerlink" title="&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;"></a>&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python del_seqs.py --inseqs yourfile.fa --limlen 100 <span class="comment">#this command can be used to delete seqs shorter than 100bp or 100aa</span></div></pre></td></tr></table></figure>
-<h6 id="&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540E;&#x7F00;&#x4E3A;lim&#x7684;&#x6587;&#x4EF6;&#x4E2D;"><a href="#&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540E;&#x7F00;&#x4E3A;lim&#x7684;&#x6587;&#x4EF6;&#x4E2D;" class="headerlink" title="&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540E;&#x7F00;&#x4E3A;lim&#x7684;&#x6587;&#x4EF6;&#x4E2D;"></a>&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540E;&#x7F00;&#x4E3A;lim&#x7684;&#x6587;&#x4EF6;&#x4E2D;</h6>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h6 id=&quot;&amp;#x8C03;&amp;#x7528;biopython&amp;#x6A21;&amp;#x5757;&amp;#xFF0C;&amp;#x5254;&amp;#x9664;fasta&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x7684;&amp;#x77ED;&amp;#x5E8F;&amp;#x5217;&amp;#xFF0
-    
-    </summary>
-    
-      <category term="Python" scheme="http://www.biopython.club/categories/Python/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>根据序列登录号从NCBI中批量下载序列</title>
     <link href="http://www.biopython.club/2016/12/26/ncbi/"/>
     <id>http://www.biopython.club/2016/12/26/ncbi/</id>
@@ -455,6 +433,28 @@
     </summary>
     
       <category term="Bioinfo" scheme="http://www.biopython.club/categories/Bioinfo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一个简单的python脚本剔除短序列</title>
+    <link href="http://www.biopython.club/2016/12/26/python2/"/>
+    <id>http://www.biopython.club/2016/12/26/python2/</id>
+    <published>2016-12-25T16:00:00.000Z</published>
+    <updated>2016-12-26T13:03:41.477Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="&#x8C03;&#x7528;biopython&#x6A21;&#x5757;&#xFF0C;&#x5254;&#x9664;fasta&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x77ED;&#x5E8F;&#x5217;&#xFF0C;&#x811A;&#x672C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;"><a href="#&#x8C03;&#x7528;biopython&#x6A21;&#x5757;&#xFF0C;&#x5254;&#x9664;fasta&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x77ED;&#x5E8F;&#x5217;&#xFF0C;&#x811A;&#x672C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;" class="headerlink" title="&#x8C03;&#x7528;biopython&#x6A21;&#x5757;&#xFF0C;&#x5254;&#x9664;fasta&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x77ED;&#x5E8F;&#x5217;&#xFF0C;&#x811A;&#x672C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;"></a>&#x8C03;&#x7528;biopython&#x6A21;&#x5757;&#xFF0C;&#x5254;&#x9664;fasta&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x77ED;&#x5E8F;&#x5217;&#xFF0C;&#x811A;&#x672C;&#x8BE6;&#x60C5;&#x5982;&#x4E0B;&#xFF1A;</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="keyword">import</span> argparse</div><div class="line"><span class="keyword">import</span> os, sys</div><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">opt</span><span class="params">()</span>:</span></div><div class="line">  <span class="string">&apos;&apos;&apos;</span></div><div class="line">  &#x4F20;&#x9012;&#x53C2;&#x6570;</div><div class="line">  &apos;&apos;&apos;</div><div class="line">  parse = argparse.ArgumentParser(usage=<span class="string">&quot;%(prog)s&quot;</span>)</div><div class="line">  parse.add_argument(--inseqs,help=<span class="string">&quot;The input file with fasta format&quot;</span>)</div><div class="line">  parse.add_argument(--limlen,help=<span class="string">&quot;The limited length&quot;</span>)</div><div class="line">  <span class="keyword">return</span> parse.parse_args()</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">  parse = opt() <span class="comment">#options</span></div><div class="line">  <span class="keyword">if</span> parse.inseqs == <span class="keyword">None</span> <span class="keyword">or</span> parse.limlen == <span class="keyword">None</span>:</div><div class="line">    os.system(<span class="string">&quot;python {0} -h&quot;</span>.format(sys.argv[<span class="number">0</span>]))</div><div class="line">    exit(<span class="string">&quot;Error, Incomplete options&quot;</span>)</div><div class="line"></div><div class="line">  inseqs = parse.inseqs</div><div class="line">  limlen = parse.limlen</div><div class="line"></div><div class="line">  out = open(<span class="string">&quot;{0}.lim&quot;</span>.format(os.path.splitext(os.path.basename(inseqs))[<span class="number">0</span>]),<span class="string">&quot;w&quot;</span>) <span class="comment">#create an empty file</span></div><div class="line"></div><div class="line">  <span class="keyword">for</span> seqs <span class="keyword">in</span> SeqIO.parse(inseqs,<span class="string">&quot;fasta&quot;</span>):</div><div class="line">    <span class="keyword">if</span> len(str(seqs.seq)) &lt;= limlen:</div><div class="line">      <span class="keyword">continue</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">      out.write(<span class="string">&quot;&gt;{0}\n{1}\n&quot;</span>.format(str(seqs.id),str(seqs.seq))) <span class="comment">#write seqs longer than limlen in empty file</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">&apos;__main__&apos;</span>:</div><div class="line">  main()</div></pre></td></tr></table></figure>
+<h6 id="&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;"><a href="#&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;" class="headerlink" title="&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;"></a>&#x8C03;&#x7528;&#x53C2;&#x6570;&#x5982;&#x4E0B;&#xFF1A;</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python del_seqs.py --inseqs yourfile.fa --limlen 100 <span class="comment">#this command can be used to delete seqs shorter than 100bp or 100aa</span></div></pre></td></tr></table></figure>
+<h6 id="&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540E;&#x7F00;&#x4E3A;lim&#x7684;&#x6587;&#x4EF6;&#x4E2D;"><a href="#&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540E;&#x7F00;&#x4E3A;lim&#x7684;&#x6587;&#x4EF6;&#x4E2D;" class="headerlink" title="&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540E;&#x7F00;&#x4E3A;lim&#x7684;&#x6587;&#x4EF6;&#x4E2D;"></a>&#x7ED3;&#x679C;&#x5B58;&#x50A8;&#x5728;&#x540E;&#x7F00;&#x4E3A;lim&#x7684;&#x6587;&#x4EF6;&#x4E2D;</h6>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;&amp;#x8C03;&amp;#x7528;biopython&amp;#x6A21;&amp;#x5757;&amp;#xFF0C;&amp;#x5254;&amp;#x9664;fasta&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x7684;&amp;#x77ED;&amp;#x5E8F;&amp;#x5217;&amp;#xFF0
+    
+    </summary>
+    
+      <category term="Python" scheme="http://www.biopython.club/categories/Python/"/>
     
     
   </entry>
