@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://www.biopython.club/2017/01/20/heatmap/</loc>
+    <lastmod>2017-01-21T18:46:09.377Z</lastmod>
+    <data>
+        <display>
+        <title>通过R语言绘制基因表达量热图</title>
+        <pubTime>2017-01-19T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="R" url="http://www.biopython.club/categories/R/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.biopython.club/2017/01/03/Mrbayes/</loc>
     <lastmod>2017-01-04T09:45:57.000Z</lastmod>
     <data>
@@ -166,12 +184,12 @@
 
     
   <url>
-    <loc>http://www.biopython.club/2016/12/22/mcmctree/</loc>
+    <loc>http://www.biopython.club/2017/01/04/mcmctree/</loc>
     <lastmod>2016-12-24T02:57:07.611Z</lastmod>
     <data>
         <display>
         <title>通过mcmctree预测物种分化时间</title>
-        <pubTime>2016-12-22T13:06:46.627Z</pubTime>
+        <pubTime>2017-01-04T11:55:00.117Z</pubTime>
         
          
            
@@ -202,12 +220,12 @@
 
     
   <url>
-    <loc>http://www.biopython.club/2016/12/22/scholar_search/</loc>
+    <loc>http://www.biopython.club/2017/01/04/scholar_search/</loc>
     <lastmod>2016-12-24T01:45:42.556Z</lastmod>
     <data>
         <display>
         <title>科技论文的检索与获取</title>
-        <pubTime>2016-12-22T13:07:39.143Z</pubTime>
+        <pubTime>2017-01-04T11:55:00.130Z</pubTime>
         
          
            
@@ -220,12 +238,12 @@
 
     
   <url>
-    <loc>http://www.biopython.club/2016/12/22/python_readfasta/</loc>
+    <loc>http://www.biopython.club/2017/01/04/python_readfasta/</loc>
     <lastmod>2016-12-22T14:36:05.924Z</lastmod>
     <data>
         <display>
         <title>一个简单的Python函数读取fasta文件</title>
-        <pubTime>2016-12-22T14:28:38.711Z</pubTime>
+        <pubTime>2017-01-04T11:55:00.127Z</pubTime>
         
          
            
@@ -256,12 +274,12 @@
 
     
   <url>
-    <loc>http://www.biopython.club/2016/12/22/genome/</loc>
+    <loc>http://www.biopython.club/2017/01/04/genome/</loc>
     <lastmod>2016-12-22T13:16:21.435Z</lastmod>
     <data>
         <display>
         <title>测序之后的基因组数据如何共享和存储</title>
-        <pubTime>2016-12-22T13:06:58.413Z</pubTime>
+        <pubTime>2017-01-04T11:55:00.115Z</pubTime>
         
          
            
