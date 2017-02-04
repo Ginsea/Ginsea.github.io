@@ -3,34 +3,28 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Ginsea Chen</title>
+    <title>R语言入门 | Ginsea Chen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="title:R&amp;#x8BED;&amp;#x8A00;&amp;#x5165;&amp;#x95E8;categories:R
-date:2017-02-05
-1. R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;
+    <meta name="description" content="1. R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;
 
-&amp;#x4ECE;CRAN &amp;#x4E2D;&amp;#x4E0B;&amp;#x8F7D;R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C">
+&amp;#x4ECE;CRAN &amp;#x4E2D;&amp;#x4E0B;&amp;#x8F7D;R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C;&amp;#x8BE5;&amp;#x7A0B;&amp;#x5E8F;&amp;#x53EF;&amp;#x4EE5;&amp;#x5728;Windows&amp;#xFF0C;Linu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ginsea Chen">
+<meta property="og:title" content="R语言入门">
 <meta property="og:url" content="http://www.biopython.club/2017/02/05/R2/index.html">
 <meta property="og:site_name" content="Ginsea Chen">
-<meta property="og:description" content="title:R&amp;#x8BED;&amp;#x8A00;&amp;#x5165;&amp;#x95E8;categories:R
-date:2017-02-05
-1. R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;
+<meta property="og:description" content="1. R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;
 
-&amp;#x4ECE;CRAN &amp;#x4E2D;&amp;#x4E0B;&amp;#x8F7D;R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C">
+&amp;#x4ECE;CRAN &amp;#x4E2D;&amp;#x4E0B;&amp;#x8F7D;R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C;&amp;#x8BE5;&amp;#x7A0B;&amp;#x5E8F;&amp;#x53EF;&amp;#x4EE5;&amp;#x5728;Windows&amp;#xFF0C;Linu">
 <meta property="og:image" content="http://ok5v9qf85.bkt.clouddn.com/R2-1.JPG">
-<meta property="og:updated_time" content="2017-02-04T18:12:13.259Z">
+<meta property="og:updated_time" content="2017-02-04T18:16:31.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ginsea Chen">
-<meta name="twitter:description" content="title:R&amp;#x8BED;&amp;#x8A00;&amp;#x5165;&amp;#x95E8;categories:R
-date:2017-02-05
-1. R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;
+<meta name="twitter:title" content="R语言入门">
+<meta name="twitter:description" content="1. R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;
 
-&amp;#x4ECE;CRAN &amp;#x4E2D;&amp;#x4E0B;&amp;#x8F7D;R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C">
+&amp;#x4ECE;CRAN &amp;#x4E2D;&amp;#x4E0B;&amp;#x8F7D;R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;&amp;#x7A0B;&amp;#x5E8F;&amp;#xFF0C;&amp;#x8BE5;&amp;#x7A0B;&amp;#x5E8F;&amp;#x53EF;&amp;#x4EE5;&amp;#x5728;Windows&amp;#xFF0C;Linu">
 <meta name="twitter:image" content="http://ok5v9qf85.bkt.clouddn.com/R2-1.JPG">
     
 
@@ -76,7 +70,7 @@ date:2017-02-05
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -97,8 +91,8 @@ date:2017-02-05
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -124,17 +118,27 @@ date:2017-02-05
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <a class="page-title-link" href="/categories/R/">R</a>
     </h1>
 </div>
                         <div class="main-body-content">
                             <article id="post-R2" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        R语言入门
+        </h1>
+    
+
+            </header>
+        
         
             <div class="article-subtitle">
                 <a href="/2017/02/05/R2/" class="article-date">
-    <time datetime="2017-02-04T17:14:55.464Z" itemprop="datePublished">2017-02-05</time>
+    <time datetime="2017-02-04T16:00:00.000Z" itemprop="datePublished">2017-02-05</time>
 </a>
                 
             </div>
@@ -142,8 +146,6 @@ date:2017-02-05
         
         <div class="article-entry" itemprop="articleBody">
             <hr>
-<p>title:R&#x8BED;&#x8A00;&#x5165;&#x95E8;<br>categories:R</p>
-<h2 id="date-2017-02-05"><a href="#date-2017-02-05" class="headerlink" title="date:2017-02-05"></a>date:2017-02-05</h2><hr>
 <p><strong>1. R&#x8BED;&#x8A00;&#x5B89;&#x88C5;</strong></p>
 <ul>
 <li>&#x4ECE;<a href="http://cran.r-project.org" target="_blank" rel="external">CRAN</a> &#x4E2D;&#x4E0B;&#x8F7D;R&#x8BED;&#x8A00;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BE5;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;Windows&#xFF0C;Linux&#x4EE5;&#x53CA;Mac&#x5E73;&#x53F0;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</li>
@@ -190,7 +192,7 @@ date:2017-02-05
 
 
 
-    <a data-url="http://www.biopython.club/2017/02/05/R2/" data-id="ciyrk6jwg00000kht9ozhjage" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://www.biopython.club/2017/02/05/R2/" data-id="ciyrka1w10003joht9jajhuur" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -257,7 +259,7 @@ date:2017-02-05
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2017/02/05/R2/" data-title="" data-url="http://www.biopython.club/2017/02/05/R2/"></div>
+    <div class="ds-thread" data-thread-key="2017/02/05/R2/" data-title="R语言入门" data-url="http://www.biopython.club/2017/02/05/R2/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -304,7 +306,7 @@ date:2017-02-05
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>follow:</p>
+        <p>seguir:</p>
         <ul class="social-links">
             
                 
@@ -331,7 +333,7 @@ date:2017-02-05
     
     
         <a href="/2017/01/20/heatmap/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
+        <strong class="article-nav-caption">antic</strong>
         <p class="article-nav-title">通过R语言绘制基因表达量热图</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -354,7 +356,7 @@ date:2017-02-05
                             <a href="/2017/02/05/R2/" class="thumbnail">
     
     
-        <span style="background-image:url(http://ok5v9qf85.bkt.clouddn.com/R2-1.JPG)" alt="" class="thumbnail-image"></span>
+        <span style="background-image:url(http://ok5v9qf85.bkt.clouddn.com/R2-1.JPG)" alt="R语言入门" class="thumbnail-image"></span>
     
     
 </a>
@@ -362,9 +364,9 @@ date:2017-02-05
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/02/05/R2/" class="title"></a></p>
-                            <p class="item-date"><time datetime="2017-02-04T17:14:55.464Z" itemprop="datePublished">2017-02-05</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/R/">R</a></p>
+                            <p class="item-title"><a href="/2017/02/05/R2/" class="title">R语言入门</a></p>
+                            <p class="item-date"><time datetime="2017-02-04T16:00:00.000Z" itemprop="datePublished">2017-02-05</time></p>
                         </div>
                     </li>
                 
@@ -457,7 +459,7 @@ date:2017-02-05
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -465,7 +467,7 @@ date:2017-02-05
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archives</h3>
+        <h3 class="widget-title">arxius</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
         </div>
