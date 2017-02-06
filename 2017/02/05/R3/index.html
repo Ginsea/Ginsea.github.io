@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>R语言的数据存储-R语言实战第二章创建数据集学习笔记 | Ginsea Chen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="" />
+    
+    <meta name="description" content="1. &amp;#x6570;&amp;#x636E;&amp;#x96C6;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;&amp;#x6570;&amp;#x636E;&amp;#x96C6;&amp;#x901A;&amp;#x5E38;&amp;#x662F;&amp;#x7531;&amp;#x6570;&amp;#x636E;&amp;#x6784;&amp;#x6210;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x77E9;&amp;#x5F62;&amp;#x6570;&amp;#x7EC4;&amp;#xF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R语言的数据存储-R语言实战第二章创建数据集学习笔记">
+<meta property="og:url" content="http://www.biopython.club/2017/02/05/R3/index.html">
+<meta property="og:site_name" content="Ginsea Chen">
+<meta property="og:description" content="1. &amp;#x6570;&amp;#x636E;&amp;#x96C6;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;&amp;#x6570;&amp;#x636E;&amp;#x96C6;&amp;#x901A;&amp;#x5E38;&amp;#x662F;&amp;#x7531;&amp;#x6570;&amp;#x636E;&amp;#x6784;&amp;#x6210;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x77E9;&amp;#x5F62;&amp;#x6570;&amp;#x7EC4;&amp;#xF">
+<meta property="og:image" content="http://ok5v9qf85.bkt.clouddn.com/R3-1.JPG">
+<meta property="og:updated_time" content="2017-02-06T02:33:21.327Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="R语言的数据存储-R语言实战第二章创建数据集学习笔记">
+<meta name="twitter:description" content="1. &amp;#x6570;&amp;#x636E;&amp;#x96C6;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;&amp;#x6570;&amp;#x636E;&amp;#x96C6;&amp;#x901A;&amp;#x5E38;&amp;#x662F;&amp;#x7531;&amp;#x6570;&amp;#x636E;&amp;#x6784;&amp;#x6210;&amp;#x7684;&amp;#x4E00;&amp;#x4E2A;&amp;#x77E9;&amp;#x5F62;&amp;#x6570;&amp;#x7EC4;&amp;#xF">
+<meta name="twitter:image" content="http://ok5v9qf85.bkt.clouddn.com/R3-1.JPG">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'categories',
+            TAGS: 'etiquetes',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/R/">R</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-R3" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        R语言的数据存储-R语言实战第二章创建数据集学习笔记
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-subtitle">
+                <a href="/2017/02/05/R3/" class="article-date">
+    <time datetime="2017-02-04T16:00:00.000Z" itemprop="datePublished">2017-02-05</time>
+</a>
+                
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <hr>
+<h5 id="1-&#x6570;&#x636E;&#x96C6;&#x7684;&#x6982;&#x5FF5;"><a href="#1-&#x6570;&#x636E;&#x96C6;&#x7684;&#x6982;&#x5FF5;" class="headerlink" title="1. &#x6570;&#x636E;&#x96C6;&#x7684;&#x6982;&#x5FF5;"></a>1. &#x6570;&#x636E;&#x96C6;&#x7684;&#x6982;&#x5FF5;</h5><p>&#x6570;&#x636E;&#x96C6;&#x901A;&#x5E38;&#x662F;&#x7531;&#x6570;&#x636E;&#x6784;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x77E9;&#x5F62;&#x6570;&#x7EC4;&#xFF0C;&#x884C;&#x8868;&#x793A;&#x89C2;&#x6D4B;&#xFF0C;&#x5217;&#x8868;&#x793A;&#x53D8;&#x91CF;&#xFF1B;</p>
+<hr>
+<h5 id="2-R&#x8BED;&#x8A00;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;"><a href="#2-R&#x8BED;&#x8A00;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;" class="headerlink" title="2. R&#x8BED;&#x8A00;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;"></a>2. R&#x8BED;&#x8A00;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</h5><ol>
+<li><em>&#x5411;&#x91CF;</em></li>
+</ol>
+<ul>
+<li>&#x5411;&#x91CF;&#x662F;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x6570;&#x503C;&#x578B;&#x3001;&#x5B57;&#x7B26;&#x578B;&#x6216;&#x903B;&#x8F91;&#x578B;&#x6570;&#x636E;&#x7684;&#x4E00;&#x5806;&#x6570;&#x7EC4;&#xFF1B;</li>
+<li>&#x51FD;&#x6570;c()&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x5411;&#x91CF;&#xFF1B;</li>
+<li>&#x5355;&#x4E2A;&#x5411;&#x91CF;&#x5FC5;&#x987B;&#x662F;&#x76F8;&#x540C;&#x6A21;&#x5F0F;&#xFF0C;&#x540C;&#x4E00;&#x5411;&#x91CF;&#x4E2D;&#x65E0;&#x6CD5;&#x6DF7;&#x6742;&#x4E0D;&#x540C;&#x6A21;&#x5F0F;&#x7684;&#x6570;&#x636E;&#xFF1B;<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a &lt;- c(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>) #&#x6570;&#x503C;&#x578B;&#x5411;&#x91CF;</div><div class="line">b &lt;- c(<span class="string">&quot;one&quot;</span>,<span class="string">&quot;two&quot;</span>) #&#x5B57;&#x7B26;&#x578B;&#x5411;&#x91CF;</div><div class="line">c &lt;- c(<span class="literal">TRUE</span>,<span class="literal">FALSE</span>) #&#x903B;&#x8F91;&#x578B;&#x5411;&#x91CF;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><em>&#x6807;&#x91CF;</em></li>
+</ol>
+<ul>
+<li>&#x53EA;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5411;&#x91CF;&#xFF1B;</li>
+<li>&#x5E38;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x5E38;&#x91CF;<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">f &lt;- <span class="number">3</span></div><div class="line">g &lt;- <span class="string">&quot;US&quot;</span></div><div class="line">h &lt;- TRUE</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><em>&#x77E9;&#x9635;</em></li>
+</ol>
+<ul>
+<li>&#x77E9;&#x9635;&#x662F;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF1B;</li>
+<li>&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x5747;&#x9700;&#x8981;&#x6709;&#x76F8;&#x540C;&#x7684;&#x6A21;&#x5F0F;&#xFF1B;</li>
+<li><p>&#x901A;&#x8FC7;matrix()&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x77E9;&#x9635;&#xFF1B;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mymatrix <span class="tag">&lt;<span class="name">-</span> <span class="attr">matrix</span>(<span class="attr">vector</span>,<span class="attr">nrow</span>=<span class="string">number_of_rows,ncol</span>=<span class="string">number_of_columns,byrow</span>=<span class="string">logical_value,dimnames</span>=<span class="string">list(char_vector_rownames,char_vector_colnames))</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>vector&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x77E9;&#x9635;&#x7684;&#x5143;&#x7D20;&#xFF1B;</p>
+</li>
+<li>nrow&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x884C;&#x7684;&#x7EF4;&#x6570;&#xFF1B;</li>
+<li>ncol&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5217;&#x7684;&#x7EF4;&#x6570;&#xFF1B;</li>
+<li>byrow TRUE&#x8868;&#x793A;&#x77E9;&#x9635;&#x6309;&#x884C;&#x586B;&#x5145;&#xFF0C;FALSE&#x8868;&#x793A;&#x77E9;&#x9635;&#x6309;&#x5217;&#x586B;&#x5145;&#xFF1B;</li>
+<li>dimnames &#x5305;&#x542B;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x4EE5;&#x5B57;&#x7B26;&#x578B;&#x5411;&#x91CF;&#x8868;&#x793A;&#x7684;&#x884C;&#x540D;&#x548C;&#x5217;&#x540D;</li>
+<li>&#x77E9;&#x9635;&#x4E0B;&#x6807;&#x7684;&#x4F7F;&#x7528;<figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">x &lt;- matrix(<span class="symbol">1:10</span>,nrow=<span class="number">2</span>)</div><div class="line">x[<span class="built_in">n</span>,] #&#x9009;&#x62E9;&#x7B2C;<span class="built_in">n</span>&#x884C;</div><div class="line">x[,<span class="built_in">n</span>] #&#x9009;&#x62E9;&#x7B2C;<span class="built_in">n</span>&#x5217;</div><div class="line">x[m,<span class="built_in">n</span>] #&#x9009;&#x62E9;&#x7B2C;m&#x884C;&#xFF0C;&#x7B2C;<span class="built_in">n</span>&#x5217;&#x7684;&#x77E9;&#x9635;&#x5143;&#x7D20;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><em>&#x6570;&#x7EC4;</em></li>
+</ol>
+<ul>
+<li>&#x6570;&#x7EC4;&#x4E0E;&#x77E9;&#x9635;&#x7C7B;&#x4F3C;&#xFF1B;</li>
+<li>&#x6570;&#x7EC4;&#x7EF4;&#x5EA6;&#x53EF;&#x4EE5;&#x5927;&#x4E8E;2&#xFF1B;</li>
+<li>&#x6570;&#x7EC4;&#x901A;&#x8FC7;array()&#x51FD;&#x6570;&#x521B;&#x5EFA;<figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">myarray &lt;- array(vector,dimensions,dimnames)</div><div class="line"><span class="meta"># vector&#x5305;&#x542B;&#x4E86;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF1B;</span></div><div class="line"><span class="meta"># dimensions &#x662F;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#x578B;&#x5411;&#x91CF;&#xFF0C;&#x7ED9;&#x51FA;&#x4E86;&#x5404;&#x4E2A;&#x7EF4;&#x5EA6;&#x7684;&#x4E0B;&#x6807;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF1B;</span></div><div class="line"><span class="meta"># dimnames &#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x5404;&#x7EF4;&#x5EA6;&#x540D;&#x79F0;&#x6807;&#x7B7E;&#x7684;&#x5217;&#x8868;;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><em>&#x6570;&#x636E;&#x6846;</em></li>
+</ol>
+<ul>
+<li>&#x4E0D;&#x540C;&#x7684;&#x5217;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5F0F;&#xFF1B;</li>
+<li>&#x6BCF;&#x4E00;&#x5217;&#x6570;&#x636E;&#x6A21;&#x5F0F;&#x5FC5;&#x987B;&#x552F;&#x4E00;&#xFF1B;</li>
+<li>&#x4E0E;SAS&#x3001;SPSS&#x4E2D;&#x770B;&#x5230;&#x7684;&#x6570;&#x636E;&#x96C6;&#x7C7B;&#x4F3C;&#xFF1B;</li>
+<li>&#x901A;&#x8FC7;data.frame()&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x6846;;<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="title">mydata</span> &lt;- <span class="class"><span class="keyword">data</span>.frame(<span class="title">col1</span>,<span class="title">col2</span>,<span class="title">col3</span>,...)</span></div><div class="line"><span class="title">col1</span>, col2, col3, ...&#x4E3A;&#x5217;&#x5411;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><div style="text-align:left"><br><img src="http://ok5v9qf85.bkt.clouddn.com/R3-1.JPG" alt="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6846;"><br><img src="http://ok5v9qf85.bkt.clouddn.com/image/R3R3-2.JPG" alt="&#x901A;&#x8FC7;&#x4E0B;&#x6807;&#x9009;&#x53D6;&#x5143;&#x7D20;"><br><img src="http://ok5v9qf85.bkt.clouddn.com/image/R3R3-3.JPG" alt="&#x901A;&#x8FC7;&#x5217;&#x540D;&#x9009;&#x53D6;&#x5143;&#x7D20;"><br><img src="http://ok5v9qf85.bkt.clouddn.com/image/R3R3-4.JPG" alt="&#x901A;&#x8FC7;$&#x9009;&#x53D6;&#x53D8;&#x91CF;"><br><img src="http://ok5v9qf85.bkt.clouddn.com/image/R3R3-5.JPG" alt="&#x751F;&#x6210;&#x5217;&#x8054;&#x8868;"><br></div></p>
+<ul>
+<li><p>attach()&#x51FD;&#x6570;&#x5C06;&#x6570;&#x636E;&#x6846;&#x6DFB;&#x52A0;&#x5230;R&#x641C;&#x7D22;&#x8DEF;&#x5F84;&#x4E2D;&#xFF1B;detach()&#x5C06;&#x6570;&#x636E;&#x6846;&#x4ECE;&#x641C;&#x7D22;&#x8DEF;&#x5F84;&#x4E2D;&#x79FB;&#x9664;&#xFF1B;</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="section">attach</span>(mtcars) #&#x5C06;R&#x81EA;&#x5E26;&#x7684;&#x6570;&#x636E;&#x6846;mtcars&#x6DFB;&#x52A0;&#x5230;R&#x641C;&#x7D22;&#x8DEF;&#x5F84;&#x4E2D;</div><div class="line">&gt; summary(mpg)</div><div class="line">   Min. <span class="number">1</span>st Qu.  Median    Mean <span class="number">3</span>rd Qu.    Max.</div><div class="line">  <span class="number">10.40</span>   <span class="number">15.42</span>   <span class="number">19.20</span>   <span class="number">20.09</span>   <span class="number">22.80</span>   <span class="number">33.90</span></div><div class="line">&gt; plot(mpg,disp)</div><div class="line">&gt; detach(mtcars)</div></pre></td></tr></table></figure>
+</li>
+<li><p>with()&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x7B80;&#x5316;&#x4EE3;&#x7801;</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&gt; with(mtcars, {</div><div class="line">  nokeepstats &lt;- summary(mpg)</div><div class="line">  keepstats &lt;&lt;- summary(mpg)</div><div class="line">})</div><div class="line">&gt; keepstats</div><div class="line">   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.</div><div class="line">  10.40   15.42   19.20   20.09   22.80   33.90</div><div class="line">&gt; nokeepstats</div><div class="line"><span class="keyword">Error: </span>object &apos;nokeepstats&apos; not found</div><div class="line"># &#x7279;&#x6B8A;&#x8D4B;&#x503C;&#x7B26;&lt;&lt;-&#x53EF;&#x4EE5;&#x5C06;&#x5BF9;&#x8C61;&#x4FDD;&#x5B58;&#x5230;with()&#x4E4B;&#x5916;&#x7684;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li><em>&#x5217;&#x8868;</em></li>
+</ol>
+<ul>
+<li>&#x5217;&#x8868;&#x662F;&#x4E00;&#x4E9B;&#x5BF9;&#x8C61;&#x7684;&#x6709;&#x5E8F;&#x96C6;&#x5408;</li>
+<li>&#x5141;&#x8BB8;&#x6574;&#x5408;&#x82E5;&#x5E72;&#xFF08;&#x53EF;&#x80FD;&#x65E0;&#x5173;&#x7684;&#xFF09;&#x5BF9;&#x8C61;&#x5230;&#x5355;&#x4E2A;&#x5BF9;&#x8C61;&#x540D;&#x4E0B;<figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&gt; g &lt;- <span class="string">&quot;my First List&quot;</span></div><div class="line">&gt; h &lt;- c(<span class="number">25</span>,<span class="number">26</span>,<span class="number">18</span>,<span class="number">39</span>)</div><div class="line">&gt; j &lt;- matrix(<span class="number">1</span>:<span class="number">10</span>,nrow=<span class="number">5</span>)</div><div class="line">&gt; k &lt;- c(<span class="string">&quot;one&quot;</span>,<span class="string">&quot;two&quot;</span>,<span class="string">&quot;three&quot;</span>)</div><div class="line">&gt; mylist &lt;- list(title=g,ages=h, j, k)</div><div class="line">&gt; mylist</div><div class="line">$title</div><div class="line">[<span class="number">1</span>] <span class="string">&quot;my First List&quot;</span></div><div class="line"></div><div class="line">$ages</div><div class="line">[<span class="number">1</span>] <span class="number">25</span> <span class="number">26</span> <span class="number">18</span> <span class="number">39</span></div><div class="line"></div><div class="line">[[<span class="number">3</span>]]</div><div class="line">     [,<span class="number">1</span>] [,<span class="number">2</span>]</div><div class="line">[<span class="number">1</span>,]    <span class="number">1</span>    <span class="number">6</span></div><div class="line">[<span class="number">2</span>,]    <span class="number">2</span>    <span class="number">7</span></div><div class="line">[<span class="number">3</span>,]    <span class="number">3</span>    <span class="number">8</span></div><div class="line">[<span class="number">4</span>,]    <span class="number">4</span>    <span class="number">9</span></div><div class="line">[<span class="number">5</span>,]    <span class="number">5</span>   <span class="number">10</span></div><div class="line"></div><div class="line">[[<span class="number">4</span>]]</div><div class="line">[<span class="number">1</span>] <span class="string">&quot;one&quot;</span>   <span class="string">&quot;two&quot;</span>   <span class="string">&quot;three&quot;</span></div><div class="line"></div><div class="line">&gt; mylist[[<span class="number">2</span>]]</div><div class="line">[<span class="number">1</span>] <span class="number">25</span> <span class="number">26</span> <span class="number">18</span> <span class="number">39</span></div><div class="line">&gt; mylist[[<span class="string">&quot;ages&quot;</span>]]</div><div class="line">[<span class="number">1</span>] <span class="number">25</span> <span class="number">26</span> <span class="number">18</span> <span class="number">39</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h5 id="3-&#x6570;&#x636E;&#x7684;&#x8F93;&#x5165;"><a href="#3-&#x6570;&#x636E;&#x7684;&#x8F93;&#x5165;" class="headerlink" title="3. &#x6570;&#x636E;&#x7684;&#x8F93;&#x5165;"></a>3. &#x6570;&#x636E;&#x7684;&#x8F93;&#x5165;</h5><ol>
+<li><em>&#x4F7F;&#x7528;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x6570;&#x636E;</em></li>
+</ol>
+<ul>
+<li>&#x8C03;&#x7528;edit()&#x51FD;&#x6570;</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mydata &lt;- data.frame(age=numeric(<span class="number">0</span>),gender=character(<span class="number">0</span>),weight=numeric(<span class="number">0</span>))</div><div class="line">mydata &lt;- edit(mydata)</div></pre></td></tr></table></figure>
+<p><img src="http://ok5v9qf85.bkt.clouddn.com/R3-6.JPG" alt="&#x53EF;&#x4EE5;&#x5728;&#x5F39;&#x51FA;&#x7684;&#x7A97;&#x53E3;&#x4E2D;&#x7F16;&#x8F91;&#x6570;&#x636E;&#x6846;"></p>
+<ol>
+<li>&#x4ECE;&#x5E26;&#x5206;&#x9694;&#x7B26;&#x7684;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x4E2D;&#x5BFC;&#x5165;&#x6570;&#x636E;</li>
+</ol>
+<ul>
+<li>&#x4F7F;&#x7528;read.table()&#x3001;read.csv()&#x51FD;&#x6570;&#x5BFC;&#x5165;&#x6570;&#x636E;</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mydataframe &lt;- read.table(file,header=logical_value, sep=<span class="string">&quot;\t&quot;</span>, row.names=<span class="number">1</span>,stringsAsFactors=<span class="literal">FALSE</span>)</div><div class="line"><span class="comment"># file &#x9700;&#x8981;&#x5BFC;&#x5165;&#x7684;&#x6587;&#x4EF6;</span></div><div class="line"><span class="comment"># header&#x4E3A;&#x903B;&#x8F91;&#x503C;&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x9996;&#x884C;&#x662F;&#x5426;&#x5305;&#x542B;&#x4E86;&#x53D8;&#x91CF;&#x540D;&#x7684;&#x903B;&#x8F91;&#x8BCD;</span></div><div class="line"><span class="comment"># sep &#x6307;&#x5B9A;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;sep=&quot; &quot;</span></div><div class="line"><span class="comment"># row.names &#x6307;&#x5B9A;&#x884C;&#x540D;</span></div><div class="line"><span class="comment"># stringsAsFactors=FALSE &#x505C;&#x6B62;&#x5BF9;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x578B;&#x53D8;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;&#x56E0;&#x5B50;</span></div></pre></td></tr></table></figure>
+<ol>
+<li>&#x5BFC;&#x5165;Excel&#x6570;&#x636E;</li>
+</ol>
+<ul>
+<li>&#x901A;&#x8FC7;RODBC&#x8F6F;&#x4EF6;&#x5305;&#x8BBF;&#x95EE;Excel(xls&#x683C;&#x5F0F;)&#x6587;&#x4EF6;</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">install.packages(<span class="string">&quot;RODBC&quot;</span>) #&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;</div><div class="line"><span class="function"><span class="title">library</span><span class="params">(RODBC)</span></span></div><div class="line">channel &lt;- odbcConnectExcel(<span class="string">&quot;myfile.xls&quot;</span>)</div><div class="line">mydataframe &lt;- sqlFetch(channel,<span class="string">&quot;mysheet&quot;</span>)</div><div class="line"><span class="function"><span class="title">odbcClose</span><span class="params">(channel)</span></span></div></pre></td></tr></table></figure>
+<ul>
+<li>&#x901A;&#x8FC7;xlsx&#x5305;&#x8BFB;&#x5165;xlsx&#x683C;&#x5F0F;</li>
+</ul>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">library(xlsx)</div><div class="line">mydataframe &lt;- <span class="built_in">read</span>.xlsx(myworkbook.xlsx,<span class="number">1</span>)</div><div class="line"><span class="comment"># &#x8868;&#x793A;&#x5BFC;&#x5165;&#x7684;&#x5DE5;&#x4F5C;&#x8868;&#x5E8F;&#x53F7;</span></div></pre></td></tr></table></figure>
+<hr>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://www.biopython.club/2017/02/05/R3/" data-id="ciysatlqe0000t8htjjx2o0xu" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div class="ds-thread" data-thread-key="2017/02/05/R3/" data-title="R语言的数据存储-R语言实战第二章创建数据集学习笔记" data-url="http://www.biopython.club/2017/02/05/R3/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>seguir:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="https://scholar.google.com.hk/citations?user=ooVqbKIAAAAJ&hl=zh-CN" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/Ginsea" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/02/05/R2/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">antic</strong>
+        <p class="article-nav-title">R语言入门</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/02/05/R3/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://ok5v9qf85.bkt.clouddn.com/R3-1.JPG)" alt="R语言的数据存储-R语言实战第二章创建数据集学习笔记" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/R/">R</a></p>
+                            <p class="item-title"><a href="/2017/02/05/R3/" class="title">R语言的数据存储-R语言实战第二章创建数据集学习笔记</a></p>
+                            <p class="item-date"><time datetime="2017-02-04T16:00:00.000Z" itemprop="datePublished">2017-02-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/02/05/R2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://ok5v9qf85.bkt.clouddn.com/R2-1.JPG)" alt="R语言入门" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/R/">R</a></p>
+                            <p class="item-title"><a href="/2017/02/05/R2/" class="title">R语言入门</a></p>
+                            <p class="item-date"><time datetime="2017-02-04T16:00:00.000Z" itemprop="datePublished">2017-02-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/20/heatmap/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://ok5v9qf85.bkt.clouddn.com/heat.png)" alt="通过R语言绘制基因表达量热图" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/R/">R</a></p>
+                            <p class="item-title"><a href="/2017/01/20/heatmap/" class="title">通过R语言绘制基因表达量热图</a></p>
+                            <p class="item-date"><time datetime="2017-01-19T16:00:00.000Z" itemprop="datePublished">2017-01-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/04/scholar_search/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://ok5v9qf85.bkt.clouddn.com/image/scholar_search/Picture1.png)" alt="科技论文的检索与获取" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Other/">Other</a></p>
+                            <p class="item-title"><a href="/2017/01/04/scholar_search/" class="title">科技论文的检索与获取</a></p>
+                            <p class="item-date"><time datetime="2017-01-04T11:55:00.130Z" itemprop="datePublished">2017-01-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/04/python_readfasta/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2017/01/04/python_readfasta/" class="title">一个简单的Python函数读取fasta文件</a></p>
+                            <p class="item-date"><time datetime="2017-01-04T11:55:00.127Z" itemprop="datePublished">2017-01-04</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">arxius</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://www.biobreeding.com.cn/">陕西博瑞德生物科技有限公司</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.hqu.edu.cn/">华侨大学</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2017 Ginsea Chen</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'ginsea'};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
