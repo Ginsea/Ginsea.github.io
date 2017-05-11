@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>通过mcmctree预测物种分化时间 | Ginsea Chen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  
-  <meta name="description" content="&amp;#x672C;&amp;#x6587;&amp;#x901A;&amp;#x8FC7;Dr.Yang&amp;#x7684;&amp;#x6559;&amp;#x7A0B;&amp;#x8FDB;&amp;#x884C;&amp;#x5B66;&amp;#x4E60;&amp;#xFF0C;&amp;#x5E76;&amp;#x8BB0;&amp;#x5F55;&amp;#x5B66;&amp;#x4E60;&amp;#x7ED3;&amp;#x679C;&amp;#xFF0C;&amp;#x5177;&amp;#x4F53;&amp;#x6B65;&amp;#x9AA4;&amp;">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>通过mcmctree预测物种分化时间 | Ginsea Chen | null</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="&amp;#x672C;&amp;#x6587;&amp;#x901A;&amp;#x8FC7;Dr.Yang&amp;#x7684;&amp;#x6559;&amp;#x7A0B;&amp;#x8FDB;&amp;#x884C;&amp;#x5B66;&amp;#x4E60;&amp;#xFF0C;&amp;#x5E76;&amp;#x8BB0;&amp;#x5F55;&amp;#x5B66;&amp;#x4E60;&amp;#x7ED3;&amp;#x679C;&amp;#xFF0C;&amp;#x5177;&amp;#x4F53;&amp;#x6B65;&amp;#x9AA4;&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过mcmctree预测物种分化时间">
 <meta property="og:url" content="http://www.biopython.club/2017/01/04/mcmctree/index.html">
@@ -21,107 +32,170 @@
 <meta name="twitter:title" content="通过mcmctree预测物种分化时间">
 <meta name="twitter:description" content="&amp;#x672C;&amp;#x6587;&amp;#x901A;&amp;#x8FC7;Dr.Yang&amp;#x7684;&amp;#x6559;&amp;#x7A0B;&amp;#x8FDB;&amp;#x884C;&amp;#x5B66;&amp;#x4E60;&amp;#xFF0C;&amp;#x5E76;&amp;#x8BB0;&amp;#x5F55;&amp;#x5B66;&amp;#x4E60;&amp;#x7ED3;&amp;#x679C;&amp;#xFF0C;&amp;#x5177;&amp;#x4F53;&amp;#x6B65;&amp;#x9AA4;&amp;">
 <meta name="twitter:image" content="http://ok5v9qf85.bkt.clouddn.com/image/mcmctree/fig1.pngfig1.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Ginsea Chen" type="application/atom+xml">
-  
-  <link rel="icon" href="/css/images/favicon.ico">
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
     
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/style.css">
-
-  <script src="/js/jquery-3.1.1.min.js"></script>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css" >
-  <link rel="stylesheet" href="/css/hiero.css" >
-  <link rel="stylesheet" href="/css/glyphs.css" >
-
+        <link rel="alternative" href="/atom.xml" title="Ginsea Chen" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
 </head>
 
+<body>
+    <div id="loading" class="active"></div>
 
-
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
-
-
-  <header id="allheader" class="site-header" role="banner">
-  <div class="clearfix container">
-      <div class="site-branding">
-
-          <h1 class="site-title">
-            
-              <a href="/" title="Ginsea Chen" rel="home"> Ginsea Chen </a>
-            
-          </h1>
-
-          
-            <div class="site-description">人生苦短，我用python</div>
-          
-            
-          <nav id="main-navigation" class="main-navigation" role="navigation">
-            <a class="nav-open">Menu</a>
-            <a class="nav-close">Close</a>
-            <div class="clearfix sf-menu">
-
-              <ul id="main-nav" class="nmenu sf-js-enabled">
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
-                    
-              </ul>
-            </div>
-          </nav>
-
-
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://ok5v9qf85.bkt.clouddn.com/image/Ginsea/%E7%99%BD%E5%BA%95.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Ginsea Chen</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
       </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Ginsea" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
   </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">通过mcmctree预测物种分化时间</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">通过mcmctree预测物种分化时间</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-04T11:55:00.117Z" itemprop="datePublished" class="page-time">
+  2017-01-04
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/PAML/">PAML</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
 </header>
 
 
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-准备物种树（树文件mtDNApri-trees）"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 准备物种树（树文件mtDNApri.trees）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-准备序列文件-mtDNApri-nuc"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 准备序列文件(mtDNApri.nuc)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-修改配置文件（mcmctree-ctl）"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.修改配置文件（mcmctree.ctl）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-运行mcmctree软件"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 运行mcmctree软件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-输出结果解读"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 输出结果解读</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-结果查看（Figtree）"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 结果查看（Figtree）</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-mcmctree"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
+    <div class="post-card">
+        <h1 class="post-card-title">通过mcmctree预测物种分化时间</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月04日 19:55" datetime="2017-01-04T11:55:00.117Z"  itemprop="datePublished">2017-01-04</time>
 
-  <div id="container">
-    <div id="wrap">
             
-      <div id="content" class="outer">
-        
-          <section id="main" style="float:none;"><article id="post-mcmctree" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" class="article-title" itemprop="name">
-      通过mcmctree预测物种分化时间
-    </h1>
-  
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/PAML/">PAML</a></li></ul>
 
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2017/01/04/mcmctree/" class="article-date">
-	  <time datetime="2017-01-04T11:55:00.117Z" itemprop="datePublished">January 4, 2017</time>
-	</a>
 
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x672C;&#x6587;&#x901A;&#x8FC7;<a href="http://abacus.gene.ucl.ac.uk/software/MCMCtree.Tutorials.pdf" target="_blank" rel="external">Dr.Yang</a>&#x7684;&#x6559;&#x7A0B;&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#xFF0C;&#x5E76;&#x8BB0;&#x5F55;&#x5B66;&#x4E60;&#x7ED3;&#x679C;&#xFF0C;&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>&#x672C;&#x6587;&#x901A;&#x8FC7;<a href="http://abacus.gene.ucl.ac.uk/software/MCMCtree.Tutorials.pdf" target="_blank" rel="external">Dr.Yang</a>&#x7684;&#x6559;&#x7A0B;&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#xFF0C;&#x5E76;&#x8BB0;&#x5F55;&#x5B66;&#x4E60;&#x7ED3;&#x679C;&#xFF0C;&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
 <h2 id="1-&#x51C6;&#x5907;&#x7269;&#x79CD;&#x6811;&#xFF08;&#x6811;&#x6587;&#x4EF6;mtDNApri-trees&#xFF09;"><a href="#1-&#x51C6;&#x5907;&#x7269;&#x79CD;&#x6811;&#xFF08;&#x6811;&#x6587;&#x4EF6;mtDNApri-trees&#xFF09;" class="headerlink" title="1. &#x51C6;&#x5907;&#x7269;&#x79CD;&#x6811;&#xFF08;&#x6811;&#x6587;&#x4EF6;mtDNApri.trees&#xFF09;"></a>1. &#x51C6;&#x5907;&#x7269;&#x79CD;&#x6811;&#xFF08;&#x6811;&#x6587;&#x4EF6;mtDNApri.trees&#xFF09;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">7 1</div><div class="line">((((human, (chimpanzee, bonobo)) <span class="string">&apos;&gt;.06&lt;.08&apos;</span>, gorilla),(orangutan, sumatran)) <span class="string">&apos;&gt;.12&lt;.16&apos;</span>, gibbon);</div></pre></td></tr></table></figure>
 <p>&#x7B2C;&#x4E00;&#x5217;&#xFF1A;7&#x8868;&#x793A;&#x7269;&#x79CD;&#x6570;&#x76EE;&#xFF0C;1&#x8868;&#x793A;&#x6811;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x76EE;&#x3002;&#x6811;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x4E3A;newick&#x3002;&#x2019;&gt;.06&lt;.08&#x2019;&#x8868;&#x793A;&#x5316;&#x77F3;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x767E;&#x4E07;&#x5E74;&#xFF0C;100Myr&#xFF0C;&#x6240;&#x4EE5;&#x8BE5;&#x5316;&#x77F3;&#x77EB;&#x6B63;&#x70B9;&#x8868;&#x793A;human&#x548C;chimp&#x7684;&#x5171;&#x540C;&#x7956;&#x5148;&#x51FA;&#x73B0;&#x4E8E;6Myr-8Myr&#x4E4B;&#x95F4;&#x3002;&#x6811;&#x6839;&#x90E8;&#x4E5F;&#x9700;&#x8981;&#x5316;&#x77F3;&#x65F6;&#x95F4;&#xFF0C;&#x82E5;&#x6839;&#x90E8;&#x65E0;&#x6CD5;&#x67E5;&#x627E;&#x5230;&#x5316;&#x77F3;&#x65F6;&#x95F4;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x5B9A;RootAge&#x53C2;&#x6570;&#xFF0C;&#x5177;&#x4F53;&#x89C1;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x8BBE;&#x5B9A;&#x3002;</p>
 <h2 id="2-&#x51C6;&#x5907;&#x5E8F;&#x5217;&#x6587;&#x4EF6;-mtDNApri-nuc"><a href="#2-&#x51C6;&#x5907;&#x5E8F;&#x5217;&#x6587;&#x4EF6;-mtDNApri-nuc" class="headerlink" title="2. &#x51C6;&#x5907;&#x5E8F;&#x5217;&#x6587;&#x4EF6;(mtDNApri.nuc)"></a>2. &#x51C6;&#x5907;&#x5E8F;&#x5217;&#x6587;&#x4EF6;(mtDNApri.nuc)</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="number">7</span>    <span class="number">3331</span></div><div class="line">human               AGACTGTTAGCAGCGCCGGGCAACTCCCTACTCAAACCAAACCTCAAGCATTCACGTTAATAGAAACCGCCCCTTACAACCTAACGAGACTTGGGGACGCTTCCGACACCACACGAAGAAA</div><div class="line">chimpanzee          AGACTGTTGGCAACGTCGGGCAACTCCCCGCCCAAACCAAACCTCACGCATTCACGTTAATAAAAACCGCCCCTTACAACCTAACGAGACCTGGGGGCGCTTCCGACACCACACGAAGAA</div><div class="line">bonobo              AGACTGTTGGCAACGCCGGGCAACTCCCCGCCCAAACCAAACCTCACGCATTCACGTTAATAGAAACCGCCCCTTACAACCTAACGAGACCTGGAGGCGCTTCCGACACCACACAAAGAA</div><div class="line">gorilla             AGATTGTTAGCAACGTCGGGTAACCCCCCACTCAAACCAGACCTCACGCATTCATATTAATAGAAACCGCTCCTTACAACCTAACGAGACCTGGGGACGCCCCCGACACCACACGAAGAA</div><div class="line">orangutan           AGGCTACTAACAGCGCCGGACGATTCCTCGCCTAAACCAAACCTCACGCATTCACATCAATAGTAACCGCTCTTTACAACCTAATGAGACCTGAAGGCGCCTCCGACACCACACAAAGAA</div><div class="line">sumatran            AGACTACTAACAGCGCCGGGCGATTCCTCACCCAAACCAAACCTCACGCATTCACATCAATAGTAACCGCCCTTTACAACCTAATGAGACTTGAAGGCACCTCCGACACCACACAAAGAG</div><div class="line">gibbon              AGACTATTGACAACGTCGGGCAACTCTCTACTCAAACCAAACCTCACGCATTCACATCAATAGAAACCGCCCCTTACAACCTAACGAGACCTGGAGGCGCCCCCGACACCACATAAAGAA</div><div class="line"></div><div class="line"><span class="number">7</span>    <span class="number">3331</span></div><div class="line">human               AAATTCCTTCCCTTGTCCCTTTTTTCCTTTCATTAAGTTCCAAGTTAGGCGCTTTTCTTTTTCCCATTGTTCACTCCCCATCTATCTCTCTGCGCTTTCATTCAGCCCCTTCTTTTTACT</div><div class="line">chimpanzee          AAATTCCTCCCCTTGTCCCTTTTTTCCTTTCATTAAGTTCCAAGTTAGGCGCTTTTCTTTTTCCCATTGTTCACTCCCCATCTATCTCTCTGCGCTTTCATTCAGCCCCTTCTTTTTACT</div><div class="line">bonobo              AAATTCCTCCCCTTGTCCCTTTTTTCCTTTCATTAAGTTCCAAGTTAGGCGCTTTTCTTTTTCCCATTGTTCACTCCCCATCTATCTCTCTGCGCTTTCATTCAGCCCCTTCTTTTTACT</div><div class="line">gorilla             AAATTCCTTCCCTTGTCCCTTTTTTCCTTTCATTAAGTTCCAAGTTAGGCGCTTTTGTTTTTCCCATTGTTCACTCCCCATCTATCTCTCTGCGCTCTCATTCAGCCCCTTCTTTTTACT</div><div class="line">orangutan           AAATTCCTCCCCTTGTCCCTTTTTTCCTTTCATTAAGTTCCAAGTTGGGCGCTTTCCTTTTTCCCATTGTTCACTCCCCATCTATCTCTCTGCGCTCTCATTCAGCCCCTTCTTTTTACT</div><div class="line">sumatran            AAGTTCCTTCCCTTGTCCCTTTTTTCCTTTCATTAAGTTTTAAGTTGGGCGCTTTCCTTTTTCCCATTGTTCACTCCCCATCTATCTCTCTGCGCTCTCATTCAGCCCCTTCTTTTTACT</div><div class="line">gibbon              AAATTCCTCCCCTTGTCCCTCTTTTCCTTTCATTAAGTTCCAAGTTAGGCGCTTTTCTTCTTCCCATTGTTCACTCCCCATCTATCTCTCTGCGCTCTCATTCAGCCCCTTCTTTTTACT</div><div class="line"></div><div class="line"> <span class="number">7</span>    <span class="number">3331</span></div><div class="line">human               <span class="built_in">CATGCTACTCCACACACCAAGCTATCTAGCCTCCCCAATCCAAAACAAACATTAAACACTTTCATCCCACGTCATAACCAATACACGCCCAAGCAGTACCCAAACATACTCCAATTCACC</span></div><div class="line">chimpanzee          <span class="built_in">CATACTACTCCACACACCAAACTACCTAGCCTCCCCAATCCAAAATAAACATCAAACACTTTCACTTTGTACCACAACCAATACACGTCCAAACAACACCCAGACATACTCCAATCCATT</span></div><div class="line">bonobo              <span class="built_in">CATGCTACTCCACACACCAAGCTACCTAGTCTCCCCAATCCAAAATAAACATCAAACATTTTCATTTCATATCACAACCAATACACGTCCAAACAACACCCAGACATACTCCAATCCATC</span></div><div class="line">gorilla             <span class="built_in">CATACTACTCCACACACCAAATCATCTAGCCTCCCCAGTCCAGAACAAACACTGAAAATTTTCACCCCACGCCACAATCGATACGCACCCGAACAATACCAAAACCTACTCTAACCTACC</span></div><div class="line">orangutan           <span class="built_in">CATACCACTCCACACCCTATACCATCCAACTTCCCCTATCCGAAACAAATACAAAACACTTCCACCCCACCCCATAATCGACACATAACCAAACGACATCCGAATCCACCCCAATTTACT</span></div><div class="line">sumatran            <span class="built_in">CATATCACTCCAAACCCCAAACCATCCAGCCTCCCCAATTCAAAACAAATACCAAGCACTCCCACCCAACCCCATAACCAACATATAATCAAACGATACCCAAATCCATCCTAATTTACC</span></div><div class="line">gibbon              <span class="built_in">CATACTACTCCATACACCAAATTATCCAACTCCCCCAATCCAGAATAAACACCGACCATCTTCACCCTCCACCACAATCAACACGCAACCAAACAACTCCTACGCACCTCTAAATCCACT</span></div></pre></td></tr></table></figure>
@@ -129,170 +203,281 @@
 <h2 id="3-&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;mcmctree-ctl&#xFF09;"><a href="#3-&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;mcmctree-ctl&#xFF09;" class="headerlink" title="3.&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;mcmctree.ctl&#xFF09;"></a>3.&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;mcmctree.ctl&#xFF09;</h2><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="attr">seed</span> = -<span class="number">1</span> <span class="comment">#&#x8BBE;&#x5B9A;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x79CD;&#x5B50;&#xFF0C;-1&#x8868;&#x793A;&#x7528;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x8BBE;&#x5B9A;&#x79CD;&#x5B50;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x8FD0;&#x884C;mcmctree&#xFF0C;&#x7531;&#x4E8E;&#x5176;&#x968F;&#x673A;&#x79CD;&#x5B50;&#x4E0D;&#x540C;&#xFF0C;&#x56E0;&#x6B64;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x6709;&#x5DEE;&#x5F02;&#xFF1B;&#x8981;&#x662F;&#x9700;&#x8981;&#x5F97;&#x5230;&#x53EF;&#x91CD;&#x590D;&#x6027;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x9700;&#x8981;&#x5C06;seed&#x53C2;&#x6570;&#x8BBE;&#x5B9A;&#x4E3A;&#x4E00;&#x4E2A;&#x5947;&#x6570;&#x6216;&#x8005;&#x5076;&#x6570;&#xFF1B;</span></div><div class="line"><span class="attr">seqfile</span> = /path/to/mtCDNApri123.txt <span class="comment">#&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x6587;&#x4EF6;(&#x7ED9;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;)&#xFF0C;&#x5177;&#x4F53;&#x5982;2&#x6240;&#x793A;&#xFF1B;</span></div><div class="line"><span class="attr">treefile</span> = /path/to/mtCDNApri.trees <span class="comment">#&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x7269;&#x79CD;&#x6811;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x6807;&#x6CE8;&#x5316;&#x77F3;&#x77EB;&#x6B63;&#x70B9;&#xFF08;&#x7ED9;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF09;&#xFF0C;&#x5177;&#x4F53;&#x5982;1&#x6240;&#x793A;&#xFF1B;</span></div><div class="line"><span class="attr">outfile</span> = out <span class="comment">#&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x7684;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#xFF0C;&#x672C;&#x5206;&#x6790;&#x7684;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x4E3A;out</span></div><div class="line"><span class="attr">ndata</span> = <span class="number">3</span> <span class="comment">#&#x6BD4;&#x5BF9;&#x7ED3;&#x679C;&#x7684;&#x5206;&#x533A;&#x6570;&#x76EE;&#xFF0C;&#x672C;&#x5206;&#x6790;&#x6709;&#x4E09;&#x4E2A;&#x5206;&#x533A;&#xFF0C;&#x89C1;2&#x7684;&#x6570;&#x636E;&#x6587;&#x4EF6;</span></div><div class="line"><span class="attr">usedata</span> = <span class="number">1</span> * <span class="number">0</span>: no data; <span class="number">1</span>:seq; <span class="number">2</span>:approximation; <span class="number">3</span>:out.BV (<span class="keyword">in</span>.BV) <span class="comment">#0&#x8868;&#x793A;&#x4E0D;&#x8BA1;&#x7B97;&#x4F3C;&#x7136;&#x503C;&#xFF0C;&#x4EC5;&#x8BA1;&#x7B97;&#x5148;&#x9A8C;&#x503C;&#xFF1B;1&#x8868;&#x793A;&#x901A;&#x8FC7;&#x5E38;&#x89C4;&#x65B9;&#x6CD5;&#x8BA1;&#x7B97;&#x4F3C;&#x7136;&#x51FD;&#x6570;&#xFF1B;2&#x548C;3&#x8868;&#x793A;&#x5206;&#x522B;&#x901A;&#x8FC7;&#x8FD1;&#x4F3C;&#x4F3C;&#x7136;&#x8BA1;&#x7B97;&#x548C;&#x6700;&#x5927;&#x4F3C;&#x7136;&#x6CD5;&#x4F30;&#x7B97;&#x5206;&#x652F;&#x957F;&#x5EA6;</span></div><div class="line"><span class="attr">clock</span> = <span class="number">2</span> * <span class="number">1</span>: global clock; <span class="number">2</span>: independent; <span class="literal">and</span> <span class="number">3</span>: correlated rates <span class="comment">#clock&#x6307;&#x5B9A;&#x5206;&#x5B50;&#x949F;&#x6A21;&#x578B;</span></div><div class="line"><span class="attr">RootAge</span> = &apos;&lt;<span class="number">1.0</span>&apos; * safe constraint on root age, used <span class="keyword">if</span> no fossil for root. <span class="comment">#&#x4E3A;&#x7CFB;&#x7EDF;&#x53D1;&#x80B2;&#x6811;&#x7684;&#x6839;&#x90E8;&#x8BBE;&#x5B9A;&#x5316;&#x77F3;&#x77EB;&#x6B63;&#x70B9;&#xFF0C;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x5F53;&#x7CFB;&#x7EDF;&#x53D1;&#x80B2;&#x6811;&#x79CD;&#x672A;&#x4E3A;&#x6811;&#x6839;&#x90E8;&#x6807;&#x6CE8;&#x5316;&#x77F3;&#x77EB;&#x6B63;&#x70B9;&#x7684;&#x60C5;&#x51B5;&#x3002;&lt;1.0&#x8868;&#x793A;&#x6240;&#x6709;&#x7269;&#x79CD;&#x7684;&#x5171;&#x540C;&#x7956;&#x5148;&#x6700;&#x65E9;&#x8D77;&#x6E90;&#x4E8E;100Myr</span></div><div class="line"><span class="attr">model</span> = <span class="number">0</span> * <span class="number">0</span>:JC69, <span class="number">1</span>:K80, <span class="number">2</span>:F81, <span class="number">3</span>:F84, <span class="number">4</span>:HKY85 <span class="comment">#&#x8BBE;&#x5B9A;&#x66FF;&#x4EE3;&#x6A21;&#x578B;</span></div><div class="line"><span class="attr">alpha</span> = <span class="number">0</span> * alpha for gamma rates at sites <span class="comment">#&#x8BBE;&#x5B9A;&#x66FF;&#x4EE3;&#x6A21;&#x578B;</span></div><div class="line"><span class="attr">ncatG</span> = <span class="number">5</span> * No. categories <span class="keyword">in</span> discrete gamma <span class="comment">#&#x8BBE;&#x5B9A;&#x66FF;&#x4EE3;&#x6A21;&#x578B;</span></div><div class="line"><span class="attr">cleandata</span> = <span class="number">0</span> * remove sites <span class="keyword">with</span> ambiguity data (<span class="number">1</span>:yes, <span class="number">0</span>:no)? <span class="comment">#&#x662F;&#x5426;&#x79FB;&#x9664;&#x4E0D;&#x6E05;&#x695A;&#x7684;&#x4F4D;&#x70B9;&#xFF0C;0&#x8868;&#x793A;&#x4E0D;&#x79FB;&#x9664;&#xFF1B;1&#x8868;&#x793A;&#x79FB;&#x9664;&#x3002;</span></div><div class="line"><span class="attr">BDparas</span> = <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> * birth, death, sampling <span class="comment">#&#x8BBE;&#x5B9A;birth and death process&#x7684;&#x53C2;&#x6570;&#xFF0C;birth and death process&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x6CA1;&#x6709;&#x5316;&#x77F3;&#x8BC1;&#x636E;&#x7684;&#x8282;&#x70B9;&#x7684;&#x65F6;&#x95F4;&#x5148;&#x9A8C;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1 1 0&#xFF0C;&#x8868;&#x793A;&#x4E0D;&#x540C;&#x8282;&#x70B9;&#x7684;&#x65F6;&#x95F4;&#x5148;&#x9A8C;&#x503C;&#x4E0D;&#x540C;&#x3002;</span></div><div class="line"><span class="attr">kappa_gamma</span> = <span class="number">6</span> <span class="number">2</span> * gamma prior for kappa <span class="comment">#&#x66FF;&#x4EE3;&#x6A21;&#x578B;&#x53C2;&#x6570;Kappa&#xFF08;&#x6307;&#x8F6C;&#x6362;&#xFF0C;&#x98A0;&#x6362;&#x901F;&#x7387;&#x6BD4;&#x503C;&#xFF09;&#x7684;gamma&#x5148;&#x9A8C;&#x503C;&#xFF0C;</span></div><div class="line"><span class="attr">alpha_gamma</span> = <span class="number">1</span> <span class="number">1</span> * gamma prior for alpha <span class="comment">#&#x66FF;&#x4EE3;&#x6A21;&#x578B;&#x53C2;&#x6570;alpha&#x7684;gamma&#x5148;&#x9A8C;&#x503C;&#xFF08;&#x4E0D;&#x540C;&#x4F4D;&#x70B9;&#x53D8;&#x5F02;&#x901F;&#x7387;&#x7684;gamma&#x5206;&#x5E03;&#x53C2;&#x6570;&#xFF09;</span></div><div class="line"><span class="attr">rgene_gamma</span> = <span class="number">2</span> <span class="number">2</span> * gamma prior for rate for genes <span class="comment">#&#x5E73;&#x5747;&#x66FF;&#x4EE3;&#x901F;&#x7387;&#x7684;gamma&#x5148;&#x9A8C;&#x503C;</span></div><div class="line"><span class="attr">sigma2_gamma</span> = <span class="number">1</span> <span class="number">10</span> * gamma prior for sigma^<span class="number">2</span> (for <span class="attr">clock=2</span> <span class="literal">or</span> <span class="number">3</span>) <span class="comment">#&#x901F;&#x7387;&#x8F6C;&#x6362;&#x53C2;&#x6570;&#x7684;gamma&#x5148;&#x9A8C;&#x503C;</span></div><div class="line"><span class="attr">finetune</span> = <span class="number">1</span>: .<span class="number">1</span> .<span class="number">1</span> .<span class="number">1</span> .<span class="number">1</span> .<span class="number">1</span> .<span class="number">1</span> * auto (<span class="number">0</span> <span class="literal">or</span> <span class="number">1</span>) : times, rates, etc.<span class="comment">#4.4e&#x7248;&#x672C;&#x4E4B;&#x540E;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x4E0D;&#x91CD;&#x8981;&#xFF0C;&#x8BBE;&#x5B9A;&#x9ED8;&#x8BA4;&#x5373;&#x53EF;&#xFF0C;&#x53C2;&#x6570;&#x8868;&#x793A;&#x9690;&#x9A6C;&#x5C14;&#x79D1;&#x592B;&#x6A21;&#x578B;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;step sizes</span></div><div class="line"><span class="attr">print</span> = <span class="number">1</span> <span class="comment">#&#x53EF;&#x9009;&#x503C;&#x4E3A;0&#x6216;&#x8005;1&#xFF0C;0&#x8868;&#x793A;&#x4EC5;&#x8F93;&#x51FA;&#x9690;&#x9A6C;&#x5C14;&#x79D1;&#x592B;&#x6A21;&#x578B;&#x7ED3;&#x679C;&#x81F3;&#x5C4F;&#x5E55;&#xFF0C;1&#x8868;&#x793A;&#x5C06;&#x5176;&#x8F93;&#x51FA;&#x4E0E;&#x5C4F;&#x5E55;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x8FD8;&#x5C06;&#x5176;&#x4FDD;&#x5B58;&#x4E8E;&#x786C;&#x76D8;&#x4E2D;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x4E3A;mcmc.out</span></div><div class="line"><span class="attr">burnin</span> = <span class="number">2000</span> <span class="comment">#&#x4E22;&#x5F03;&#x524D;&#x4E24;&#x5343;&#x6B21;&#x53D6;&#x6837;&#x7684;&#x6837;&#x672C;&#xFF1B;</span></div><div class="line"><span class="attr">sampfreq</span> = <span class="number">2</span> <span class="comment">#&#x53D6;&#x6837;&#x6B21;&#x6570;&#xFF0C;&#x6BCF;&#x4E24;&#x6B21;&#x8FED;&#x4EE3;&#x53D6;&#x4E00;&#x6B21;&#x6837;</span></div><div class="line"><span class="attr">nsample</span> = <span class="number">20000</span> <span class="comment">#&#x603B;&#x5171;&#x53D6;&#x6837;&#x7684;&#x6570;&#x76EE;</span></div><div class="line"><span class="comment">#&#x8F6F;&#x4EF6;&#x603B;&#x5171;&#x8FD0;&#x884C;&#x7684;&#x8FED;&#x4EE3;&#x6B21;&#x6570;2000+2*20000=42000</span></div></pre></td></tr></table></figure>
 <h2 id="4-&#x8FD0;&#x884C;mcmctree&#x8F6F;&#x4EF6;"><a href="#4-&#x8FD0;&#x884C;mcmctree&#x8F6F;&#x4EF6;" class="headerlink" title="4. &#x8FD0;&#x884C;mcmctree&#x8F6F;&#x4EF6;"></a>4. &#x8FD0;&#x884C;mcmctree&#x8F6F;&#x4EF6;</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ mkdir mcmctree <span class="comment">#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</span></div><div class="line">$ <span class="built_in">cd</span> mcmctree <span class="comment">#&#x8FDB;&#x5165;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</span></div><div class="line">$ cp ../mcmctrees.ctl ./ <span class="comment">#&#x5C06;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x5230;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</span></div><div class="line">$ mcmctree mcmctrees.ctl <span class="comment">#&#x8FD0;&#x884C;&#x8F6F;&#x4EF6;</span></div></pre></td></tr></table></figure>
 <h2 id="5-&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x89E3;&#x8BFB;"><a href="#5-&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x89E3;&#x8BFB;" class="headerlink" title="5. &#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x89E3;&#x8BFB;"></a>5. &#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x89E3;&#x8BFB;</h2><figure class="highlight dns"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">lnL0 = -<span class="number">40215.47</span> #&#x521D;&#x59CB;&#x7684;&#x4F3C;&#x7136;&#x503C;</div><div class="line">Starting MCMC (np = <span class="number">48</span>) . . . #&#x53C2;&#x6570;&#x6570;&#x76EE;&#x4E3A;<span class="number">48</span>&#xFF0C;<span class="number">7</span>&#x4E2A;&#x7269;&#x79CD;&#x7684;&#x6709;&#x6839;&#x6811;&#x6709;<span class="number">7</span>-<span class="number">1</span>=<span class="number">6</span>&#x4E2A;&#x5185;&#x90E8;&#x8282;&#x70B9;&#x548C;<span class="number">7*2-2=12</span>&#x4E2A;&#x5206;&#x652F;&#x3002;&#x603B;&#x5171;&#x4F30;&#x7B97;<span class="number">6</span>&#x4E2A;&#x5206;&#x5316;&#x65F6;&#x95F4;&#xFF0C;<span class="number">3</span>&#x4E2A;&#x5E73;&#x5747;&#x7A81;&#x53D8;&#x901F;&#x7387;&#x53C2;&#x6570;&#x4EE5;&#x53CA;<span class="number">3</span>&#x4E2A;&#x901F;&#x7387;&#x8F6C;&#x6362;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;<span class="number">12</span>*<span class="number">3</span>=<span class="number">36</span>&#x4E2A;&#x5206;&#x652F;&#x901F;&#x7387;&#x3002;&#x603B;&#x5171;&#x6709;<span class="number">6+3+3+36</span>=<span class="number">48</span>&#x4E2A;&#x53C2;&#x6570;</div><div class="line">finetune steps (time rate mixing para RatePara ...): <span class="number">0.1000 0</span>.<span class="number">1000</span> <span class="number">0.1000 0</span>.<span class="number">1000</span> <span class="number">0</span>.<span class="number">1000</span></div><div class="line">paras: <span class="number">6</span> times, <span class="number">3</span> mu, <span class="number">3</span> sigma2 (&amp; rates, kappa, alpha)</div><div class="line">-<span class="number">4</span>% <span class="number">0.16 0.64</span> <span class="number">0.33 0.00</span> <span class="number">0.69 0.178</span> <span class="number">0.149 0</span>.<span class="number">091</span> <span class="number">0.067 0</span>.<span class="number">032</span> - <span class="number">1</span>.<span class="number">438</span> -<span class="number">34999.3</span> #&#x767E;&#x5206;&#x6BD4;&#x4E3A;&#x8D1F;&#x6570;&#x8868;&#x793A;MCMC&#x5206;&#x6790;&#x5904;&#x4E8E;&#x6570;&#x636E;&#x8FC7;&#x6EE4;&#x9636;&#x6BB5;</div><div class="line">Current Pjump: <span class="number">0.16033 0</span>.<span class="number">64117 0</span>.<span class="number">32800 0</span>.<span class="number">00000 0</span>.<span class="number">69267</span></div><div class="line">Current finetune: <span class="number">0.10000 0</span>.<span class="number">10000 0</span>.<span class="number">10000 0</span>.<span class="number">10000 0</span>.<span class="number">10000</span></div><div class="line">New finetune: <span class="number">0.05050 0</span>.<span class="number">31051 0</span>.<span class="number">11113 0</span>.<span class="number">00100 0</span>.<span class="number">37446</span></div><div class="line">-<span class="number">2</span>% <span class="number">0.38 0.19</span> <span class="number">0.40 0.00</span> <span class="number">0.37 0.160</span> <span class="number">0.147 0</span>.<span class="number">092</span> <span class="number">0.066 0</span>.<span class="number">029</span> - <span class="number">1</span>.<span class="number">313</span> -<span class="number">34989.9</span></div><div class="line">Current Pjump: <span class="number">0.38033 0</span>.<span class="number">18628 0</span>.<span class="number">39600 0</span>.<span class="number">00000 0</span>.<span class="number">36633</span></div><div class="line">Current finetune: <span class="number">0.05050 0</span>.<span class="number">31051 0</span>.<span class="number">11113 0</span>.<span class="number">00100 0</span>.<span class="number">37446</span></div><div class="line">New finetune: <span class="number">0.06743 0</span>.<span class="number">18359 0</span>.<span class="number">15638 0</span>.<span class="number">00001 0</span>.<span class="number">47671</span></div><div class="line">-<span class="number">1</span>% <span class="number">0.27 0.37</span> <span class="number">0.27 0.00</span> <span class="number">0.30 0.154</span> <span class="number">0.147 0</span>.<span class="number">092</span> <span class="number">0.066 0</span>.<span class="number">029</span> - <span class="number">1</span>.<span class="number">280</span> -<span class="number">34995.0</span></div><div class="line">Current Pjump: <span class="number">0.27133 0</span>.<span class="number">36956 0</span>.<span class="number">27400 0</span>.<span class="number">00000 0</span>.<span class="number">30433</span></div><div class="line">Current finetune: <span class="number">0.06743 0</span>.<span class="number">18359 0</span>.<span class="number">15638 0</span>.<span class="number">00001 0</span>.<span class="number">47671</span></div><div class="line">New finetune: <span class="number">0.06009 0</span>.<span class="number">23632 0</span>.<span class="number">14090 0</span>.<span class="number">00000 0</span>.<span class="number">48476</span></div><div class="line"><span class="number">0</span>% <span class="number">0.29 0.27</span> <span class="number">0.32 0.00</span> <span class="number">0.30 0.155</span> <span class="number">0.145 0</span>.<span class="number">094</span> <span class="number">0.067 0</span>.<span class="number">029</span> - <span class="number">1</span>.<span class="number">332</span> -<span class="number">34996.7 0</span>:<span class="number">02</span></div><div class="line">Current Pjump: <span class="number">0.29367 0</span>.<span class="number">26978 0</span>.<span class="number">32200 0</span>.<span class="number">00000 0</span>.<span class="number">29833</span></div><div class="line">Current finetune: <span class="number">0.06009 0</span>.<span class="number">23632 0</span>.<span class="number">14090 0</span>.<span class="number">00000 0</span>.<span class="number">48476</span></div><div class="line">New finetune: <span class="number">0.05862 0</span>.<span class="number">20922 0</span>.<span class="number">15316 0</span>.<span class="number">00000 0</span>.<span class="number">48163</span></div><div class="line"><span class="number">5</span>% <span class="number">0.32 0.31</span> <span class="number">0.25 0.00</span> <span class="number">0.31 0.158</span> <span class="number">0.147 0</span>.<span class="number">092</span> <span class="number">0.066 0</span>.<span class="number">029</span> - <span class="number">1</span>.<span class="number">280</span> -<span class="number">34997.5 0</span>:<span class="number">04</span></div><div class="line"><span class="number">10</span>% <span class="number">0.31 0.32</span> <span class="number">0.27 0.00</span> <span class="number">0.30 0.158</span> <span class="number">0.146 0</span>.<span class="number">093</span> <span class="number">0.067 0</span>.<span class="number">029</span> - <span class="number">1</span>.<span class="number">303</span> -<span class="number">35000.8 0</span>:<span class="number">06</span></div><div class="line"><span class="number">15</span>% <span class="number">0.32 0.32</span> <span class="number">0.28 0.00</span> <span class="number">0.30 0.157</span> <span class="number">0.146 0</span>.<span class="number">093</span> <span class="number">0.067 0</span>.<span class="number">029</span> - <span class="number">1</span>.<span class="number">308</span> -<span class="number">34994.6 0</span>:<span class="number">08</span></div><div class="line"><span class="number">20</span>% <span class="number">0.32 0.32</span> <span class="number">0.28 0.00</span> <span class="number">0.31 0.157</span> <span class="number">0.146 0</span>.<span class="number">093</span> <span class="number">0.067 0</span>.<span class="number">029</span> - <span class="number">1</span>.<span class="number">311</span> -<span class="number">34993.5 0</span>:<span class="number">10</span></div></pre></td></tr></table></figure>
-<h2 id="6-&#x7ED3;&#x679C;&#x67E5;&#x770B;&#xFF08;Figtree&#xFF09;"><a href="#6-&#x7ED3;&#x679C;&#x67E5;&#x770B;&#xFF08;Figtree&#xFF09;" class="headerlink" title="6. &#x7ED3;&#x679C;&#x67E5;&#x770B;&#xFF08;Figtree&#xFF09;"></a>6. &#x7ED3;&#x679C;&#x67E5;&#x770B;&#xFF08;<a href="http://tree.bio.ed.ac.uk/software/figtree/" target="_blank" rel="external">Figtree</a>&#xFF09;</h2><p>&#x901A;&#x8FC7;figtree&#x6253;&#x5F00;Figtrees.tre&#x6587;&#x4EF6;&#xFF0C;&#x5BF9;&#x5E94;&#x7ED3;&#x679C;&#x8BF7;&#x89C1;&#x4E0B;&#x56FE;<br><img src="http://ok5v9qf85.bkt.clouddn.com/image/mcmctree/fig1.pngfig1.png" alt=""></p>
+<h2 id="6-&#x7ED3;&#x679C;&#x67E5;&#x770B;&#xFF08;Figtree&#xFF09;"><a href="#6-&#x7ED3;&#x679C;&#x67E5;&#x770B;&#xFF08;Figtree&#xFF09;" class="headerlink" title="6. &#x7ED3;&#x679C;&#x67E5;&#x770B;&#xFF08;Figtree&#xFF09;"></a>6. &#x7ED3;&#x679C;&#x67E5;&#x770B;&#xFF08;<a href="http://tree.bio.ed.ac.uk/software/figtree/" target="_blank" rel="external">Figtree</a>&#xFF09;</h2><p>&#x901A;&#x8FC7;figtree&#x6253;&#x5F00;Figtrees.tre&#x6587;&#x4EF6;&#xFF0C;&#x5BF9;&#x5E94;&#x7ED3;&#x679C;&#x8BF7;&#x89C1;&#x4E0B;&#x56FE;<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ok5v9qf85.bkt.clouddn.com/image/mcmctree/fig1.pngfig1.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure></p>
 
-      
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-21T19:36:21.230Z" itemprop="dateUpdated">2017年1月22日 3:36</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/01/04/mcmctree/" target="_blank" rel="external">http://www.biopython.club/2017/01/04/mcmctree/</a>
     </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/PAML/">PAML</a>
-
-      
-      
-        
-	<div id="comment">
-	
-	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2017/01/04/mcmctree/" data-title="通过mcmctree预测物种分化时间" data-url="http://www.biopython.club/2017/01/04/mcmctree/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"ginsea"};
-	  (function() {
-	    var ds = document.createElement('script');
-	    ds.type = 'text/javascript';ds.async = true;
-	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	    ds.charset = 'UTF-8';
-	    (document.getElementsByTagName('head')[0] 
-	     || document.getElementsByTagName('body')[0]).appendChild(ds);
-	  })();
-	  </script>
-	<!-- 多说公共JS代码 end -->
-	
-	</div>
-	<link rel="stylesheet" href="/css/comment.css">
-
-
-      
+    <footer>
+        <a href="http://www.biopython.club">
+            <img src="http://ok5v9qf85.bkt.clouddn.com/image/Ginsea/%E7%99%BD%E5%BA%95.jpg" alt="Ginsea Chen">
+            Ginsea Chen
+        </a>
     </footer>
-  </div>
-  
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
     
-<nav id="article-nav">
-  
-    <a href="/2017/01/04/python_readfasta/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          一个简单的Python函数读取fasta文件
-        
-      </div>
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.biopython.club/2017/01/04/mcmctree/&title=《通过mcmctree预测物种分化时间》 — Ginsea Chen&pic=http://ok5v9qf85.bkt.clouddn.com/image/Ginsea/%E7%99%BD%E5%BA%95.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.biopython.club/2017/01/04/mcmctree/&title=《通过mcmctree预测物种分化时间》 — Ginsea Chen&source=人生苦短，我用python" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.biopython.club/2017/01/04/mcmctree/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通过mcmctree预测物种分化时间》 — Ginsea Chen&url=http://www.biopython.club/2017/01/04/mcmctree/&via=http://www.biopython.club" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.biopython.club/2017/01/04/mcmctree/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
     </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
   
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/01/04/python_readfasta/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">一个简单的Python函数读取fasta文件</h4>
+      </a>
+    </div>
   
-    <a href="/2017/01/04/genome/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">测序之后的基因组数据如何共享和存储</div>
-    </a>
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/04/genome/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">测序之后的基因组数据如何共享和存储</h4>
+      </a>
+    </div>
   
 </nav>
 
-  
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="mcmctree" data-title="通过mcmctree预测物种分化时间" data-url="http://www.biopython.club/2017/01/04/mcmctree/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ginsea', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
 </article>
 
-<!-- Table of Contents -->
-
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-准备物种树（树文件mtDNApri-trees）"><span class="nav-number">1.</span> <span class="nav-text">1. 准备物种树（树文件mtDNApri.trees）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-准备序列文件-mtDNApri-nuc"><span class="nav-number">2.</span> <span class="nav-text">2. 准备序列文件(mtDNApri.nuc)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-修改配置文件（mcmctree-ctl）"><span class="nav-number">3.</span> <span class="nav-text">3.修改配置文件（mcmctree.ctl）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-运行mcmctree软件"><span class="nav-number">4.</span> <span class="nav-text">4. 运行mcmctree软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-输出结果解读"><span class="nav-number">5.</span> <span class="nav-text">5. 输出结果解读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-结果查看（Figtree）"><span class="nav-number">6.</span> <span class="nav-text">6. 结果查看（Figtree）</span></a></li></ol>
-    
-    </div>
-  </aside>
-</section>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
         
-      </div>
-      <footer id="footer" class="site-footer">
-  
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
 
-  <div class="clearfix container">
-      <div class="site-info">
-	      &copy; 2017 Ginsea Chen All Rights Reserved.
-      </div>
-      <div class="site-credit">
-        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
-      </div>
-  </div>
-</footer>
-
-
-<!-- min height -->
-
-<script>
-    var contentdiv = document.getElementById("content");
-
-    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-</script>
-    </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
-    
-<div style="display: none;">
-  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
 </div>
 
-<!-- mathjax config similar to math.stackexchange -->
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Ginsea Chen &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.biopython.club/2017/01/04/mcmctree/&title=《通过mcmctree预测物种分化时间》 — Ginsea Chen&pic=http://ok5v9qf85.bkt.clouddn.com/image/Ginsea/%E7%99%BD%E5%BA%95.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.biopython.club/2017/01/04/mcmctree/&title=《通过mcmctree预测物种分化时间》 — Ginsea Chen&source=人生苦短，我用python" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.biopython.club/2017/01/04/mcmctree/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通过mcmctree预测物种分化时间》 — Ginsea Chen&url=http://www.biopython.club/2017/01/04/mcmctree/&via=http://www.biopython.club" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.biopython.club/2017/01/04/mcmctree/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.biopython.club/2017/01/04/mcmctree/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
 </script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<script src="/js/main.min.js?v=1.4.7"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
 
-
-<script src="/js/script.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/search.min.js?v=1.4.7" async></script>
 
 
 
 
 
-  </div>
 
-  <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js" async=""></script>
-  
-
-  <div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>

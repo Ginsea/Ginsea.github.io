@@ -4,6 +4,60 @@
 
     
   <url>
+    <loc>http://www.biopython.club/2017/05/11/python3_bytes/</loc>
+    <lastmod>2017-05-11T02:43:32.340Z</lastmod>
+    <data>
+        <display>
+        <title>解决在Python3中读入二进制文件之后出现TypeError的问题</title>
+        <pubTime>2017-05-10T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="python" url="http://www.biopython.club/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.biopython.club/2017/05/10/python_custom_module/</loc>
+    <lastmod>2017-05-10T06:00:26.678Z</lastmod>
+    <data>
+        <display>
+        <title>在Python语言中导入自定义模块</title>
+        <pubTime>2017-05-09T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="python" url="http://www.biopython.club/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.biopython.club/2017/02/08/R4/</loc>
+    <lastmod>2017-02-08T10:18:20.561Z</lastmod>
+    <data>
+        <display>
+        <title>通过R进行两个数据集间的Wilcoxon rank sum test比较</title>
+        <pubTime>2017-02-07T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="R" url="http://www.biopython.club/categories/R/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.biopython.club/2017/02/05/R3/</loc>
     <lastmod>2017-02-06T02:33:21.327Z</lastmod>
     <data>

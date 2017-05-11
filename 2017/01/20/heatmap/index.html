@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>通过r语言绘制基因表达量热图 | Ginsea Chen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
-  
-  <meta name="description" content="1. &amp;#x6570;&amp;#x636E;&amp;#x8F93;&amp;#x5165;&amp;#x683C;&amp;#x5F0F;&amp;#xFF08;data.txt,&amp;#x4EE5;Tab&amp;#x5206;&amp;#x5272;&amp;#xFF09;1234gene  t1  t2  t3  t4g1  0.256 1.375 2.569 1.256g2  0.456 1.569 3.590 3.154g3  5.569 4.562 1.2">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>通过R语言绘制基因表达量热图 | Ginsea Chen | null</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="1. &amp;#x6570;&amp;#x636E;&amp;#x8F93;&amp;#x5165;&amp;#x683C;&amp;#x5F0F;&amp;#xFF08;data.txt,&amp;#x4EE5;Tab&amp;#x5206;&amp;#x5272;&amp;#xFF09;1234gene  t1  t2  t3  t4g1  0.256 1.375 2.569 1.256g2  0.456 1.569 3.590 3.154g3  5.569 4.562 1.2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过R语言绘制基因表达量热图">
 <meta property="og:url" content="http://www.biopython.club/2017/01/20/heatmap/index.html">
@@ -21,276 +32,450 @@
 <meta name="twitter:title" content="通过R语言绘制基因表达量热图">
 <meta name="twitter:description" content="1. &amp;#x6570;&amp;#x636E;&amp;#x8F93;&amp;#x5165;&amp;#x683C;&amp;#x5F0F;&amp;#xFF08;data.txt,&amp;#x4EE5;Tab&amp;#x5206;&amp;#x5272;&amp;#xFF09;1234gene  t1  t2  t3  t4g1  0.256 1.375 2.569 1.256g2  0.456 1.569 3.590 3.154g3  5.569 4.562 1.2">
 <meta name="twitter:image" content="http://ok5v9qf85.bkt.clouddn.com/heat.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Ginsea Chen" type="application/atom+xml">
-  
-  <link rel="icon" href="/css/images/favicon.ico">
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
-  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
-    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
     
-  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
-  <link rel="stylesheet" href="/css/style.css">
-
-  <script src="/js/jquery-3.1.1.min.js"></script>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.css" >
-  <link rel="stylesheet" href="/css/hiero.css" >
-  <link rel="stylesheet" href="/css/glyphs.css" >
-
+        <link rel="alternative" href="/atom.xml" title="Ginsea Chen" type="application/atom+xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.4.7">
+    <script>window.lazyScripts=[]</script>
 </head>
 
+<body>
+    <div id="loading" class="active"></div>
 
-
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
-
-
-  <header id="allheader" class="site-header" role="banner">
-  <div class="clearfix container">
-      <div class="site-branding">
-
-          <h1 class="site-title">
-            
-              <a href="/" title="Ginsea Chen" rel="home"> Ginsea Chen </a>
-            
-          </h1>
-
-          
-            <div class="site-description">人生苦短，我用python</div>
-          
-            
-          <nav id="main-navigation" class="main-navigation" role="navigation">
-            <a class="nav-open">Menu</a>
-            <a class="nav-close">Close</a>
-            <div class="clearfix sf-menu">
-
-              <ul id="main-nav" class="nmenu sf-js-enabled">
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
-                    
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
-                    
-              </ul>
-            </div>
-          </nav>
-
-
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="http://ok5v9qf85.bkt.clouddn.com/image/Ginsea/%E7%99%BD%E5%BA%95.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Ginsea Chen</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
       </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Ginsea" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
   </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">通过R语言绘制基因表达量热图</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">通过R语言绘制基因表达量热图</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-01-19T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2017-01-20
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/R/">R</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
 </header>
 
 
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-数据输入格式（data-txt-以Tab分割）"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 数据输入格式（data.txt,以Tab分割）</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-安装需要的软件包（gplots）"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 安装需要的软件包（gplots）</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#3-导入数据"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 导入数据</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#4-绘制热图"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 绘制热图</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#5-合并脚本内容（heatmap-r）"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. 合并脚本内容（heatmap.r）</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#6-运行脚本"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 运行脚本</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-最终效果图"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. 最终效果图</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-heatmap"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
+    <div class="post-card">
+        <h1 class="post-card-title">通过R语言绘制基因表达量热图</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017年01月20日 0:00" datetime="2017-01-19T16:00:00.000Z"  itemprop="datePublished">2017-01-20</time>
 
-  <div id="container">
-    <div id="wrap">
             
-      <div id="content" class="outer">
-        
-          <section id="main" style="float:none;"><article id="post-heatmap" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" class="article-title" itemprop="name">
-      通过R语言绘制基因表达量热图
-    </h1>
-  
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/R/">R</a></li></ul>
 
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2017/01/20/heatmap/" class="article-date">
-	  <time datetime="2017-01-19T16:00:00.000Z" itemprop="datePublished">January 20, 2017</time>
-	</a>
 
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="1-&#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data-txt-&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;"><a href="#1-&#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data-txt-&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;" class="headerlink" title="1. &#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data.txt,&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;"></a>1. &#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data.txt,&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gene</span>  <span class="selector-tag">t1</span>  <span class="selector-tag">t2</span>  <span class="selector-tag">t3</span>  <span class="selector-tag">t4</span></div><div class="line"><span class="selector-tag">g1</span>  0<span class="selector-class">.256</span> 1<span class="selector-class">.375</span> 2<span class="selector-class">.569</span> 1<span class="selector-class">.256</span></div><div class="line"><span class="selector-tag">g2</span>  0<span class="selector-class">.456</span> 1<span class="selector-class">.569</span> 3<span class="selector-class">.590</span> 3<span class="selector-class">.154</span></div><div class="line"><span class="selector-tag">g3</span>  5<span class="selector-class">.569</span> 4<span class="selector-class">.562</span> 1<span class="selector-class">.2656</span>  0<span class="selector-class">.365</span></div></pre></td></tr></table></figure>
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h6 id="1-&#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data-txt-&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;"><a href="#1-&#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data-txt-&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;" class="headerlink" title="1. &#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data.txt,&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;"></a>1. &#x6570;&#x636E;&#x8F93;&#x5165;&#x683C;&#x5F0F;&#xFF08;data.txt,&#x4EE5;Tab&#x5206;&#x5272;&#xFF09;</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gene</span>  <span class="selector-tag">t1</span>  <span class="selector-tag">t2</span>  <span class="selector-tag">t3</span>  <span class="selector-tag">t4</span></div><div class="line"><span class="selector-tag">g1</span>  0<span class="selector-class">.256</span> 1<span class="selector-class">.375</span> 2<span class="selector-class">.569</span> 1<span class="selector-class">.256</span></div><div class="line"><span class="selector-tag">g2</span>  0<span class="selector-class">.456</span> 1<span class="selector-class">.569</span> 3<span class="selector-class">.590</span> 3<span class="selector-class">.154</span></div><div class="line"><span class="selector-tag">g3</span>  5<span class="selector-class">.569</span> 4<span class="selector-class">.562</span> 1<span class="selector-class">.2656</span>  0<span class="selector-class">.365</span></div></pre></td></tr></table></figure>
 <h6 id="2-&#x5B89;&#x88C5;&#x9700;&#x8981;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF08;gplots&#xFF09;"><a href="#2-&#x5B89;&#x88C5;&#x9700;&#x8981;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF08;gplots&#xFF09;" class="headerlink" title="2. &#x5B89;&#x88C5;&#x9700;&#x8981;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF08;gplots&#xFF09;"></a>2. &#x5B89;&#x88C5;&#x9700;&#x8981;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF08;gplots&#xFF09;</h6><figure class="highlight d"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/usr/bin/env Rscript</span></div><div class="line">install.packages(<span class="string">&quot;gplots&quot;</span>,dependencies = TRUE)</div><div class="line">library(gplots)</div></pre></td></tr></table></figure>
 <h6 id="3-&#x5BFC;&#x5165;&#x6570;&#x636E;"><a href="#3-&#x5BFC;&#x5165;&#x6570;&#x636E;" class="headerlink" title="3. &#x5BFC;&#x5165;&#x6570;&#x636E;"></a>3. &#x5BFC;&#x5165;&#x6570;&#x636E;</h6><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">args</span> = commandArgs(<span class="attr">trailingOnly</span> = TRUE)</div><div class="line"><span class="attr">data</span> = read.table(args[<span class="number">1</span>],<span class="attr">header</span> = TRUE,<span class="attr">sep</span> = <span class="string">&quot;\t&quot;</span>,row.<span class="attr">names</span> = <span class="number">1</span>,<span class="attr">stringsAsFactors</span> = FALSE,<span class="attr">quote</span> = <span class="string">&quot;&quot;</span>) <span class="comment">#&#x8BFB;&#x5165;&#x6570;&#x636E;</span></div><div class="line"><span class="attr">data_matrix</span> = as.matrix(data)<span class="comment">#&#x8F6C;&#x6362;&#x4E3A;&#x77E9;&#x9635;</span></div></pre></td></tr></table></figure>
 <h6 id="4-&#x7ED8;&#x5236;&#x70ED;&#x56FE;"><a href="#4-&#x7ED8;&#x5236;&#x70ED;&#x56FE;" class="headerlink" title="4. &#x7ED8;&#x5236;&#x70ED;&#x56FE;"></a>4. &#x7ED8;&#x5236;&#x70ED;&#x56FE;</h6><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">my_palette &lt;- colorRampPalette(c(<span class="string">&quot;red&quot;</span>, <span class="string">&quot;yellow&quot;</span>, <span class="string">&quot;green&quot;</span>))(n = <span class="number">299</span>) #&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EA2;&#x3001;&#x9EC4;&#x3001;&#x84DD;&#x7684;&#x989C;&#x8272;&#x677F;</div><div class="line">png(args[<span class="number">2</span>], width = <span class="number">5</span>*<span class="number">300</span>, height = <span class="number">5</span>*<span class="number">300</span>, res = <span class="number">300</span>, pointsize = <span class="number">8</span>) #&#x521B;&#x5EFA; &#x4E00;&#x4E2A;&#x7A7A;&#x767D;&#x7684;png&#x6587;&#x4EF6;</div><div class="line">heatmap<span class="number">.2</span>(data_matrix,cellnote = data_matrix,main = <span class="string">&quot;Correlation&quot;</span>,notecol=<span class="string">&quot;black&quot;</span>,density.info=<span class="string">&quot;none&quot;</span>,trace=<span class="string">&quot;none&quot;</span>,margins =c(<span class="number">12</span>,<span class="number">9</span>),col=my_palette,dendrogram=<span class="string">&quot;row&quot;</span>,Colv=<span class="string">&quot;NA&quot;</span>) #&#x7ED8;&#x5236;&#x70ED;&#x56FE;</div><div class="line">dev.off() #&#x5173;&#x95ED;png&#x6587;&#x4EF6;</div></pre></td></tr></table></figure>
 <h6 id="5-&#x5408;&#x5E76;&#x811A;&#x672C;&#x5185;&#x5BB9;&#xFF08;heatmap-r&#xFF09;"><a href="#5-&#x5408;&#x5E76;&#x811A;&#x672C;&#x5185;&#x5BB9;&#xFF08;heatmap-r&#xFF09;" class="headerlink" title="5. &#x5408;&#x5E76;&#x811A;&#x672C;&#x5185;&#x5BB9;&#xFF08;heatmap.r&#xFF09;"></a>5. &#x5408;&#x5E76;&#x811A;&#x672C;&#x5185;&#x5BB9;&#xFF08;heatmap.r&#xFF09;</h6><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env Rscript</span></div><div class="line">install.packages(<span class="string">&quot;gplots&quot;</span>,<span class="attr">dependencies</span> = TRUE)</div><div class="line">library(gplots)</div><div class="line"><span class="attr">args</span> = commandArgs(<span class="attr">trailingOnly</span> = TRUE)</div><div class="line"><span class="attr">data</span> = read.table(args[<span class="number">1</span>],<span class="attr">header</span> = TRUE,<span class="attr">sep</span> = <span class="string">&quot;\t&quot;</span>,row.<span class="attr">names</span> = <span class="number">1</span>,<span class="attr">stringsAsFactors</span> = FALSE,<span class="attr">quote</span> = <span class="string">&quot;&quot;</span>) <span class="comment">#&#x8BFB;&#x5165;&#x6570;&#x636E;</span></div><div class="line"><span class="attr">data_matrix</span> = as.matrix(data)<span class="comment">#&#x8F6C;&#x6362;&#x4E3A;&#x77E9;&#x9635;</span></div><div class="line">my_palette &lt;- colorRampPalette(c(<span class="string">&quot;red&quot;</span>, <span class="string">&quot;yellow&quot;</span>, <span class="string">&quot;green&quot;</span>))(<span class="attr">n</span> = <span class="number">299</span>) <span class="comment">#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EA2;&#x3001;&#x9EC4;&#x3001;&#x84DD;&#x7684;&#x989C;&#x8272;&#x677F;</span></div><div class="line">png(args[<span class="number">2</span>], <span class="attr">width</span> = <span class="number">5</span>*<span class="number">300</span>, <span class="attr">height</span> = <span class="number">5</span>*<span class="number">300</span>, <span class="attr">res</span> = <span class="number">300</span>, <span class="attr">pointsize</span> = <span class="number">8</span>) <span class="comment">#&#x521B;&#x5EFA; &#x4E00;&#x4E2A;&#x7A7A;&#x767D;&#x7684;png&#x6587;&#x4EF6;</span></div><div class="line">heatmap.<span class="number">2</span>(data_matrix,<span class="attr">cellnote</span> = data_matrix,<span class="attr">main</span> = <span class="string">&quot;Correlation&quot;</span>,<span class="attr">notecol=&quot;black&quot;,density.info=&quot;none&quot;,trace=&quot;none&quot;,margins</span> =c(<span class="number">12</span>,<span class="number">9</span>),<span class="attr">col=my_palette,dendrogram=&quot;row&quot;,Colv=&quot;NA&quot;)</span> <span class="comment">#&#x7ED8;&#x5236;&#x70ED;&#x56FE;</span></div><div class="line">dev.off() <span class="comment">#&#x5173;&#x95ED;png&#x6587;&#x4EF6;</span></div></pre></td></tr></table></figure>
 <h6 id="6-&#x8FD0;&#x884C;&#x811A;&#x672C;"><a href="#6-&#x8FD0;&#x884C;&#x811A;&#x672C;" class="headerlink" title="6. &#x8FD0;&#x884C;&#x811A;&#x672C;"></a>6. &#x8FD0;&#x884C;&#x811A;&#x672C;</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Rscript heatmap.r data.txt data.png</div></pre></td></tr></table></figure>
-<h6 id="7-&#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;"><a href="#7-&#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;" class="headerlink" title="7. &#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;"></a>7. &#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;</h6><p><img src="http://ok5v9qf85.bkt.clouddn.com/heat.png" alt=""></p>
+<h6 id="7-&#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;"><a href="#7-&#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;" class="headerlink" title="7. &#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;"></a>7. &#x6700;&#x7EC8;&#x6548;&#x679C;&#x56FE;</h6><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ok5v9qf85.bkt.clouddn.com/heat.png" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
 
-      
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-01-21T19:23:16.159Z" itemprop="dateUpdated">2017年1月22日 3:23</time>
+</span><br>
+
+
+        这里写留言或版权声明：<a href="/2017/01/20/heatmap/" target="_blank" rel="external">http://www.biopython.club/2017/01/20/heatmap/</a>
     </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/R/">R</a>
-
-      
-      
-        
-	<div id="comment">
-	
-	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2017/01/20/heatmap/" data-title="通过R语言绘制基因表达量热图" data-url="http://www.biopython.club/2017/01/20/heatmap/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"ginsea"};
-	  (function() {
-	    var ds = document.createElement('script');
-	    ds.type = 'text/javascript';ds.async = true;
-	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	    ds.charset = 'UTF-8';
-	    (document.getElementsByTagName('head')[0] 
-	     || document.getElementsByTagName('body')[0]).appendChild(ds);
-	  })();
-	  </script>
-	<!-- 多说公共JS代码 end -->
-	
-	</div>
-	<link rel="stylesheet" href="/css/comment.css">
-
-
-      
+    <footer>
+        <a href="http://www.biopython.club">
+            <img src="http://ok5v9qf85.bkt.clouddn.com/image/Ginsea/%E7%99%BD%E5%BA%95.jpg" alt="Ginsea Chen">
+            Ginsea Chen
+        </a>
     </footer>
-  </div>
-  
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
     
-<nav id="article-nav">
-  
-    <a href="/2017/02/05/R2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          R语言入门
-        
-      </div>
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.biopython.club/2017/01/20/heatmap/&title=《通过R语言绘制基因表达量热图》 — Ginsea Chen&pic=http://ok5v9qf85.bkt.clouddn.com/image/Ginsea/%E7%99%BD%E5%BA%95.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.biopython.club/2017/01/20/heatmap/&title=《通过R语言绘制基因表达量热图》 — Ginsea Chen&source=人生苦短，我用python" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.biopython.club/2017/01/20/heatmap/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通过R语言绘制基因表达量热图》 — Ginsea Chen&url=http://www.biopython.club/2017/01/20/heatmap/&via=http://www.biopython.club" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.biopython.club/2017/01/20/heatmap/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
     </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
   
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/02/05/R2/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">R语言入门</h4>
+      </a>
+    </div>
   
-    <a href="/2017/01/04/scholar_search/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">科技论文的检索与获取</div>
-    </a>
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/01/04/scholar_search/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">科技论文的检索与获取</h4>
+      </a>
+    </div>
   
 </nav>
 
-  
+
+
+    
+
+<div class="comments" id="comments">
+    <div class="ds-thread" data-thread-key="heatmap" data-title="通过R语言绘制基因表达量热图" data-url="http://www.biopython.club/2017/01/20/heatmap/"></div>
+</div>
+<script>
+lazyScripts.push('//cdn.bootcss.com/marked/0.3.6/marked.min.js');
+
+var duoshuoQuery = {short_name:'ginsea', theme: 'none'};
+lazyScripts.push('/js/embed.min.js?v=1.4.7');
+
+
+</script>
+
+
+
+
+
+
+
 </article>
 
-<!-- Table of Contents -->
-
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    
-      <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-数据输入格式（data-txt-以Tab分割）"><span class="nav-number">1.</span> <span class="nav-text">1. 数据输入格式（data.txt,以Tab分割）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-安装需要的软件包（gplots）"><span class="nav-number">2.</span> <span class="nav-text">2. 安装需要的软件包（gplots）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#3-导入数据"><span class="nav-number">3.</span> <span class="nav-text">3. 导入数据</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#4-绘制热图"><span class="nav-number">4.</span> <span class="nav-text">4. 绘制热图</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#5-合并脚本内容（heatmap-r）"><span class="nav-number">5.</span> <span class="nav-text">5. 合并脚本内容（heatmap.r）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#6-运行脚本"><span class="nav-number">6.</span> <span class="nav-text">6. 运行脚本</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#7-最终效果图"><span class="nav-number">7.</span> <span class="nav-text">7. 最终效果图</span></a></li></ol>
-    
-    </div>
-  </aside>
-</section>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
         
-      </div>
-      <footer id="footer" class="site-footer">
-  
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
 
-  <div class="clearfix container">
-      <div class="site-info">
-	      &copy; 2017 Ginsea Chen All Rights Reserved.
-      </div>
-      <div class="site-credit">
-        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
-      </div>
-  </div>
-</footer>
-
-
-<!-- min height -->
-
-<script>
-    var contentdiv = document.getElementById("content");
-
-    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
-</script>
-    </div>
-    <!-- <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav> -->
-    
-<div style="display: none;">
-  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
 </div>
 
-<!-- mathjax config similar to math.stackexchange -->
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            <span>博客内容遵循 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>Ginsea Chen &copy; 2015 - 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.biopython.club/2017/01/20/heatmap/&title=《通过R语言绘制基因表达量热图》 — Ginsea Chen&pic=http://ok5v9qf85.bkt.clouddn.com/image/Ginsea/%E7%99%BD%E5%BA%95.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.biopython.club/2017/01/20/heatmap/&title=《通过R语言绘制基因表达量热图》 — Ginsea Chen&source=人生苦短，我用python" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.biopython.club/2017/01/20/heatmap/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《通过R语言绘制基因表达量热图》 — Ginsea Chen&url=http://www.biopython.club/2017/01/20/heatmap/&via=http://www.biopython.club" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.biopython.club/2017/01/20/heatmap/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.biopython.club/2017/01/20/heatmap/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
 </script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+<script src="/js/main.min.js?v=1.4.7"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
 
-
-<script src="/js/script.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/search.min.js?v=1.4.7" async></script>
 
 
 
 
 
-  </div>
 
-  <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js" async=""></script>
-  
-
-  <div style="display: none;">
-    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
-  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 </body>
