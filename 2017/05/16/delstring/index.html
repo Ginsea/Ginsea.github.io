@@ -3,30 +3,21 @@
 <head>
     <meta charset="utf-8">
     
-    <title>通过R进行两个数据集间的Wilcoxon rank sum test比较 | Ginsea Chen</title>
+    <title>每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS) | Ginsea Chen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="" />
     
-    <meta name="description" content="Wilcoxon rank sum test&amp;#x7684;&amp;#x6982;&amp;#x5FF5;
-
-
-&amp;#x811A;&amp;#x672C;&amp;#x7F16;&amp;#x5199;">
+    <meta name="description" content="&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;: &amp;#x83B7;&amp;#x53D6;&amp;#x4E24;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x4E4B;&amp;#x95F4;&amp;#x7684;&amp;#x6700;&amp;#x957F;&amp;#x5B50;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#xFF0C;&amp;#x6BD4;&amp;#x5982;: &amp;#x5B57;&amp;#x">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通过R进行两个数据集间的Wilcoxon rank sum test比较">
-<meta property="og:url" content="http://www.biopython.club/2017/02/08/R4/index.html">
+<meta property="og:title" content="每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)">
+<meta property="og:url" content="http://www.biopython.club/2017/05/16/delstring/index.html">
 <meta property="og:site_name" content="Ginsea Chen">
-<meta property="og:description" content="Wilcoxon rank sum test&amp;#x7684;&amp;#x6982;&amp;#x5FF5;
-
-
-&amp;#x811A;&amp;#x672C;&amp;#x7F16;&amp;#x5199;">
-<meta property="og:updated_time" content="2017-02-08T10:18:20.561Z">
+<meta property="og:description" content="&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;: &amp;#x83B7;&amp;#x53D6;&amp;#x4E24;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x4E4B;&amp;#x95F4;&amp;#x7684;&amp;#x6700;&amp;#x957F;&amp;#x5B50;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#xFF0C;&amp;#x6BD4;&amp;#x5982;: &amp;#x5B57;&amp;#x">
+<meta property="og:updated_time" content="2017-05-16T02:14:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通过R进行两个数据集间的Wilcoxon rank sum test比较">
-<meta name="twitter:description" content="Wilcoxon rank sum test&amp;#x7684;&amp;#x6982;&amp;#x5FF5;
-
-
-&amp;#x811A;&amp;#x672C;&amp;#x7F16;&amp;#x5199;">
+<meta name="twitter:title" content="每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)">
+<meta name="twitter:description" content="&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;: &amp;#x83B7;&amp;#x53D6;&amp;#x4E24;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x4E4B;&amp;#x95F4;&amp;#x7684;&amp;#x6700;&amp;#x957F;&amp;#x5B50;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#xFF0C;&amp;#x6BD4;&amp;#x5982;: &amp;#x5B57;&amp;#x">
     
 
     
@@ -119,18 +110,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/R/">R</a>
+    <a class="page-title-link" href="/categories/python/">python</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-R4" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-delstring" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        通过R进行两个数据集间的Wilcoxon rank sum test比较
+        每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)
         </h1>
     
 
@@ -138,20 +129,31 @@
         
         
             <div class="article-subtitle">
-                <a href="/2017/02/08/R4/" class="article-date">
-    <time datetime="2017-02-07T16:00:00.000Z" itemprop="datePublished">2017-02-08</time>
+                <a href="/2017/05/16/delstring/" class="article-date">
+    <time datetime="2017-05-15T16:00:00.000Z" itemprop="datePublished">2017-05-16</time>
 </a>
                 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <ol>
-<li>Wilcoxon rank sum test&#x7684;&#x6982;&#x5FF5;</li>
-</ol>
-<ol>
-<li>&#x811A;&#x672C;&#x7F16;&#x5199;</li>
-</ol>
+            <ul>
+<li>&#x95EE;&#x9898;&#x63CF;&#x8FF0;: &#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E4B;&#x95F4;&#x7684;&#x6700;&#x957F;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BD4;&#x5982;: &#x5B57;&#x7B26;&#x4E32;1=&#x201D;testing&#x201D;; &#x5B57;&#x7B26;&#x4E32;2=&#x201D;testng&#x201D;, &#x5219;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#x201D;testng&#x201D;</li>
+<li>&#x5B9E;&#x73B0;&#x811A;&#x672C;(&#x901A;&#x8FC7;&#x9012;&#x5F52;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">lcs</span><span class="params">(xstr,ystr)</span>:</span></div><div class="line">  <span class="string">&apos;&apos;&apos;</span></div><div class="line">  &gt;&gt;&gt; lcs(&quot;testing&quot;,&quot;testng&quot;)</div><div class="line">  &apos;testng&apos;</div><div class="line">  &apos;&apos;&apos;</div><div class="line"></div><div class="line">  <span class="keyword">if</span> <span class="keyword">not</span> xstr <span class="keyword">or</span> <span class="keyword">not</span> ystr: <span class="comment">#&#x5F53;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6709;&#x4E00;&#x4E2A;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;</span></div><div class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span></div><div class="line"></div><div class="line">  x,xs,y,ys = xstr[<span class="number">0</span>], xstr[<span class="number">1</span>:], ystr[<span class="number">0</span>], ystr[<span class="number">1</span>:] <span class="comment">#&#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;</span></div><div class="line"></div><div class="line">  <span class="comment">#&#x5206;&#x522B;&#x4ECE;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#xFF0C;&#x82E5;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x63D0;&#x53D6;&#x4E3A;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5F00;&#x59CB;&#x5206;&#x6790;&#x4E0B;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;.</span></div><div class="line">  <span class="comment">#&#x82E5;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#xFF0C;&#x5219;&#x5206;&#x522B;&#x8003;&#x8651;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x4E0E;&#x7B2C;&#x4E8C;&#x5B57;&#x7B26;&#x4E32;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x4EE5;&#x53CA;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F4D;&#x70B9;&#x4E0E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6700;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span></div><div class="line">  <span class="keyword">if</span> x == y:</div><div class="line">    <span class="keyword">return</span> x + lcs(xs,ys)</div><div class="line">  <span class="keyword">else</span>:</div><div class="line">    <span class="keyword">return</span> max(lcs(xs,ystr),lcs(xstr,ys),key=len)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</div><div class="line">  <span class="keyword">import</span> doctest; doctest.testmod() <span class="comment">#&#x8C03;&#x7528;doctest&#x6A21;&#x5757;&#x5BF9;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>&#x89E3;&#x51B3;LeetCode&#x95EE;&#x9898;:<ul>
+<li>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6C42;&#x603B;&#x5171;&#x9700;&#x8981;&#x51E0;&#x6B65;&#x5C06;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8005;&#x7684;&#x6700;&#x957F;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BCF;&#x6B21;&#x53EA;&#x80FD;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF1B;&#x6BD4;&#x5982;&#x5BF9;&#x4E8E;str1=&#x201D;sea&#x201D;, str2=&#x201D;eat&#x201D;&#xFF0C;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x201D;ea&#x201D;, &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;2</li>
+<li>&#x65B9;&#x6CD5;1: &#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;:</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GetCommStrStep</span><span class="params">(object)</span>:</span></div><div class="line">  <span class="string">&quot;&quot;&quot;Get steps for obtaining common subsequence among two strings&quot;&quot;&quot;</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, str1, str2)</span>:</span></div><div class="line">    super(, self).__init__()</div><div class="line">    self.str1 = str1</div><div class="line">    self.str2 = str2</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">lcs</span><span class="params">()</span>:</span></div><div class="line">    str1 = self.str1</div><div class="line">    str2 = self.str2</div><div class="line"></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> str1 <span class="keyword">or</span> <span class="keyword">not</span> str2:</div><div class="line">      <span class="keyword">return</span> <span class="string">&quot;&quot;</span></div><div class="line"></div><div class="line">    fstr1, nstr1, fstr2, nstr2 = str1[<span class="number">0</span>], str1[<span class="number">1</span>:], str2[<span class="number">0</span>], str2[<span class="number">1</span>:]</div><div class="line"></div><div class="line">    <span class="keyword">if</span> fstr1 == fstr2:</div><div class="line">      <span class="keyword">return</span> fstr1 + lcs(nstr1, nstr2)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">      <span class="keyword">return</span> max(lcs(nstr1,str2),lcs(str1,nstr2),key=len)</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">getstep</span><span class="params">()</span>:</span></div><div class="line">    str1 = self.str1</div><div class="line">    str2 = self.str2</div><div class="line"></div><div class="line">    n1, n2 = len(str1),len(str2)</div><div class="line"></div><div class="line">    commstr = self.lcs()</div><div class="line"></div><div class="line">    <span class="keyword">if</span> commstr:</div><div class="line">      <span class="keyword">return</span> n1+n2 - len(commstr)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">      <span class="keyword">return</span> <span class="number">0</span></div></pre></td></tr></table></figure>
+<ul>
+<li>&#x65B9;&#x6CD5;2:<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsteps</span><span class="params">(str1,str2)</span>:</span></div><div class="line">  <span class="keyword">if</span> <span class="keyword">not</span> str1 <span class="keyword">or</span> <span class="keyword">not</span> str2:</div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">  n1,n2 = len(str1),len(str2)</div><div class="line"></div><div class="line">  tmpmaxtrix = [[<span class="number">0</span>] * (n1+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(n2 + <span class="number">1</span>)]</div><div class="line"></div><div class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(n1):</div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(n2):</div><div class="line">      tmpmaxtrix[i+<span class="number">1</span>][j+<span class="number">1</span>] = tmpmaxtrix[i][j] + <span class="number">1</span> <span class="keyword">if</span> str1[i] == str2[j] <span class="keyword">else</span> max(tmpmaxtrix[i+<span class="number">1</span>][j],tmpmaxtrix[i][j+<span class="number">1</span>])</div><div class="line">  <span class="keyword">return</span> n1+n2-tmpmaxtrx[n1][n2]*<span class="number">2</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -159,7 +161,7 @@
 
 
 
-    <a data-url="http://www.biopython.club/2017/02/08/R4/" data-id="cj2qxh6tz0005fgu15ypku6wz" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://www.biopython.club/2017/05/16/delstring/" data-id="cj2qxh6u50007fgu1z750fyb0" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -226,7 +228,7 @@
     <section id="comments">
     
         
-    <div class="ds-thread" data-thread-key="2017/02/08/R4/" data-title="通过R进行两个数据集间的Wilcoxon rank sum test比较" data-url="http://www.biopython.club/2017/02/08/R4/"></div>
+    <div class="ds-thread" data-thread-key="2017/05/16/delstring/" data-title="每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)" data-url="http://www.biopython.club/2017/05/16/delstring/"></div>
     <style>
         #ds-thread #ds-reset .ds-textarea-wrapper {
             background: none;
@@ -298,20 +300,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/05/10/python_custom_module/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
-        <p class="article-nav-title">
-        
-            在Python语言中导入自定义模块
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/02/05/R3/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/05/11/scholar_search/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">antic</strong>
-        <p class="article-nav-title">R语言的数据存储-R语言实战第二章创建数据集学习笔记</p>
+        <p class="article-nav-title">科技论文的检索与获取</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     

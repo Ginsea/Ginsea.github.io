@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.biopython.club/2017/05/16/delstring/</loc>
+    
+    <lastmod>2017-05-16T02:14:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.biopython.club/2017/05/11/python3_bytes/</loc>
     
     <lastmod>2017-05-11T02:43:32.340Z</lastmod>

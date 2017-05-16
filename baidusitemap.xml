@@ -4,6 +4,24 @@
 
     
   <url>
+    <loc>http://www.biopython.club/2017/05/16/delstring/</loc>
+    <lastmod>2017-05-16T02:14:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)</title>
+        <pubTime>2017-05-15T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="python" url="http://www.biopython.club/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.biopython.club/2017/05/11/python3_bytes/</loc>
     <lastmod>2017-05-11T02:43:32.340Z</lastmod>
     <data>
