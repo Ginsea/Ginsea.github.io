@@ -674,30 +674,6 @@
   </entry>
   
   <entry>
-    <title>通过ggplot软件包绘制Ka、Ks散点图</title>
-    <link href="http://www.biopython.club/2016/12/28/R1/"/>
-    <id>http://www.biopython.club/2016/12/28/R1/</id>
-    <published>2016-12-27T16:00:00.000Z</published>
-    <updated>2016-12-28T11:49:16.268Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="&#x8F93;&#x5165;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5982;&#x4E0B;-&#x4EE5;tab&#x5206;&#x5272;-&#x547D;&#x540D;&#x4E3A;omega-txt"><a href="#&#x8F93;&#x5165;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5982;&#x4E0B;-&#x4EE5;tab&#x5206;&#x5272;-&#x547D;&#x540D;&#x4E3A;omega-txt" class="headerlink" title="&#x8F93;&#x5165;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5982;&#x4E0B;(&#x4EE5;tab&#x5206;&#x5272;,&#x547D;&#x540D;&#x4E3A;omega.txt)"></a>&#x8F93;&#x5165;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5982;&#x4E0B;(&#x4EE5;tab&#x5206;&#x5272;,&#x547D;&#x540D;&#x4E3A;omega.txt)</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Class</span> <span class="selector-tag">Ka</span>  <span class="selector-tag">Ks</span></div><div class="line"><span class="selector-tag">H1</span>  0<span class="selector-class">.1</span> 0<span class="selector-class">.09</span></div><div class="line"><span class="selector-tag">L1</span>  0<span class="selector-class">.5</span> 0<span class="selector-class">.6</span></div><div class="line"><span class="selector-tag">E1</span>  0<span class="selector-class">.5</span> 0<span class="selector-class">.5</span></div></pre></td></tr></table></figure>
-<p><strong>H1&#x3001;L1&#x3001;E1&#x4E3A;omega(ka/ks)&#x503C;&#x7684;&#x5206;&#x7C7B;&#xFF0C;H1&#x8868;&#x793A;omega&#x503C;&#x5927;&#x4E8E;1&#xFF0C;L1&#x8868;&#x793A;omega&#x503C;&#x5C0F;&#x4E8E;1&#xFF0C;E1&#x8868;&#x793A;omega&#x503C;&#x7B49;&#x4E8E;1</strong></p>
-<h6 id="&#x811A;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;"><a href="#&#x811A;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;" class="headerlink" title="&#x811A;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;"></a>&#x811A;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;</h6><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">install.packages(<span class="string">&quot;ggplot2&quot;</span>)</div><div class="line"><span class="keyword">library</span>(ggplot2)</div><div class="line">data = read.table(<span class="string">&quot;omega.txt&quot;</span>,header=<span class="literal">TRUE</span>,sep=<span class="string">&quot;\t&quot;</span>)</div><div class="line">Ka = data$Ka</div><div class="line">Ks = data$Ks</div><div class="line">Group = data$Class</div><div class="line">p = ggplot(data = data,mapping = aes(x=Ks,y=Ka,colour=Group)) + geom_point()</div><div class="line">p + theme(axis.title.x = element_text(size=<span class="number">18</span>,colour = <span class="string">&quot;black&quot;</span>),axis.title.y = element_text(size=<span class="number">18</span>,colour = <span class="string">&quot;black&quot;</span>),axis.text.x = element_text(size=<span class="number">18</span>,colour = <span class="string">&quot;black&quot;</span>, vjust = <span class="number">0.5</span>, hjust = <span class="number">0.5</span>),axis.text.y = element_text(size=<span class="number">18</span>,colour = <span class="string">&quot;black&quot;</span>),legend.title=element_text(colour = <span class="string">&quot;black&quot;</span>,size = <span class="number">18</span>),legend.text = element_text(color = <span class="string">&quot;black&quot;</span>,size=<span class="number">18</span>))</div><div class="line">ggsave(<span class="string">&quot;kaks.png&quot;</span>,width =<span class="number">5</span>,height = <span class="number">5</span>)</div></pre></td></tr></table></figure>
-<p><strong>&#x751F;&#x6210;&#x56FE;&#x5F62;kaks.png&#x5373;&#x4E3A;&#x7ED3;&#x679C;&#x56FE;&#x5F62;</strong></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h6 id=&quot;&amp;#x8F93;&amp;#x5165;&amp;#x6570;&amp;#x636E;&amp;#x683C;&amp;#x5F0F;&amp;#x5982;&amp;#x4E0B;-&amp;#x4EE5;tab&amp;#x5206;&amp;#x5272;-&amp;#x547D;&amp;#x540D;&amp;#x4E3A;omega-txt&quot;&gt;&lt;a h
-    
-    </summary>
-    
-      <category term="R" scheme="http://www.biopython.club/categories/R/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>MPI并行环境的搭建</title>
     <link href="http://www.biopython.club/2016/12/28/mpich2/"/>
     <id>http://www.biopython.club/2016/12/28/mpich2/</id>
@@ -725,6 +701,30 @@
     </summary>
     
       <category term="Bioinfo" scheme="http://www.biopython.club/categories/Bioinfo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>通过ggplot软件包绘制Ka、Ks散点图</title>
+    <link href="http://www.biopython.club/2016/12/28/R1/"/>
+    <id>http://www.biopython.club/2016/12/28/R1/</id>
+    <published>2016-12-27T16:00:00.000Z</published>
+    <updated>2016-12-28T11:49:16.268Z</updated>
+    
+    <content type="html"><![CDATA[<h6 id="&#x8F93;&#x5165;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5982;&#x4E0B;-&#x4EE5;tab&#x5206;&#x5272;-&#x547D;&#x540D;&#x4E3A;omega-txt"><a href="#&#x8F93;&#x5165;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5982;&#x4E0B;-&#x4EE5;tab&#x5206;&#x5272;-&#x547D;&#x540D;&#x4E3A;omega-txt" class="headerlink" title="&#x8F93;&#x5165;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5982;&#x4E0B;(&#x4EE5;tab&#x5206;&#x5272;,&#x547D;&#x540D;&#x4E3A;omega.txt)"></a>&#x8F93;&#x5165;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5982;&#x4E0B;(&#x4EE5;tab&#x5206;&#x5272;,&#x547D;&#x540D;&#x4E3A;omega.txt)</h6><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Class</span> <span class="selector-tag">Ka</span>  <span class="selector-tag">Ks</span></div><div class="line"><span class="selector-tag">H1</span>  0<span class="selector-class">.1</span> 0<span class="selector-class">.09</span></div><div class="line"><span class="selector-tag">L1</span>  0<span class="selector-class">.5</span> 0<span class="selector-class">.6</span></div><div class="line"><span class="selector-tag">E1</span>  0<span class="selector-class">.5</span> 0<span class="selector-class">.5</span></div></pre></td></tr></table></figure>
+<p><strong>H1&#x3001;L1&#x3001;E1&#x4E3A;omega(ka/ks)&#x503C;&#x7684;&#x5206;&#x7C7B;&#xFF0C;H1&#x8868;&#x793A;omega&#x503C;&#x5927;&#x4E8E;1&#xFF0C;L1&#x8868;&#x793A;omega&#x503C;&#x5C0F;&#x4E8E;1&#xFF0C;E1&#x8868;&#x793A;omega&#x503C;&#x7B49;&#x4E8E;1</strong></p>
+<h6 id="&#x811A;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;"><a href="#&#x811A;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;" class="headerlink" title="&#x811A;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;"></a>&#x811A;&#x672C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;</h6><figure class="highlight r"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">install.packages(<span class="string">&quot;ggplot2&quot;</span>)</div><div class="line"><span class="keyword">library</span>(ggplot2)</div><div class="line">data = read.table(<span class="string">&quot;omega.txt&quot;</span>,header=<span class="literal">TRUE</span>,sep=<span class="string">&quot;\t&quot;</span>)</div><div class="line">Ka = data$Ka</div><div class="line">Ks = data$Ks</div><div class="line">Group = data$Class</div><div class="line">p = ggplot(data = data,mapping = aes(x=Ks,y=Ka,colour=Group)) + geom_point()</div><div class="line">p + theme(axis.title.x = element_text(size=<span class="number">18</span>,colour = <span class="string">&quot;black&quot;</span>),axis.title.y = element_text(size=<span class="number">18</span>,colour = <span class="string">&quot;black&quot;</span>),axis.text.x = element_text(size=<span class="number">18</span>,colour = <span class="string">&quot;black&quot;</span>, vjust = <span class="number">0.5</span>, hjust = <span class="number">0.5</span>),axis.text.y = element_text(size=<span class="number">18</span>,colour = <span class="string">&quot;black&quot;</span>),legend.title=element_text(colour = <span class="string">&quot;black&quot;</span>,size = <span class="number">18</span>),legend.text = element_text(color = <span class="string">&quot;black&quot;</span>,size=<span class="number">18</span>))</div><div class="line">ggsave(<span class="string">&quot;kaks.png&quot;</span>,width =<span class="number">5</span>,height = <span class="number">5</span>)</div></pre></td></tr></table></figure>
+<p><strong>&#x751F;&#x6210;&#x56FE;&#x5F62;kaks.png&#x5373;&#x4E3A;&#x7ED3;&#x679C;&#x56FE;&#x5F62;</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h6 id=&quot;&amp;#x8F93;&amp;#x5165;&amp;#x6570;&amp;#x636E;&amp;#x683C;&amp;#x5F0F;&amp;#x5982;&amp;#x4E0B;-&amp;#x4EE5;tab&amp;#x5206;&amp;#x5272;-&amp;#x547D;&amp;#x540D;&amp;#x4E3A;omega-txt&quot;&gt;&lt;a h
+    
+    </summary>
+    
+      <category term="R" scheme="http://www.biopython.club/categories/R/"/>
     
     
   </entry>
