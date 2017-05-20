@@ -3,28 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>524. longest word in dictionary through deletion | Ginsea Chen</title>
+  <title>每天刷leetcode之第二天 | Ginsea Chen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="&amp;#x672C;&amp;#x95EE;&amp;#x9898;&amp;#x6E90;&amp;#x81EA;LeetCode.
-
-&amp;#x95EE;&amp;#x9898;&amp;#x5185;&amp;#x5BB9;:&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;s&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x">
+  <meta name="description" content="&amp;#x4EE3;&amp;#x7801;&amp;#x95EE;&amp;#x9898;:Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one soluti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="524. Longest Word In Dictionary Through Deletion">
-<meta property="og:url" content="http://www.biopython.club/2017/05/16/leetcode1/index.html">
+<meta property="og:title" content="每天刷LeetCode之第二天">
+<meta property="og:url" content="http://www.biopython.club/2017/05/20/leetcode2/index.html">
 <meta property="og:site_name" content="Ginsea Chen">
-<meta property="og:description" content="&amp;#x672C;&amp;#x95EE;&amp;#x9898;&amp;#x6E90;&amp;#x81EA;LeetCode.
-
-&amp;#x95EE;&amp;#x9898;&amp;#x5185;&amp;#x5BB9;:&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;s&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x">
-<meta property="og:updated_time" content="2017-05-16T09:00:17.000Z">
+<meta property="og:description" content="&amp;#x4EE3;&amp;#x7801;&amp;#x95EE;&amp;#x9898;:Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one soluti">
+<meta property="og:updated_time" content="2017-05-20T05:27:24.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="524. Longest Word In Dictionary Through Deletion">
-<meta name="twitter:description" content="&amp;#x672C;&amp;#x95EE;&amp;#x9898;&amp;#x6E90;&amp;#x81EA;LeetCode.
-
-&amp;#x95EE;&amp;#x9898;&amp;#x5185;&amp;#x5BB9;:&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;s&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x">
+<meta name="twitter:title" content="每天刷LeetCode之第二天">
+<meta name="twitter:description" content="&amp;#x4EE3;&amp;#x7801;&amp;#x95EE;&amp;#x9898;:Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one soluti">
   
     <link rel="alternate" href="/atom.xml" title="Ginsea Chen" type="application/atom+xml">
   
@@ -102,7 +96,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-leetcode1" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-leetcode2" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -110,7 +104,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      524. Longest Word In Dictionary Through Deletion
+      每天刷LeetCode之第二天
     </h1>
   
 
@@ -118,47 +112,31 @@
     
     <div class="article-meta">
       
-	Posted on <a href="/2017/05/16/leetcode1/" class="article-date">
-	  <time datetime="2017-05-15T16:00:00.000Z" itemprop="datePublished">May 16, 2017</time>
+	Posted on <a href="/2017/05/20/leetcode2/" class="article-date">
+	  <time datetime="2017-05-19T16:00:00.000Z" itemprop="datePublished">May 20, 2017</time>
 	</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x672C;&#x95EE;&#x9898;&#x6E90;&#x81EA;<a href="https://leetcode.com/articles/longest-word-in-dictionary-through-deletion/" target="_blank" rel="external">LeetCode</a>.</p>
-<ul>
-<li><p>&#x95EE;&#x9898;&#x5185;&#x5BB9;:<br>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;s&#x548C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;d&#xFF0C;&#x8981;&#x6C42;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x627E;&#x51FA;&#x4E00;&#x4E2A;&#x6700;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5220;&#x9664;s&#x4E2D;&#x7684;&#x82E5;&#x5E72;&#x5B57;&#x7B26;&#x5F97;&#x5230;&#x3002;&#x82E5;&#x6CA1;&#x6709;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;&#x82E5;&#x6709;&#x591A;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5728;&#x6392;&#x5E8F;&#x4E2D;&#x6700;&#x5C0F;&#x7684;&#x3002;</p>
+        <ul>
+<li><p>&#x4EE3;&#x7801;&#x95EE;&#x9898;:<br>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.<br>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x82E5;&#x5217;&#x8868;&#x4E2D;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x548C;&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6570;&#xFF08;&#x7ED9;&#x5B9A;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7531;&#x8FD9;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;;<br>&#x6CE8;&#x610F;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53EA;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x6B21;;</p>
 </li>
-<li><p>&#x793A;&#x4F8B;1:</p>
-</li>
-</ul>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Input:</span></div><div class="line">s = <span class="string">&quot;abpcplea&quot;</span>, d = [<span class="string">&quot;ale&quot;</span>,<span class="string">&quot;apple&quot;</span>,<span class="string">&quot;monkey&quot;</span>,<span class="string">&quot;plea&quot;</span>]</div><div class="line"></div><div class="line"><span class="symbol">Output:</span></div><div class="line"><span class="string">&quot;apple&quot;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>&#x793A;&#x4F8B;2:</li>
-</ul>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Input:</span></div><div class="line">s = <span class="string">&quot;abpcplea&quot;</span>, d = [<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>]</div><div class="line"></div><div class="line"><span class="symbol">Output:</span></div><div class="line"><span class="string">&quot;a&quot;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>&#x6CE8;&#x610F;<ul>
-<li>&#x6240;&#x6709;&#x5B57;&#x7B26;&#x5747;&#x5C0F;&#x5199;;</li>
-<li>&#x5217;&#x8868;d&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x5C0F;&#x4E8E;1000;</li>
-<li>&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x5C0F;&#x4E8E;1000;</li>
-</ul>
+<li><p>&#x95EE;&#x9898;&#x4E3E;&#x4F8B;</p>
 </li>
 </ul>
-<hr>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,</div><div class="line"></div><div class="line">Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,</div><div class="line">return [<span class="number">0</span>, <span class="number">1</span>].</div></pre></td></tr></table></figure>
 <ul>
-<li>&#x601D;&#x8DEF;1-&#x7A77;&#x4E3E;&#x6CD5;-&#x65F6;&#x95F4;&#x8D85;&#x9650;<ul>
-<li>&#x7B97;&#x6CD5;</li>
+<li>&#x89E3;&#x51B3;&#x4EE3;&#x7801;</li>
 </ul>
-</li>
-</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">&quot;&quot;&quot;</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[int]</div><div class="line">        &quot;&quot;&quot;</div><div class="line">        </div><div class="line">        list_len = len(nums)</div><div class="line"></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(list_len):</div><div class="line">            annum = target - nums[i]</div><div class="line">            <span class="keyword">if</span> annum <span class="keyword">in</span> nums[i+<span class="number">1</span>:]:</div><div class="line">                <span class="keyword">return</span> [i,i + nums[i+<span class="number">1</span>:].index(annum) + <span class="number">1</span>]</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/Python/">Python</a>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
 
       
       
@@ -166,7 +144,7 @@
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2017/05/16/leetcode1/" data-title="524. Longest Word In Dictionary Through Deletion" data-url="http://www.biopython.club/2017/05/16/leetcode1/"></div>
+	 <div class="ds-thread" data-thread-key="/2017/05/20/leetcode2/" data-title="每天刷LeetCode之第二天" data-url="http://www.biopython.club/2017/05/20/leetcode2/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -193,19 +171,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/20/leetcode2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          每天刷LeetCode之第二天
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/05/16/delstring/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/05/16/leetcode1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)</div>
+      <div class="article-nav-title">524. Longest Word In Dictionary Through Deletion</div>
     </a>
   
 </nav>
