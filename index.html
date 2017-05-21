@@ -97,6 +97,54 @@
         
           <section id="main">
   
+    <article id="post-leetcode4"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/21/leetcode4/">每天刷LeetCode之第四天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/05/21/leetcode4/" class="article-date">
+	  <time datetime="2017-05-20T16:00:00.000Z" itemprop="datePublished">May 21, 2017</time>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;</h5><p>&#x8F93;&#x5165;&#x4E00;&#x4E2A;32&#x4F4D;&#x7684;&#x6574;&#x6570;&#xFF0C;&#x5E76;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;&#xFF1B;&#x6574;&#x6570;&#x4EE5;32&#x4F4D;&#x5B58;&#x50A8;&#xFF0C;&#x82E5;&#x53CD;&#x8F6C;&#x4E4B;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x6EA2;&#x51FA;&#x5185;&#x5B58;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;0</p>
+<h5 id="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"><a href="#&#x95EE;&#x9898;&#x4E3E;&#x4F8B;" class="headerlink" title="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"></a>&#x95EE;&#x9898;&#x4E3E;&#x4F8B;</h5><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">Example1:</span> x = <span class="number">123</span>, <span class="keyword">return</span> <span class="number">321</span></div><div class="line"><span class="string">Example2:</span> x = <span class="number">-123</span>, <span class="keyword">return</span> <span class="number">-321</span></div></pre></td></tr></table></figure>
+<h5 id="&#x5173;&#x4E8E;&#x95EE;&#x9898;&#x7684;&#x601D;&#x8003;"><a href="#&#x5173;&#x4E8E;&#x95EE;&#x9898;&#x7684;&#x601D;&#x8003;" class="headerlink" title="&#x5173;&#x4E8E;&#x95EE;&#x9898;&#x7684;&#x601D;&#x8003;"></a>&#x5173;&#x4E8E;&#x95EE;&#x9898;&#x7684;&#x601D;&#x8003;</h5><ul>
+<li>&#x82E5;&#x8F93;&#x5165;&#x6574;&#x6570;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x51E0;&#x4E2A;&#x4F4D;&#x6570;&#x4E3A;0&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x64CD;&#x4F5C;? &#x6BD4;&#x5982;100&#xFF0C;-100&#x7B49;</li>
+<li>&#x6CE8;&#x610F;&#x5185;&#x5B58;&#x7684;&#x6EA2;&#x51FA;&#xFF0C;&#x6BD4;&#x5982;&#x8F93;&#x5165;&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;32&#x4F4D;&#x7684;&#x6574;&#x6570;&#xFF0C;&#x50CF;1000000003&#x8F6C;&#x7F6E;&#x4E4B;&#x540E;&#x4F1A;&#x6EA2;&#x51FA;&#x5185;&#x5B58;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x4F60;&#x5982;&#x4F55;&#x5904;&#x7406;?</li>
+</ul>
+<h5 id="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"><a href="#&#x89E3;&#x51B3;&#x4EE3;&#x7801;" class="headerlink" title="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"></a>&#x89E3;&#x51B3;&#x4EE3;&#x7801;</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">reverse</span><span class="params">(self, x)</span>:</span></div><div class="line">        <span class="string">&quot;&quot;&quot;</span></div><div class="line">        :type x: int</div><div class="line">        :rtype: int</div><div class="line">        &quot;&quot;&quot;</div><div class="line">        res = <span class="number">0</span></div><div class="line"></div><div class="line">        <span class="keyword">if</span> str(x).startswith(<span class="string">&quot;-&quot;</span>):</div><div class="line">            res = <span class="string">&quot;-&quot;</span> + str(str(x).lstrip(<span class="string">&quot;-&quot;</span>))[::<span class="number">-1</span>]</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            res = str(x)[::<span class="number">-1</span>]</div><div class="line">        <span class="comment"># &#x5C06;&#x7ED3;&#x679C;&#x5148;&#x5F53;&#x4F5C;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;&#xFF0C;&#x7ED3;&#x675F;&#x540E;&#x8F6C;&#x6362;&#x4E3A;&#x6574;&#x6570;&#x7C7B;&#x578B;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x6700;&#x540E;&#x51E0;&#x4F4D;&#x6570;&#x4E3A;0&#x7684;&#x60C5;&#x51B5;&#x3002;</span></div><div class="line"></div><div class="line">        <span class="keyword">if</span> <span class="number">-2147483648</span> &lt; int(res) &lt; <span class="number">2147483647</span>: <span class="comment">#&#x5BF9;&#x8F93;&#x51FA;&#x7684;&#x6574;&#x6570;&#x8BBE;&#x7F6E;&#x8303;&#x56F4;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x5185;&#x5B58;&#x6EA2;&#x51FA;&#x7684;&#x60C5;&#x51B5;&#x3002;</span></div><div class="line">            <span class="keyword">return</span> int(res)</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-leetcode2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -596,63 +644,11 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-python_custom_module"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/10/python_custom_module/">在Python语言中导入自定义模块</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2017/05/10/python_custom_module/" class="article-date">
-	  <time datetime="2017-05-09T16:00:00.000Z" itemprop="datePublished">May 10, 2017</time>
-	</a>
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>&#x5728;Python&#x4EE3;&#x7801;&#x7684;&#x7F16;&#x5199;&#x4E2D;&#xFF0C;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x6A21;&#x5757;&#xFF0C;&#x8FDB;&#x800C;&#x5B9E;&#x73B0;&#x7279;&#x5B9A;&#x7684;&#x4EFB;&#x52A1;;</li>
-<li>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;Python&#x73AF;&#x5883;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x5C3D;&#x91CF;&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6A21;&#x5757;&#x4E0E;Python&#x81EA;&#x5E26;&#x4EE5;&#x53CA;&#x7B2C;&#x4E09;&#x65B9;&#x5F00;&#x53D1;&#x7684;&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x5206;&#x5F00;&#x5B58;&#x50A8;&#xFF1B;</li>
-<li>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x81EA;&#x5DF1;&#x6CA1;&#x6709;&#x670D;&#x52A1;&#x5668;&#x7684;root&#x6743;&#x9650;&#xFF0C;&#x4E5F;&#x96BE;&#x4EE5;&#x5C06;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x7684;&#x6A21;&#x5757;&#x5BFC;&#x5165;&#x5230;Python&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;</li>
-</ul>
-<p>&#x9488;&#x5BF9;&#x4E0A;&#x8FF0;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x9700;&#x8981;&#x4E3A;Python&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684;Python&#x6A21;&#x5757;&#xFF0C;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x5982;&#x4E0B;&#x6240;&#x793A;:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">&quot;export PYTHONPATH=<span class="variable">$PYTHONPATH</span>:{your path}&quot;</span> &gt;&gt; /home/{user}/.bashrc</div><div class="line"><span class="built_in">source</span> /home/{user}/.bashrc</div></pre></td></tr></table></figure>
-<ul>
-<li>{your path} &#x8868;&#x793A;&#x6307;&#x5B9A;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</li>
-<li>{user} &#x8868;&#x793A;&#x7528;&#x6237;&#x540D;</li>
-</ul>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/python/">python</a>
-
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/hueman/2/">2</a><a class="page-number" href="/hueman/3/">3</a><a class="extend next" rel="next" href="/hueman/2/">weiter</a>
+    <span class="page-number current">1</span><a class="page-number" href="/hueman/2/">2</a><a class="page-number" href="/hueman/3/">3</a><a class="extend next" rel="next" href="/hueman/2/">Next</a>
   </nav>
 
 </section>
@@ -664,9 +660,9 @@
     <form class="search-form">
         <label style="width: 75%;">
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 42px;" placeholder=" Suche…" value="" name="s" title="Search for:">
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" Search…" value="" name="s" title="Search for:">
         </label>
-        <input type="submit" class="search-form-submit" value="Suche">
+        <input type="submit" class="search-form-submit" value="Search">
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -753,10 +749,22 @@
     
   <div class="widget_athemes_tabs">
     <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>letzter Beitrag</a></li>
+      <li class="active"><a>Recent Posts</a></li>
     </ul>
     <div class="widget">
       <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/05/21/leetcode4/">每天刷LeetCode之第四天</a></h6>
+              <span>May 21, 2017</span>
+            </div>
+
+          </li>
         
           <li class="clearfix">
 
@@ -818,18 +826,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/05/11/python_readfasta/">一个简单的Python函数读取fasta文件</a></h6>
-              <span>May 11, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -837,9 +833,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Kategorien</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -852,10 +848,10 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 

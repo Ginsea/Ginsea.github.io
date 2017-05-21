@@ -97,6 +97,61 @@
         
           <section id="main">
   
+    <article id="post-python3"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2016/12/27/python3/">biopython的一些常见用法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2016/12/27/python3/" class="article-date">
+	  <time datetime="2016-12-26T16:00:00.000Z" itemprop="datePublished">December 27, 2016</time>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="1-&#x8BFB;&#x5165;&#x5E8F;&#x5217;&#x6587;&#x4EF6;"><a href="#1-&#x8BFB;&#x5165;&#x5E8F;&#x5217;&#x6587;&#x4EF6;" class="headerlink" title="1. &#x8BFB;&#x5165;&#x5E8F;&#x5217;&#x6587;&#x4EF6;"></a>1. &#x8BFB;&#x5165;&#x5E8F;&#x5217;&#x6587;&#x4EF6;</h5><h6 id="for&#x5FAA;&#x73AF;&#x904D;&#x5386;fasta&#x6587;&#x4EF6;"><a href="#for&#x5FAA;&#x73AF;&#x904D;&#x5386;fasta&#x6587;&#x4EF6;" class="headerlink" title="for&#x5FAA;&#x73AF;&#x904D;&#x5386;fasta&#x6587;&#x4EF6;"></a>for&#x5FAA;&#x73AF;&#x904D;&#x5386;fasta&#x6587;&#x4EF6;</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line"><span class="keyword">for</span> seqs <span class="keyword">in</span> SeqIO.parse(<span class="string">&quot;target.fa&quot;</span>,<span class="string">&quot;fasta&quot;</span>):</div><div class="line">  print(seqs.id) <span class="comment">#&#x6253;&#x5370;&#x5E8F;&#x5217;ID</span></div><div class="line">  print(seqs.seq) <span class="comment">#&#x6253;&#x5370;&#x5E8F;&#x5217;&#x5185;&#x5BB9;</span></div><div class="line">  print(seqs.description) <span class="comment">#&#x6253;&#x5370;&#x5E8F;&#x5217;&#x6240;&#x6709;&#x7684;&#x6807;&#x6CE8;&#x4FE1;&#x606F;&#xFF08;&gt;&#x540E;&#x6240;&#x6709;&#x5B57;&#x7B26;&#xFF09;</span></div></pre></td></tr></table></figure>
+<h6 id="&#x5C06;fasta&#x7ED3;&#x679C;&#x8BFB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5217;&#x8868;"><a href="#&#x5C06;fasta&#x7ED3;&#x679C;&#x8BFB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5217;&#x8868;" class="headerlink" title="&#x5C06;fasta&#x7ED3;&#x679C;&#x8BFB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5217;&#x8868;"></a>&#x5C06;fasta&#x7ED3;&#x679C;&#x8BFB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5217;&#x8868;</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line">records = list(SeqIO.parse(<span class="string">&quot;target.fa&quot;</span>,<span class="string">&quot;fasta&quot;</span>))</div><div class="line">print(records[<span class="number">0</span>].id) <span class="comment">#&#x6253;&#x5370;&#x7B2C;&#x4E00;&#x6761;&#x5E8F;&#x5217;&#x7684;ID</span></div><div class="line">print(records[<span class="number">0</span>].seq) <span class="comment">#&#x6253;&#x5370;&#x7B2C;&#x4E00;&#x6761;&#x5E8F;&#x5217;&#x7684;&#x5E8F;&#x5217;&#x5185;&#x5BB9;</span></div></pre></td></tr></table></figure>
+<h6 id="&#x5C06;fasta&#x7ED3;&#x679C;&#x8BFB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x5178;"><a href="#&#x5C06;fasta&#x7ED3;&#x679C;&#x8BFB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x5178;" class="headerlink" title="&#x5C06;fasta&#x7ED3;&#x679C;&#x8BFB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x5178;"></a>&#x5C06;fasta&#x7ED3;&#x679C;&#x8BFB;&#x5165;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x5178;</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line">record_dict = SeqIO.to_dict(<span class="string">&quot;target.fa&quot;</span>,<span class="string">&quot;fasta&quot;</span>)</div><div class="line">record_dict = SeqIO.index(<span class="string">&quot;target.fa&quot;</span>,<span class="string">&quot;fasta&quot;</span>)</div></pre></td></tr></table></figure>
+<ul>
+<li>to_dict&#x51FD;&#x6570;&#x548C;index&#x51FD;&#x6570;&#x5747;&#x53EF;&#x4EE5;&#x4E3A;&#x5E8F;&#x5217;&#x6587;&#x4EF6;&#x4EE5;&#x67D0;&#x4E9B;&#x5143;&#x7D20;&#x4E3A;&#x952E;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#xFF0C;</li>
+<li>to_dict &#x9ED8;&#x8BA4;&#x4EE5;ID&#x4E3A;&#x952E;&#x521B;&#x5EFA;&#x5B57;&#x5178;&#xFF0C;&#x4F46;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;key_function&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x5176;&#x4ED6;&#x7684;&#x952E;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x8BFB;&#x5165;&#x8F83;&#x5927;&#x7684;&#x5E8F;&#x5217;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x8FC7;&#x91CF;&#x6D88;&#x8017;&#xFF1B;</li>
+<li>index&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8BFB;&#x5165;&#x5927;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x652F;&#x6301;BioSQL&#xFF08;&#x5173;&#x4E8E;BioSQL&#x672C;&#x535A;&#x5BA2;&#x4F1A;&#x5728;&#x540E;&#x671F;&#x4ECB;&#x7ECD;&#xFF09;<h6 id="&#x8BFB;&#x53D6;&#x7B2C;&#x4E00;&#x6761;&#x5E8F;&#x5217;"><a href="#&#x8BFB;&#x53D6;&#x7B2C;&#x4E00;&#x6761;&#x5E8F;&#x5217;" class="headerlink" title="&#x8BFB;&#x53D6;&#x7B2C;&#x4E00;&#x6761;&#x5E8F;&#x5217;"></a>&#x8BFB;&#x53D6;&#x7B2C;&#x4E00;&#x6761;&#x5E8F;&#x5217;</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line">first_record = SeqIO.parse(<span class="string">&quot;target.fasta&quot;</span>, <span class="string">&quot;fasta&quot;</span>).next()</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&#x672C;&#x535A;&#x5BA2;&#x4EE5;&#x6700;&#x4E3A;&#x5E38;&#x7528;&#x7684;fasta&#x6587;&#x4EF6;&#x4E3A;&#x4F8B;&#x8FDB;&#x884C;Biopython&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x7684;&#x8BF4;&#x660E;&#x3002;&#x6B64;&#x5916;&#xFF0C;biopython&#x8FD8;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x6709;abi,ace,clustal,embl,fastq, genbank,ig,imgt,nexus,pdb-seqres,pdb-atom,phd,phylip,pir,seqxml,sff,stockholm,swiss,tab,qual,uniprot-xml&#x7B49;&#x3002;</p>
+<h5 id="2-&#x5199;&#x5165;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x6587;&#x4EF6;"><a href="#2-&#x5199;&#x5165;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x6587;&#x4EF6;" class="headerlink" title="2. &#x5199;&#x5165;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x6587;&#x4EF6;"></a>2. &#x5199;&#x5165;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x6587;&#x4EF6;</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="comment">#coding=UTF-8</span></div><div class="line"><span class="comment">#&#x8BFB;&#x5165;&#x4E00;&#x4E2A;genbank&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x7B2C;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x8F6C;&#x6362;&#x4E3A;fasta&#x683C;&#x5F0F;</span></div><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line"><span class="keyword">import</span> sys,os</div><div class="line"></div><div class="line">first_record = SeqIO.parse(sys.argv[<span class="number">0</span>],<span class="string">&quot;genbank&quot;</span>).next()</div><div class="line"><span class="keyword">with</span> open(<span class="string">&quot;out.fa&quot;</span>,<span class="string">&quot;fasta&quot;</span>) <span class="keyword">as</span> out_handle:</div><div class="line">  SeqIO.write(first_record,out_handle,<span class="string">&quot;fasta&quot;</span>) <span class="comment">#&#x5C06;first_record&#x4E2D;&#x7684;&#x5E8F;&#x5217;&#x4FE1;&#x606F;&#x4EE5;fasta&#x683C;&#x5F0F;&#x5199;&#x5165;out_handle&#x53E5;&#x67C4;&#x4E2D;</span></div></pre></td></tr></table></figure>
+<h5 id="3-&#x5E8F;&#x5217;&#x683C;&#x5F0F;&#x8F6C;&#x6362;"><a href="#3-&#x5E8F;&#x5217;&#x683C;&#x5F0F;&#x8F6C;&#x6362;" class="headerlink" title="3.&#x5E8F;&#x5217;&#x683C;&#x5F0F;&#x8F6C;&#x6362;"></a>3.&#x5E8F;&#x5217;&#x683C;&#x5F0F;&#x8F6C;&#x6362;</h5><h6 id="&#x65B9;&#x6CD5;1-&#x901A;&#x8FC7;SeqIO-parse&#x8BFB;&#x53D6;&#x5E8F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x4EE5;&#x76EE;&#x6807;&#x683C;&#x5F0F;&#x5199;&#x5165;&#x8F93;&#x51FA;&#x53E5;&#x67C4;"><a href="#&#x65B9;&#x6CD5;1-&#x901A;&#x8FC7;SeqIO-parse&#x8BFB;&#x53D6;&#x5E8F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x4EE5;&#x76EE;&#x6807;&#x683C;&#x5F0F;&#x5199;&#x5165;&#x8F93;&#x51FA;&#x53E5;&#x67C4;" class="headerlink" title="&#x65B9;&#x6CD5;1 &#x901A;&#x8FC7;SeqIO.parse&#x8BFB;&#x53D6;&#x5E8F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x4EE5;&#x76EE;&#x6807;&#x683C;&#x5F0F;&#x5199;&#x5165;&#x8F93;&#x51FA;&#x53E5;&#x67C4;"></a>&#x65B9;&#x6CD5;1 &#x901A;&#x8FC7;SeqIO.parse&#x8BFB;&#x53D6;&#x5E8F;&#x5217;&#xFF0C;&#x7136;&#x540E;&#x4EE5;&#x76EE;&#x6807;&#x683C;&#x5F0F;&#x5199;&#x5165;&#x8F93;&#x51FA;&#x53E5;&#x67C4;</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env python</span></div><div class="line"><span class="comment">#&#x5C06;infile.gb&#x4ECE;genbank&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A;fasta&#x683C;&#x5F0F;</span></div><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line"><span class="keyword">with</span> open(<span class="string">&quot;infile.gb&quot;</span>,<span class="string">&quot;rU&quot;</span>) <span class="keyword">as</span> inhandle, open(<span class="string">&quot;outfile.fa&quot;</span>,<span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> outhandle:</div><div class="line">  seqs = SeqIO.parse(inhandle,<span class="string">&quot;genbank&quot;</span>)</div><div class="line">  SeqIO.write(seqs,outhandle,<span class="string">&quot;fasta&quot;</span>)</div></pre></td></tr></table></figure>
+<h6 id="&#x65B9;&#x6CD5;2-&#x4F7F;&#x7528;SeqIO-convert-&#x51FD;&#x6570;&#x76F4;&#x63A5;&#x8F6C;&#x6362;"><a href="#&#x65B9;&#x6CD5;2-&#x4F7F;&#x7528;SeqIO-convert-&#x51FD;&#x6570;&#x76F4;&#x63A5;&#x8F6C;&#x6362;" class="headerlink" title="&#x65B9;&#x6CD5;2 &#x4F7F;&#x7528;SeqIO.convert()&#x51FD;&#x6570;&#x76F4;&#x63A5;&#x8F6C;&#x6362;"></a>&#x65B9;&#x6CD5;2 &#x4F7F;&#x7528;SeqIO.convert()&#x51FD;&#x6570;&#x76F4;&#x63A5;&#x8F6C;&#x6362;</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</div><div class="line">SeqIO.convert(<span class="string">&quot;infile.gb&quot;</span>,<span class="string">&quot;genbank&quot;</span>,<span class="string">&quot;outfile.fa&quot;</span>,<span class="string">&quot;fasta&quot;</span>)</div></pre></td></tr></table></figure>
+<p>=============================&#x672A;&#x5B8C;&#x5F85;&#x7EED;=============================</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-python2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -370,7 +425,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/hueman/2/">zurück</a><a class="page-number" href="/">1</a><a class="page-number" href="/hueman/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/hueman/2/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/hueman/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 </section>
@@ -382,9 +437,9 @@
     <form class="search-form">
         <label style="width: 75%;">
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 42px;" placeholder=" Suche…" value="" name="s" title="Search for:">
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" Search…" value="" name="s" title="Search for:">
         </label>
-        <input type="submit" class="search-form-submit" value="Suche">
+        <input type="submit" class="search-form-submit" value="Search">
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -471,10 +526,22 @@
     
   <div class="widget_athemes_tabs">
     <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>letzter Beitrag</a></li>
+      <li class="active"><a>Recent Posts</a></li>
     </ul>
     <div class="widget">
       <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/05/21/leetcode4/">每天刷LeetCode之第四天</a></h6>
+              <span>May 21, 2017</span>
+            </div>
+
+          </li>
         
           <li class="clearfix">
 
@@ -536,18 +603,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/05/11/python_readfasta/">一个简单的Python函数读取fasta文件</a></h6>
-              <span>May 11, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -555,9 +610,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Kategorien</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -570,10 +625,10 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
