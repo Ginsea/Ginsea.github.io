@@ -127,7 +127,7 @@
 <h5 id="&#x601D;&#x8DEF;"><a href="#&#x601D;&#x8DEF;" class="headerlink" title="&#x601D;&#x8DEF;"></a>&#x601D;&#x8DEF;</h5><ul>
 <li>&#x5217;&#x8868;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x7A7A;</li>
 <li>&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x5217;&#x8868;&#x4E2D;&#x6700;&#x77ED;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#xFF1B;</li>
-<li>&#x4EE5;&#x6700;&#x77ED;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#x5FAA;&#x73AF; <figure class="highlight plain"><figcaption><span>i in range(len(minstring))```&#xFF0C;&#x5C06;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#x5B58;&#x4E3A;set, &#x5F53;set&#x957F;&#x5EA6;&#x4E3A;1&#x662F;&#x8868;&#x793A;&#x4E3A;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5927;&#x4E8E;1&#x65F6;&#x7EC8;&#x6B62;&#x8FED;&#x4EE3; ```break```&#xFF1B;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">* &#x83B7;&#x53D6;&#x6700;&#x957F;&#x5171;&#x540C;&#x524D;&#x7F00;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x4F4D;&#x7F6E;&#x63D0;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x4F4D;&#x70B9;&#xFF1B;</div><div class="line"></div><div class="line">##### &#x5BF9;&#x5E94;&#x4EE3;&#x7801;</div><div class="line"></div><div class="line">```python</div><div class="line">class Solution(object):</div><div class="line">    &apos;&apos;&apos;</div><div class="line">    Example</div><div class="line">    -------</div><div class="line">    &gt;&gt;&gt; strs=[&quot;AA&quot;,&quot;AAB&quot;]</div><div class="line">    &gt;&gt;&gt; longestCommonPrefix(self,strs)</div><div class="line">    &quot;AA&quot;</div><div class="line">    &apos;&apos;&apos;</div><div class="line"></div><div class="line">    def longestCommonPrefix(self, strs):</div><div class="line">        if strs:</div><div class="line">            minlen = min([len(x) for x in strs])</div><div class="line"></div><div class="line">            tmps = []</div><div class="line">            for i in range(minlen):</div><div class="line">                if len(set([x[i] for x in strs])) == 1:</div><div class="line">                    tmps.append(i)</div><div class="line">                else:</div><div class="line">                    break</div><div class="line">            return &quot;&quot;.join([strs[0][i] for i in tmps])</div><div class="line">        else:</div><div class="line">            return &quot;&quot;</div></pre></td></tr></table></figure></li>
+<li>&#x4EE5;&#x6700;&#x77ED;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#x5FAA;&#x73AF; <figure class="highlight plain"><figcaption><span>i in range(len(minstring))```&#xFF0C;&#x5C06;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#x5B58;&#x4E3A;set, &#x5F53;set&#x957F;&#x5EA6;&#x4E3A;1&#x662F;&#x8868;&#x793A;&#x4E3A;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5927;&#x4E8E;1&#x65F6;&#x7EC8;&#x6B62;&#x8FED;&#x4EE3; ```break``` &#xFF1B;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">* &#x83B7;&#x53D6;&#x6700;&#x957F;&#x5171;&#x540C;&#x524D;&#x7F00;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x4F4D;&#x7F6E;&#x63D0;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x4F4D;&#x70B9;&#xFF1B;</div><div class="line"></div><div class="line">##### &#x5BF9;&#x5E94;&#x4EE3;&#x7801;</div><div class="line"></div><div class="line">```python</div><div class="line">class Solution(object):</div><div class="line">    &apos;&apos;&apos;</div><div class="line">    Example</div><div class="line">    -------</div><div class="line">    &gt;&gt;&gt; strs=[&quot;AA&quot;,&quot;AAB&quot;]</div><div class="line">    &gt;&gt;&gt; longestCommonPrefix(self,strs)</div><div class="line">    &quot;AA&quot;</div><div class="line">    &apos;&apos;&apos;</div><div class="line"></div><div class="line">    def longestCommonPrefix(self, strs):</div><div class="line">        if strs:</div><div class="line">            minlen = min([len(x) for x in strs])</div><div class="line"></div><div class="line">            tmps = []</div><div class="line">            for i in range(minlen):</div><div class="line">                if len(set([x[i] for x in strs])) == 1:</div><div class="line">                    tmps.append(i)</div><div class="line">                else:</div><div class="line">                    break</div><div class="line">            return &quot;&quot;.join([strs[0][i] for i in tmps])</div><div class="line">        else:</div><div class="line">            return &quot;&quot;</div></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -195,6 +195,50 @@
 <!-- Table of Contents -->
 
   
+    <article id="post-leetcode2"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/20/leetcode2/">每天刷LeetCode之第二天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/05/20/leetcode2/" class="article-date">
+	  <time datetime="2017-05-19T16:00:00.000Z" itemprop="datePublished">May 20, 2017</time>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="&#x4EE3;&#x7801;&#x95EE;&#x9898;"><a href="#&#x4EE3;&#x7801;&#x95EE;&#x9898;" class="headerlink" title="&#x4EE3;&#x7801;&#x95EE;&#x9898;:"></a>&#x4EE3;&#x7801;&#x95EE;&#x9898;:</h5><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.<br>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x82E5;&#x5217;&#x8868;&#x4E2D;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x548C;&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6570;&#xFF08;&#x7ED9;&#x5B9A;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7531;&#x8FD9;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;;<br>&#x6CE8;&#x610F;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53EA;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x6B21;;</p>
+<h5 id="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"><a href="#&#x95EE;&#x9898;&#x4E3E;&#x4F8B;" class="headerlink" title="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"></a>&#x95EE;&#x9898;&#x4E3E;&#x4F8B;</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,</div><div class="line"></div><div class="line">Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,</div><div class="line">return [<span class="number">0</span>, <span class="number">1</span>].</div></pre></td></tr></table></figure>
+<h5 id="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"><a href="#&#x89E3;&#x51B3;&#x4EE3;&#x7801;" class="headerlink" title="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"></a>&#x89E3;&#x51B3;&#x4EE3;&#x7801;</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">&quot;&quot;&quot;</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[int]</div><div class="line">        &quot;&quot;&quot;</div><div class="line"></div><div class="line">        list_len = len(nums)</div><div class="line"></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(list_len):</div><div class="line">            annum = target - nums[i]</div><div class="line">            <span class="keyword">if</span> annum <span class="keyword">in</span> nums[i+<span class="number">1</span>:]:</div><div class="line">                <span class="keyword">return</span> [i,i + nums[i+<span class="number">1</span>:].index(annum) + <span class="number">1</span>]</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-leetcode3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -240,7 +284,7 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-leetcode2"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-delstring"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -248,7 +292,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/20/leetcode2/">每天刷LeetCode之第二天</a>
+      <a class="article-title" href="/2017/05/16/delstring/">每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)</a>
     </h1>
   
 
@@ -256,23 +300,37 @@
     
     <div class="article-meta">
       
-	Posted on <a href="/2017/05/20/leetcode2/" class="article-date">
-	  <time datetime="2017-05-19T16:00:00.000Z" itemprop="datePublished">May 20, 2017</time>
+	Posted on <a href="/2017/05/16/delstring/" class="article-date">
+	  <time datetime="2017-05-15T16:00:00.000Z" itemprop="datePublished">May 16, 2017</time>
 	</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="&#x4EE3;&#x7801;&#x95EE;&#x9898;"><a href="#&#x4EE3;&#x7801;&#x95EE;&#x9898;" class="headerlink" title="&#x4EE3;&#x7801;&#x95EE;&#x9898;:"></a>&#x4EE3;&#x7801;&#x95EE;&#x9898;:</h5><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.<br>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x82E5;&#x5217;&#x8868;&#x4E2D;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x548C;&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6570;&#xFF08;&#x7ED9;&#x5B9A;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7531;&#x8FD9;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;;<br>&#x6CE8;&#x610F;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53EA;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x6B21;;</p>
-<h5 id="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"><a href="#&#x95EE;&#x9898;&#x4E3E;&#x4F8B;" class="headerlink" title="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"></a>&#x95EE;&#x9898;&#x4E3E;&#x4F8B;</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,</div><div class="line"></div><div class="line">Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,</div><div class="line">return [<span class="number">0</span>, <span class="number">1</span>].</div></pre></td></tr></table></figure>
-<h5 id="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"><a href="#&#x89E3;&#x51B3;&#x4EE3;&#x7801;" class="headerlink" title="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"></a>&#x89E3;&#x51B3;&#x4EE3;&#x7801;</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">&quot;&quot;&quot;</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[int]</div><div class="line">        &quot;&quot;&quot;</div><div class="line"></div><div class="line">        list_len = len(nums)</div><div class="line"></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(list_len):</div><div class="line">            annum = target - nums[i]</div><div class="line">            <span class="keyword">if</span> annum <span class="keyword">in</span> nums[i+<span class="number">1</span>:]:</div><div class="line">                <span class="keyword">return</span> [i,i + nums[i+<span class="number">1</span>:].index(annum) + <span class="number">1</span>]</div></pre></td></tr></table></figure>
+        <ul>
+<li>&#x95EE;&#x9898;&#x63CF;&#x8FF0;: &#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E4B;&#x95F4;&#x7684;&#x6700;&#x957F;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BD4;&#x5982;: &#x5B57;&#x7B26;&#x4E32;1=&#x201D;testing&#x201D;; &#x5B57;&#x7B26;&#x4E32;2=&#x201D;testng&#x201D;, &#x5219;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#x201D;testng&#x201D;</li>
+<li>&#x5B9E;&#x73B0;&#x811A;&#x672C;(&#x901A;&#x8FC7;&#x9012;&#x5F52;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">lcs</span><span class="params">(xstr,ystr)</span>:</span></div><div class="line">  <span class="string">&apos;&apos;&apos;</span></div><div class="line">  &gt;&gt;&gt; lcs(&quot;testing&quot;,&quot;testng&quot;)</div><div class="line">  &apos;testng&apos;</div><div class="line">  &apos;&apos;&apos;</div><div class="line"></div><div class="line">  <span class="keyword">if</span> <span class="keyword">not</span> xstr <span class="keyword">or</span> <span class="keyword">not</span> ystr: <span class="comment">#&#x5F53;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6709;&#x4E00;&#x4E2A;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;</span></div><div class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span></div><div class="line"></div><div class="line">  x,xs,y,ys = xstr[<span class="number">0</span>], xstr[<span class="number">1</span>:], ystr[<span class="number">0</span>], ystr[<span class="number">1</span>:] <span class="comment">#&#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;</span></div><div class="line"></div><div class="line">  <span class="comment">#&#x5206;&#x522B;&#x4ECE;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#xFF0C;&#x82E5;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x63D0;&#x53D6;&#x4E3A;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5F00;&#x59CB;&#x5206;&#x6790;&#x4E0B;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;.</span></div><div class="line">  <span class="comment">#&#x82E5;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#xFF0C;&#x5219;&#x5206;&#x522B;&#x8003;&#x8651;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x4E0E;&#x7B2C;&#x4E8C;&#x5B57;&#x7B26;&#x4E32;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x4EE5;&#x53CA;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F4D;&#x70B9;&#x4E0E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6700;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span></div><div class="line">  <span class="keyword">if</span> x == y:</div><div class="line">    <span class="keyword">return</span> x + lcs(xs,ys)</div><div class="line">  <span class="keyword">else</span>:</div><div class="line">    <span class="keyword">return</span> max(lcs(xs,ystr),lcs(xstr,ys),key=len)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</div><div class="line">  <span class="keyword">import</span> doctest; doctest.testmod() <span class="comment">#&#x8C03;&#x7528;doctest&#x6A21;&#x5757;&#x5BF9;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>&#x89E3;&#x51B3;LeetCode&#x95EE;&#x9898;:<ul>
+<li>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6C42;&#x603B;&#x5171;&#x9700;&#x8981;&#x51E0;&#x6B65;&#x5C06;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8005;&#x7684;&#x6700;&#x957F;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BCF;&#x6B21;&#x53EA;&#x80FD;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF1B;&#x6BD4;&#x5982;&#x5BF9;&#x4E8E;str1=&#x201D;sea&#x201D;, str2=&#x201D;eat&#x201D;&#xFF0C;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x201D;ea&#x201D;, &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;2</li>
+<li>&#x65B9;&#x6CD5;1: &#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;:</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GetCommStrStep</span><span class="params">(object)</span>:</span></div><div class="line">  <span class="string">&quot;&quot;&quot;Get steps for obtaining common subsequence among two strings&quot;&quot;&quot;</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, str1, str2)</span>:</span></div><div class="line">    super(, self).__init__()</div><div class="line">    self.str1 = str1</div><div class="line">    self.str2 = str2</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">lcs</span><span class="params">()</span>:</span></div><div class="line">    str1 = self.str1</div><div class="line">    str2 = self.str2</div><div class="line"></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> str1 <span class="keyword">or</span> <span class="keyword">not</span> str2:</div><div class="line">      <span class="keyword">return</span> <span class="string">&quot;&quot;</span></div><div class="line"></div><div class="line">    fstr1, nstr1, fstr2, nstr2 = str1[<span class="number">0</span>], str1[<span class="number">1</span>:], str2[<span class="number">0</span>], str2[<span class="number">1</span>:]</div><div class="line"></div><div class="line">    <span class="keyword">if</span> fstr1 == fstr2:</div><div class="line">      <span class="keyword">return</span> fstr1 + lcs(nstr1, nstr2)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">      <span class="keyword">return</span> max(lcs(nstr1,str2),lcs(str1,nstr2),key=len)</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">getstep</span><span class="params">()</span>:</span></div><div class="line">    str1 = self.str1</div><div class="line">    str2 = self.str2</div><div class="line"></div><div class="line">    n1, n2 = len(str1),len(str2)</div><div class="line"></div><div class="line">    commstr = self.lcs()</div><div class="line"></div><div class="line">    <span class="keyword">if</span> commstr:</div><div class="line">      <span class="keyword">return</span> n1+n2 - len(commstr)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">      <span class="keyword">return</span> <span class="number">0</span></div></pre></td></tr></table></figure>
+<ul>
+<li>&#x65B9;&#x6CD5;2:<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsteps</span><span class="params">(str1,str2)</span>:</span></div><div class="line">  <span class="keyword">if</span> <span class="keyword">not</span> str1 <span class="keyword">or</span> <span class="keyword">not</span> str2:</div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">  n1,n2 = len(str1),len(str2)</div><div class="line"></div><div class="line">  tmpmaxtrix = [[<span class="number">0</span>] * (n1+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(n2 + <span class="number">1</span>)]</div><div class="line"></div><div class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(n1):</div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(n2):</div><div class="line">      tmpmaxtrix[i+<span class="number">1</span>][j+<span class="number">1</span>] = tmpmaxtrix[i][j] + <span class="number">1</span> <span class="keyword">if</span> str1[i] == str2[j] <span class="keyword">else</span> max(tmpmaxtrix[i+<span class="number">1</span>][j],tmpmaxtrix[i][j+<span class="number">1</span>])</div><div class="line">  <span class="keyword">return</span> n1+n2-tmpmaxtrx[n1][n2]*<span class="number">2</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+    <a class="article-category-link" href="/categories/python/">python</a>
 
       
       
@@ -341,64 +399,6 @@
       
 	<span class="ico-folder"></span>
     <a class="article-category-link" href="/categories/Python/">Python</a>
-
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-delstring"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/16/delstring/">每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2017/05/16/delstring/" class="article-date">
-	  <time datetime="2017-05-15T16:00:00.000Z" itemprop="datePublished">May 16, 2017</time>
-	</a>
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>&#x95EE;&#x9898;&#x63CF;&#x8FF0;: &#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E4B;&#x95F4;&#x7684;&#x6700;&#x957F;&#x5B50;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BD4;&#x5982;: &#x5B57;&#x7B26;&#x4E32;1=&#x201D;testing&#x201D;; &#x5B57;&#x7B26;&#x4E32;2=&#x201D;testng&#x201D;, &#x5219;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#x201D;testng&#x201D;</li>
-<li>&#x5B9E;&#x73B0;&#x811A;&#x672C;(&#x901A;&#x8FC7;&#x9012;&#x5F52;&#x65B9;&#x5F0F;&#x89E3;&#x51B3;)</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">lcs</span><span class="params">(xstr,ystr)</span>:</span></div><div class="line">  <span class="string">&apos;&apos;&apos;</span></div><div class="line">  &gt;&gt;&gt; lcs(&quot;testing&quot;,&quot;testng&quot;)</div><div class="line">  &apos;testng&apos;</div><div class="line">  &apos;&apos;&apos;</div><div class="line"></div><div class="line">  <span class="keyword">if</span> <span class="keyword">not</span> xstr <span class="keyword">or</span> <span class="keyword">not</span> ystr: <span class="comment">#&#x5F53;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6709;&#x4E00;&#x4E2A;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;</span></div><div class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span></div><div class="line"></div><div class="line">  x,xs,y,ys = xstr[<span class="number">0</span>], xstr[<span class="number">1</span>:], ystr[<span class="number">0</span>], ystr[<span class="number">1</span>:] <span class="comment">#&#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;</span></div><div class="line"></div><div class="line">  <span class="comment">#&#x5206;&#x522B;&#x4ECE;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#xFF0C;&#x82E5;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x63D0;&#x53D6;&#x4E3A;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5E76;&#x5F00;&#x59CB;&#x5206;&#x6790;&#x4E0B;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;.</span></div><div class="line">  <span class="comment">#&#x82E5;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#xFF0C;&#x5219;&#x5206;&#x522B;&#x8003;&#x8651;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x4E0E;&#x7B2C;&#x4E8C;&#x5B57;&#x7B26;&#x4E32;&#x4E0B;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x4EE5;&#x53CA;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F4D;&#x70B9;&#x4E0E;&#x7B2C;&#x4E8C;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x70B9;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6700;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span></div><div class="line">  <span class="keyword">if</span> x == y:</div><div class="line">    <span class="keyword">return</span> x + lcs(xs,ys)</div><div class="line">  <span class="keyword">else</span>:</div><div class="line">    <span class="keyword">return</span> max(lcs(xs,ystr),lcs(xstr,ys),key=len)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</div><div class="line">  <span class="keyword">import</span> doctest; doctest.testmod() <span class="comment">#&#x8C03;&#x7528;doctest&#x6A21;&#x5757;&#x5BF9;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>&#x89E3;&#x51B3;LeetCode&#x95EE;&#x9898;:<ul>
-<li>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6C42;&#x603B;&#x5171;&#x9700;&#x8981;&#x51E0;&#x6B65;&#x5C06;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8005;&#x7684;&#x6700;&#x957F;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6BCF;&#x6B21;&#x53EA;&#x80FD;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF1B;&#x6BD4;&#x5982;&#x5BF9;&#x4E8E;str1=&#x201D;sea&#x201D;, str2=&#x201D;eat&#x201D;&#xFF0C;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#x4E3A;&#x201D;ea&#x201D;, &#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;2</li>
-<li>&#x65B9;&#x6CD5;1: &#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x51FD;&#x6570;:</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">GetCommStrStep</span><span class="params">(object)</span>:</span></div><div class="line">  <span class="string">&quot;&quot;&quot;Get steps for obtaining common subsequence among two strings&quot;&quot;&quot;</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, str1, str2)</span>:</span></div><div class="line">    super(, self).__init__()</div><div class="line">    self.str1 = str1</div><div class="line">    self.str2 = str2</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">lcs</span><span class="params">()</span>:</span></div><div class="line">    str1 = self.str1</div><div class="line">    str2 = self.str2</div><div class="line"></div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> str1 <span class="keyword">or</span> <span class="keyword">not</span> str2:</div><div class="line">      <span class="keyword">return</span> <span class="string">&quot;&quot;</span></div><div class="line"></div><div class="line">    fstr1, nstr1, fstr2, nstr2 = str1[<span class="number">0</span>], str1[<span class="number">1</span>:], str2[<span class="number">0</span>], str2[<span class="number">1</span>:]</div><div class="line"></div><div class="line">    <span class="keyword">if</span> fstr1 == fstr2:</div><div class="line">      <span class="keyword">return</span> fstr1 + lcs(nstr1, nstr2)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">      <span class="keyword">return</span> max(lcs(nstr1,str2),lcs(str1,nstr2),key=len)</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">getstep</span><span class="params">()</span>:</span></div><div class="line">    str1 = self.str1</div><div class="line">    str2 = self.str2</div><div class="line"></div><div class="line">    n1, n2 = len(str1),len(str2)</div><div class="line"></div><div class="line">    commstr = self.lcs()</div><div class="line"></div><div class="line">    <span class="keyword">if</span> commstr:</div><div class="line">      <span class="keyword">return</span> n1+n2 - len(commstr)</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">      <span class="keyword">return</span> <span class="number">0</span></div></pre></td></tr></table></figure>
-<ul>
-<li>&#x65B9;&#x6CD5;2:<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsteps</span><span class="params">(str1,str2)</span>:</span></div><div class="line">  <span class="keyword">if</span> <span class="keyword">not</span> str1 <span class="keyword">or</span> <span class="keyword">not</span> str2:</div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">  n1,n2 = len(str1),len(str2)</div><div class="line"></div><div class="line">  tmpmaxtrix = [[<span class="number">0</span>] * (n1+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(n2 + <span class="number">1</span>)]</div><div class="line"></div><div class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(n1):</div><div class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(n2):</div><div class="line">      tmpmaxtrix[i+<span class="number">1</span>][j+<span class="number">1</span>] = tmpmaxtrix[i][j] + <span class="number">1</span> <span class="keyword">if</span> str1[i] == str2[j] <span class="keyword">else</span> max(tmpmaxtrix[i+<span class="number">1</span>][j],tmpmaxtrix[i][j+<span class="number">1</span>])</div><div class="line">  <span class="keyword">return</span> n1+n2-tmpmaxtrx[n1][n2]*<span class="number">2</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/python/">python</a>
 
       
       
@@ -649,7 +649,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/hueman/2/">2</a><a class="page-number" href="/hueman/3/">3</a><a class="extend next" rel="next" href="/hueman/2/">Next</a>
+    <span class="page-number current">1</span><a class="page-number" href="/hueman/2/">2</a><a class="page-number" href="/hueman/3/">3</a><a class="extend next" rel="next" href="/hueman/2/">weiter</a>
   </nav>
 
 </section>
@@ -661,9 +661,9 @@
     <form class="search-form">
         <label style="width: 75%;">
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 42px;" placeholder=" Search…" value="" name="s" title="Search for:">
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" Suche…" value="" name="s" title="Search for:">
         </label>
-        <input type="submit" class="search-form-submit" value="Search">
+        <input type="submit" class="search-form-submit" value="Suche">
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -750,7 +750,7 @@
     
   <div class="widget_athemes_tabs">
     <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>Recent Posts</a></li>
+      <li class="active"><a>letzter Beitrag</a></li>
     </ul>
     <div class="widget">
       <ul>
@@ -785,18 +785,6 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/05/20/leetcode3/">每天刷LeetCode之第三天</a></h6>
-              <span>May 20, 2017</span>
-            </div>
-
-          </li>
-        
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
               <h6 style="margin: 0;"><a href="/2017/05/20/leetcode2/">每天刷LeetCode之第二天</a></h6>
               <span>May 20, 2017</span>
             </div>
@@ -809,8 +797,8 @@
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/05/16/leetcode1/">524. Longest Word In Dictionary Through Deletion</a></h6>
-              <span>May 16, 2017</span>
+              <h6 style="margin: 0;"><a href="/2017/05/20/leetcode3/">每天刷LeetCode之第三天</a></h6>
+              <span>May 20, 2017</span>
             </div>
 
           </li>
@@ -827,6 +815,18 @@
 
           </li>
         
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/05/16/leetcode1/">524. Longest Word In Dictionary Through Deletion</a></h6>
+              <span>May 16, 2017</span>
+            </div>
+
+          </li>
+        
       </ul>
     </div>
   </div>
@@ -834,7 +834,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">3</span></li></ul>
     </div>
@@ -849,7 +849,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
 
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
