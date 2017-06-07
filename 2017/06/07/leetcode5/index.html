@@ -3,28 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>524. longest word in dictionary through deletion | Ginsea Chen</title>
+  <title>leetcode：获取一个列表中所有元素的最长前缀字符串 | Ginsea Chen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="&amp;#x672C;&amp;#x95EE;&amp;#x9898;&amp;#x6E90;&amp;#x81EA;LeetCode.
-
-&amp;#x95EE;&amp;#x9898;&amp;#x5185;&amp;#x5BB9;:&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;s&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x">
+  <meta name="description" content="&amp;#x9898;&amp;#x76EE;   &amp;#x83B7;&amp;#x53D6;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x8868;&amp;#x4E2D;&amp;#x6240;&amp;#x6709;&amp;#x5143;&amp;#x7D20;&amp;#x7684;&amp;#x6700;&amp;#x957F;&amp;#x524D;&amp;#x7F00;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#xFF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="524. Longest Word In Dictionary Through Deletion">
-<meta property="og:url" content="http://www.biopython.club/2017/05/16/leetcode1/index.html">
+<meta property="og:title" content="LeetCode：获取一个列表中所有元素的最长前缀字符串">
+<meta property="og:url" content="http://www.biopython.club/2017/06/07/leetcode5/index.html">
 <meta property="og:site_name" content="Ginsea Chen">
-<meta property="og:description" content="&amp;#x672C;&amp;#x95EE;&amp;#x9898;&amp;#x6E90;&amp;#x81EA;LeetCode.
-
-&amp;#x95EE;&amp;#x9898;&amp;#x5185;&amp;#x5BB9;:&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;s&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x">
-<meta property="og:updated_time" content="2017-05-16T09:00:17.000Z">
+<meta property="og:description" content="&amp;#x9898;&amp;#x76EE;   &amp;#x83B7;&amp;#x53D6;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x8868;&amp;#x4E2D;&amp;#x6240;&amp;#x6709;&amp;#x5143;&amp;#x7D20;&amp;#x7684;&amp;#x6700;&amp;#x957F;&amp;#x524D;&amp;#x7F00;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#xFF">
+<meta property="og:updated_time" content="2017-06-07T09:58:50.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="524. Longest Word In Dictionary Through Deletion">
-<meta name="twitter:description" content="&amp;#x672C;&amp;#x95EE;&amp;#x9898;&amp;#x6E90;&amp;#x81EA;LeetCode.
-
-&amp;#x95EE;&amp;#x9898;&amp;#x5185;&amp;#x5BB9;:&amp;#x7ED9;&amp;#x5B9A;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;s&amp;#x548C;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x">
+<meta name="twitter:title" content="LeetCode：获取一个列表中所有元素的最长前缀字符串">
+<meta name="twitter:description" content="&amp;#x9898;&amp;#x76EE;   &amp;#x83B7;&amp;#x53D6;&amp;#x4E00;&amp;#x4E2A;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5217;&amp;#x8868;&amp;#x4E2D;&amp;#x6240;&amp;#x6709;&amp;#x5143;&amp;#x7D20;&amp;#x7684;&amp;#x6700;&amp;#x957F;&amp;#x524D;&amp;#x7F00;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#xFF">
   
     <link rel="alternate" href="/atom.xml" title="Ginsea Chen" type="application/atom+xml">
   
@@ -102,7 +96,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-leetcode1" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-leetcode5" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -110,7 +104,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      524. Longest Word In Dictionary Through Deletion
+      LeetCode：获取一个列表中所有元素的最长前缀字符串
     </h1>
   
 
@@ -118,39 +112,21 @@
     
     <div class="article-meta">
       
-	Posted on <a href="/2017/05/16/leetcode1/" class="article-date">
-	  <time datetime="2017-05-15T16:00:00.000Z" itemprop="datePublished">May 16, 2017</time>
+	Posted on <a href="/2017/06/07/leetcode5/" class="article-date">
+	  <time datetime="2017-06-06T16:00:00.000Z" itemprop="datePublished">June 7, 2017</time>
 	</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x672C;&#x95EE;&#x9898;&#x6E90;&#x81EA;<a href="https://leetcode.com/articles/longest-word-in-dictionary-through-deletion/" target="_blank" rel="external">LeetCode</a>.</p>
-<ul>
-<li><p>&#x95EE;&#x9898;&#x5185;&#x5BB9;:<br>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;s&#x548C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;d&#xFF0C;&#x8981;&#x6C42;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x627E;&#x51FA;&#x4E00;&#x4E2A;&#x6700;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5220;&#x9664;s&#x4E2D;&#x7684;&#x82E5;&#x5E72;&#x5B57;&#x7B26;&#x5F97;&#x5230;&#x3002;&#x82E5;&#x6CA1;&#x6709;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;&#x82E5;&#x6709;&#x591A;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5728;&#x6392;&#x5E8F;&#x4E2D;&#x6700;&#x5C0F;&#x7684;&#x3002;</p>
-</li>
-<li><p>&#x793A;&#x4F8B;1:</p>
-</li>
+        <h5 id="&#x9898;&#x76EE;"><a href="#&#x9898;&#x76EE;" class="headerlink" title="&#x9898;&#x76EE;"></a>&#x9898;&#x76EE;</h5><p>   &#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#x7684;&#x6700;&#x957F;&#x524D;&#x7F00;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;<br>   Write a function to find the longest common prefix string amongst an array of strings.</p>
+<h5 id="&#x793A;&#x4F8B;"><a href="#&#x793A;&#x4F8B;" class="headerlink" title="&#x793A;&#x4F8B;"></a>&#x793A;&#x4F8B;</h5><ul>
+<li>&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;: <figure class="highlight plain"><figcaption><span>&quot;AABAA&quot;, &quot;ABAA&quot;]```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* &#x8FD4;&#x56DE;&#x503C;&#xFF1A;```A</div></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Input:</span></div><div class="line">s = <span class="string">&quot;abpcplea&quot;</span>, d = [<span class="string">&quot;ale&quot;</span>,<span class="string">&quot;apple&quot;</span>,<span class="string">&quot;monkey&quot;</span>,<span class="string">&quot;plea&quot;</span>]</div><div class="line"></div><div class="line"><span class="symbol">Output:</span></div><div class="line"><span class="string">&quot;apple&quot;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>&#x793A;&#x4F8B;2:</li>
-</ul>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Input:</span></div><div class="line">s = <span class="string">&quot;abpcplea&quot;</span>, d = [<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>]</div><div class="line"></div><div class="line"><span class="symbol">Output:</span></div><div class="line"><span class="string">&quot;a&quot;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>&#x6CE8;&#x610F;<ul>
-<li>&#x6240;&#x6709;&#x5B57;&#x7B26;&#x5747;&#x5C0F;&#x5199;;</li>
-<li>&#x5217;&#x8868;d&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x5C0F;&#x4E8E;1000;</li>
-<li>&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x5C0F;&#x4E8E;1000;</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>&#x601D;&#x8DEF;1-&#x7A77;&#x4E3E;&#x6CD5;-&#x65F6;&#x95F4;&#x8D85;&#x9650;<ul>
-<li>&#x7B97;&#x6CD5;</li>
-</ul>
-</li>
+<h5 id="&#x601D;&#x8DEF;"><a href="#&#x601D;&#x8DEF;" class="headerlink" title="&#x601D;&#x8DEF;"></a>&#x601D;&#x8DEF;</h5><ul>
+<li>&#x5217;&#x8868;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x7A7A;</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x5217;&#x8868;&#x4E2D;&#x6700;&#x77ED;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#xFF1B;</li>
+<li>&#x4EE5;&#x6700;&#x77ED;&#x5143;&#x7D20;&#x7684;&#x957F;&#x5EA6;&#x8FDB;&#x884C;&#x8FED;&#x4EE3;&#x5FAA;&#x73AF; <figure class="highlight plain"><figcaption><span>i in range(len(minstring))```&#xFF0C;&#x5C06;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x5143;&#x7D20;&#x5B58;&#x4E3A;set, &#x5F53;set&#x957F;&#x5EA6;&#x4E3A;1&#x662F;&#x8868;&#x793A;&#x4E3A;&#x516C;&#x5171;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5927;&#x4E8E;1&#x65F6;&#x7EC8;&#x6B62;&#x8FED;&#x4EE3; ```break```&#xFF1B;</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">* &#x83B7;&#x53D6;&#x6700;&#x957F;&#x5171;&#x540C;&#x524D;&#x7F00;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x4F4D;&#x7F6E;&#x63D0;&#x53D6;&#x5B57;&#x7B26;&#x4E32;&#x4F4D;&#x70B9;&#xFF1B;</div><div class="line"></div><div class="line">##### &#x5BF9;&#x5E94;&#x4EE3;&#x7801;</div><div class="line"></div><div class="line">```python</div><div class="line">class Solution(object):</div><div class="line">    &apos;&apos;&apos;</div><div class="line">    Example</div><div class="line">    -------</div><div class="line">    &gt;&gt;&gt; strs=[&quot;AA&quot;,&quot;AAB&quot;]</div><div class="line">    &gt;&gt;&gt; longestCommonPrefix(self,strs)</div><div class="line">    &quot;AA&quot;</div><div class="line">    &apos;&apos;&apos;</div><div class="line"></div><div class="line">    def longestCommonPrefix(self, strs):</div><div class="line">        if strs:</div><div class="line">            minlen = min([len(x) for x in strs])</div><div class="line"></div><div class="line">            tmps = []</div><div class="line">            for i in range(minlen):</div><div class="line">                if len(set([x[i] for x in strs])) == 1:</div><div class="line">                    tmps.append(i)</div><div class="line">                else:</div><div class="line">                    break</div><div class="line">            return &quot;&quot;.join([strs[0][i] for i in tmps])</div><div class="line">        else:</div><div class="line">            return &quot;&quot;</div></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -158,7 +134,7 @@
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/Python/">Python</a>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
 
       
       
@@ -166,7 +142,7 @@
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2017/05/16/leetcode1/" data-title="524. Longest Word In Dictionary Through Deletion" data-url="http://www.biopython.club/2017/05/16/leetcode1/"></div>
+	 <div class="ds-thread" data-thread-key="/2017/06/07/leetcode5/" data-title="LeetCode：获取一个列表中所有元素的最长前缀字符串" data-url="http://www.biopython.club/2017/06/07/leetcode5/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -193,19 +169,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/20/leetcode2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          每天刷LeetCode之第二天
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/05/16/delstring/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/05/21/leetcode4/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">每日一个算法-获取两个字符串之间的最长公共子字符串(Longest Common subsequence, LCS)</div>
+      <div class="article-nav-title">每天刷LeetCode之第四天</div>
     </a>
   
 </nav>
@@ -219,7 +186,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav">None</ol>
+      <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#示例"><span class="nav-number">2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li></ol>
     
     </div>
   </aside>
