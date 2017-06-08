@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.biopython.club/"/>
-  <updated>2017-06-07T10:19:03.128Z</updated>
+  <updated>2017-06-08T06:07:16.516Z</updated>
   <id>http://www.biopython.club/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>虚拟机安装Centos之后无法上网的问题</title>
+    <link href="http://www.biopython.club/2017/06/08/centos_server/"/>
+    <id>http://www.biopython.club/2017/06/08/centos_server/</id>
+    <published>2017-06-07T16:00:00.000Z</published>
+    <updated>2017-06-08T06:07:16.516Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="&#x95EE;&#x9898;&#x63CF;&#x8FF0;"><a href="#&#x95EE;&#x9898;&#x63CF;&#x8FF0;" class="headerlink" title="&#x95EE;&#x9898;&#x63CF;&#x8FF0;"></a>&#x95EE;&#x9898;&#x63CF;&#x8FF0;</h5><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">ping</span> www.baidu.com</div><div class="line"></div><div class="line">Name <span class="literal">or</span> service <span class="literal">not</span> known</div></pre></td></tr></table></figure>
+<h5 id="&#x89E3;&#x51B3;&#x529E;&#x6CD5;"><a href="#&#x89E3;&#x51B3;&#x529E;&#x6CD5;" class="headerlink" title="&#x89E3;&#x51B3;&#x529E;&#x6CD5;"></a>&#x89E3;&#x51B3;&#x529E;&#x6CD5;</h5><ul>
+<li>&#x6253;&#x5F00; <code>ifcfg-ens33</code> &#x6587;&#x4EF6;</li>
+</ul>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd <span class="regexp">/etc/</span>sysconfig<span class="regexp">/network-scripts/</span></div><div class="line">vi ifcfg-ens33</div></pre></td></tr></table></figure>
+<ul>
+<li>&#x66F4;&#x6539; <code>ONBOOT</code> &#x503C;&#x4E3A;yes</li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="attr">TYPE</span>=Ethernet</div><div class="line"><span class="attr">BOOTPROTO</span>=dhcp</div><div class="line"><span class="attr">DEFROUTE</span>=<span class="literal">yes</span></div><div class="line"><span class="attr">PEERDNS</span>=<span class="literal">yes</span></div><div class="line"><span class="attr">PEERROUTES</span>=<span class="literal">yes</span></div><div class="line"><span class="attr">IPV4_FAILURE_FATAL</span>=<span class="literal">no</span></div><div class="line"><span class="attr">IPV6INIT</span>=<span class="literal">yes</span></div><div class="line"><span class="attr">IPV6_AUTOCONF</span>=<span class="literal">yes</span></div><div class="line"><span class="attr">IPV6_DEFROUTE</span>=<span class="literal">yes</span></div><div class="line"><span class="attr">IPV6_PEERDNS</span>=<span class="literal">yes</span></div><div class="line"><span class="attr">IPV6_PEERROUTES</span>=<span class="literal">yes</span></div><div class="line"><span class="attr">IPV6_FAILURE_FATAL</span>=<span class="literal">no</span></div><div class="line"><span class="attr">IPV6_ADDR_GEN_MODE</span>=stable-privacy</div><div class="line"><span class="attr">NAME</span>=ens33</div><div class="line"><span class="attr">UUID</span>=fbcaaa6b-<span class="number">3</span>df2-<span class="number">411</span>c-<span class="number">8</span>a13-d9460a5e9c5b</div><div class="line"><span class="attr">DEVICE</span>=ens33</div><div class="line"><span class="attr">ONBOOT</span>=<span class="literal">yes</span> #&#x66F4;&#x6539;&#x8BE5;&#x503C;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h5 id=&quot;&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;&quot;&gt;&lt;a href=&quot;#&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8FF0;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x95EE;&amp;#x9898;&amp;#x63CF;&amp;#x8
+    
+    </summary>
+    
+      <category term="server" scheme="http://www.biopython.club/categories/server/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>LeetCode：获取一个列表中所有元素的最长前缀字符串</title>
@@ -449,69 +478,6 @@
   </entry>
   
   <entry>
-    <title>R语言入门</title>
-    <link href="http://www.biopython.club/2017/02/05/R2/"/>
-    <id>http://www.biopython.club/2017/02/05/R2/</id>
-    <published>2017-02-04T16:00:00.000Z</published>
-    <updated>2017-02-04T18:16:31.848Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<p><strong>1. R&#x8BED;&#x8A00;&#x5B89;&#x88C5;</strong></p>
-<ul>
-<li>&#x4ECE;<a href="http://cran.r-project.org" target="_blank" rel="external">CRAN</a> &#x4E2D;&#x4E0B;&#x8F7D;R&#x8BED;&#x8A00;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BE5;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;Windows&#xFF0C;Linux&#x4EE5;&#x53CA;Mac&#x5E73;&#x53F0;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</li>
-<li>&#x4ECE;<a href="https://www.rstudio.com/" target="_blank" rel="external">RStudio</a>&#x4E2D;&#x4E0B;&#x8F7D;R&#x8BED;&#x8A00;&#x7F16;&#x8BD1;&#x5668;RStudio&#xFF0C;&#x8BE5;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;Windows, Linux&#x4EE5;&#x53CA;Mac&#x5E73;&#x53F0;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</li>
-</ul>
-<hr>
-<p><strong>2. R&#x8BED;&#x8A00;&#x4F7F;&#x7528;</strong></p>
-<ul>
-<li>R&#x8BED;&#x8A00;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;help(),Help(),HELP()&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF1B;</li>
-<li>R&#x4F7F;&#x7528; &lt;- &#x4F5C;&#x4E3A;&#x8D4B;&#x503C;&#x7B26;&#x53F7;&#xFF0C;&#x4F46;&#x4E5F;&#x5141;&#x8BB8;&#x4F7F;&#x7528;=&#x4E3A;&#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#xFF0C;&#x4F46;&#x8FD9;&#x4E48;&#x5199;&#x7684;R&#x7A0B;&#x5E8F;&#x4E0D;&#x591A;&#xFF1B;</li>
-<li><p>R&#x8BED;&#x8A00;&#x4E2D;&#x5C06;&#x53CD;&#x659C;&#x6760;&#xFF08;\ &#xFF09;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8F6C;&#x4E49;&#x7B26;&#xFF0C;&#x56E0;&#x6B64;&#x5373;&#x4F7F;&#x5728;Windows&#x4E2D;&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6B63;&#x659C;&#x6760;&#xFF08;/&#xFF09;</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x &lt;- rnorm(<span class="number">5</span>) #&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;x&#x7684;&#x5411;&#x91CF;&#x5BF9;&#x8C61;</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x4F7F;&#x7528;demo()&#x51FD;&#x6570;&#x4E86;&#x89E3;R&#x8BED;&#x8A00;&#x80FD;&#x591F;&#x4F5C;&#x51FA;&#x4F55;&#x79CD;&#x56FE;&#x5F62;</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">demo</span><span class="params">(graphics)</span></span></div></pre></td></tr></table></figure>
-<p><img src="http://ok5v9qf85.bkt.clouddn.com/R2-1.JPG" alt="&#x5728;RStudio&#x4E2D;&#x8FD0;&#x884C;R&#x793A;&#x4F8B;"></p>
-</li>
-<li><p>&#x901A;&#x8FC7;help()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">help.start() #&#x6253;&#x5F00;&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x9996;&#x9875;</div><div class="line"><span class="function"><span class="title">help</span><span class="params">(<span class="string">&quot;foo&quot;</span>)</span></span> #&#x67E5;&#x770B;&#x51FD;&#x6570;foo&#x7684;&#x5E2E;&#x52A9;&#xFF08;&#x5F15;&#x53F7;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF09;</div><div class="line">help.search(<span class="string">&quot;foo&quot;</span>) #&#x4EE5;foo&#x4E3A;&#x5173;&#x952E;&#x8BCD;&#x641C;&#x7D22;&#x672C;&#x5730;&#x5E2E;&#x52A9;&#x6587;&#x6863;</div><div class="line"><span class="function"><span class="title">example</span><span class="params">(<span class="string">&quot;foo&quot;</span>)</span></span> #&#x51FD;&#x6570;foo&#x7684;&#x4F7F;&#x7528;&#x793A;&#x4F8B;</div><div class="line"><span class="function"><span class="title">RSiteSearch</span><span class="params">(<span class="string">&quot;foo&quot;</span>)</span></span> #&#x4EE5;foo&#x4E3A;&#x5173;&#x952E;&#x8BCD;&#x641C;&#x7D22;&#x5728;&#x7EBF;&#x6587;&#x6863;&#x548C;&#x90AE;&#x4EF6;&#x5217;&#x8868;&#x5B58;&#x6863;</div><div class="line"><span class="function"><span class="title">apropos</span><span class="params">(<span class="string">&quot;foo&quot;</span>,mode=<span class="string">&quot;function&quot;</span>)</span></span> #&#x5217;&#x51FA;&#x540D;&#x79F0;&#x4E2D;&#x542B;&#x6709;foo&#x7684;&#x6240;&#x6709;&#x53EF;&#x7528;&#x51FD;&#x6570;</div><div class="line"><span class="function"><span class="title">data</span><span class="params">()</span></span> #&#x5217;&#x51FA;&#x5F53;&#x524D;&#x5DF2;&#x52A0;&#x8F7D;&#x5305;&#x4E2D;&#x6240;&#x542B;&#x7684;&#x6240;&#x6709;&#x53EF;&#x7528;&#x793A;&#x4F8B;&#x6570;&#x636E;&#x96C6;</div><div class="line"><span class="function"><span class="title">vignette</span><span class="params">()</span></span> #&#x5217;&#x51FA;&#x5F53;&#x524D;&#x5DF2;&#x5B89;&#x88C5;&#x5305;&#x4E2D;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;vignette&#x6587;&#x6863;</div><div class="line"><span class="function"><span class="title">vignette</span><span class="params">(<span class="string">&quot;foo&quot;</span>)</span></span> #&#x4E3A;&#x4E3B;&#x9898;foo&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7684;vignette&#x6587;&#x6863;</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x8BBE;&#x5B9A;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">getwd</span><span class="params">()</span></span> #&#x663E;&#x793A;&#x5F53;&#x524D;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</div><div class="line"><span class="function"><span class="title">setwd</span><span class="params">(<span class="string">&quot;E:/R-learn&quot;</span>)</span></span> #&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x76EE;&#x5F55;</div><div class="line">dir.create(<span class="string">&quot;Test&quot;</span>) #&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Test&#x6587;&#x4EF6;&#x5939;</div><div class="line"><span class="function"><span class="title">ls</span><span class="params">()</span></span> #&#x5217;&#x51FA;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;</div><div class="line"><span class="function"><span class="title">rm</span><span class="params">(objectlist)</span></span> #&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;</div><div class="line"><span class="function"><span class="title">help</span><span class="params">(options)</span></span> #&#x663E;&#x793A;&#x53EF;&#x7528;&#x9009;&#x9879;&#x7684;&#x8BF4;&#x660E;</div><div class="line"><span class="function"><span class="title">options</span><span class="params">()</span></span> #&#x663E;&#x793A;&#x6216;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x9009;&#x9879;</div><div class="line"><span class="function"><span class="title">history</span><span class="params">(<span class="number">20</span>)</span></span> #&#x663E;&#x793A;&#x6700;&#x8FD1;&#x4F7F;&#x7528;&#x7684;<span class="number">20</span>&#x4E2A;&#x547D;&#x4EE4;</div><div class="line"><span class="function"><span class="title">savehistory</span><span class="params">(<span class="string">&quot;myfile&quot;</span>)</span></span> #&#x4FDD;&#x5B58;&#x547D;&#x4EE4;&#x5386;&#x53F2;&#x5230;&#x6587;&#x4EF6;myfile&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<span class="selector-class">.Rhistory</span></div><div class="line"><span class="function"><span class="title">loadhistory</span><span class="params">(<span class="string">&quot;myfile&quot;</span>)</span></span> #&#x8F7D;&#x5165;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x5386;&#x53F2;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<span class="selector-class">.Rhistory</span></div><div class="line">save.image(<span class="string">&quot;myfile&quot;</span>) #&#x4FDD;&#x5B58;&#x56FE;&#x50CF;&#x6587;&#x4EF6;&#x5230;myfile&#x4E2D;&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;.RData&#xFF09;</div><div class="line"><span class="function"><span class="title">save</span><span class="params">(objectlist,file=<span class="string">&quot;myfile&quot;</span>)</span></span> #&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;</div><div class="line"><span class="function"><span class="title">load</span><span class="params">(<span class="string">&quot;myfile&quot;</span>)</span></span> #&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x5230;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<span class="selector-class">.RData</span></div><div class="line"><span class="function"><span class="title">q</span><span class="params">()</span></span> #&#x9000;&#x51FA;R&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x6267;&#x884C;&#x811A;&#x672C;</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">source</span><span class="params">(<span class="string">&quot;Rscript.r&quot;</span>)</span></span> #&#x5728;R&#x7684;GUI&#x754C;&#x9762;&#x4E2D;&#x6267;&#x884C;&#x4E00;&#x4E2A;R&#x811A;&#x672C;</div><div class="line">Rscript Rscript<span class="selector-class">.r</span> #&#x5728;Linux&#x7CFB;&#x7EDF;&#x7684;Terminal&#x4E2D;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x811A;&#x672C;</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x6587;&#x672C;&#x8F93;&#x51FA;</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sink(<span class="string">&quot;filename&quot;</span>,<span class="keyword">append</span>=<span class="keyword">TRUE</span>,split=<span class="keyword">TRUE</span>) #&#x5C06;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x5230;filename&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;<span class="keyword">append</span>=<span class="keyword">TRUE</span>&#x8868;&#x793A;&#x8FFD;&#x52A0;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8986;&#x76D6;&#x6587;&#x4EF6;&#xFF0C;split=<span class="keyword">TRUE</span>&#x8868;&#x793A;&#x5C06;&#x8F93;&#x51FA;&#x540C;&#x65F6;&#x53D1;&#x9001;&#x5230;&#x5C4F;&#x5E55;&#x548C;&#x8F93;&#x51FA;&#x6587;&#x4EF6;</div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x56FE;&#x5F62;&#x8F93;&#x51FA;</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">pdf</span><span class="params">(<span class="string">&quot;filename.pdf&quot;</span>)</span></span> #PDF&#x6587;&#x4EF6;</div><div class="line">win.metafile(filename.wmf) #Windows&#x56FE;&#x5143;&#x6587;&#x4EF6;</div><div class="line"><span class="function"><span class="title">png</span><span class="params">(<span class="string">&quot;filename.png&quot;</span>)</span></span> #PNG&#x6587;&#x4EF6;</div><div class="line"><span class="function"><span class="title">jpeg</span><span class="params">(<span class="string">&quot;filename.jpeg&quot;</span>)</span></span> #JPEG&#x6587;&#x4EF6;</div><div class="line"><span class="function"><span class="title">bmp</span><span class="params">(<span class="string">&quot;filename.bmp&quot;</span>)</span></span> #BMP&#x6587;&#x4EF6;</div><div class="line"><span class="function"><span class="title">postscript</span><span class="params">(<span class="string">&quot;filename.ps&quot;</span>)</span></span> #postscript&#x6587;&#x4EF6;</div></pre></td></tr></table></figure>
-</li>
-<li><p>R&#x7A0B;&#x5E8F;&#x5305;</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">install</span>.packages(<span class="string">&quot;ggplot2&quot;</span>) <span class="comment">#&#x5B89;&#x88C5;ggplot2&#x7A0B;&#x5E8F;&#x5305;&#xFF0C;&#x6CE8;&#x610F;&#x5F15;&#x53F7;&#x4E0D;&#x80FD;&#x7701;&#x7565;</span></div><div class="line">library(ggplot2) <span class="comment">#&#x8F7D;&#x5165;&#x7A0B;&#x5E8F;&#x5305;</span></div><div class="line">installed.packages() <span class="comment">#&#x5217;&#x51FA;&#x5B89;&#x88C5;&#x7684;&#x5305;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7B49;&#x4FE1;&#x606F;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>&#x5728;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;&#x9700;&#x8981;&#x52A0;&#x62EC;&#x53F7;&#xFF0C;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x53C2;&#x6570;</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">help</span>() <span class="comment">#&#x6B63;&#x5E38;&#x8FD0;&#x884C;</span></div><div class="line"><span class="built_in">help</span> <span class="comment">#&#x62A5;&#x9519;</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;1. R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;#x4ECE;&lt;a href=&quot;http://cran.r-project.org&quot; target=&quot;_blank&quot; rel=&quot;
-    
-    </summary>
-    
-      <category term="R" scheme="http://www.biopython.club/categories/R/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>R语言的数据存储-R语言实战第二章创建数据集学习笔记</title>
     <link href="http://www.biopython.club/2017/02/05/R3/"/>
     <id>http://www.biopython.club/2017/02/05/R3/</id>
@@ -626,6 +592,69 @@
     
       &lt;hr&gt;
 &lt;h5 id=&quot;1-&amp;#x6570;&amp;#x636E;&amp;#x96C6;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;&quot;&gt;&lt;a href=&quot;#1-&amp;#x6570;&amp;#x636E;&amp;#x96C6;&amp;#x7684;&amp;#x6982;&amp;#x5FF5;&quot; class=&quot;header
+    
+    </summary>
+    
+      <category term="R" scheme="http://www.biopython.club/categories/R/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>R语言入门</title>
+    <link href="http://www.biopython.club/2017/02/05/R2/"/>
+    <id>http://www.biopython.club/2017/02/05/R2/</id>
+    <published>2017-02-04T16:00:00.000Z</published>
+    <updated>2017-02-04T18:16:31.848Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p><strong>1. R&#x8BED;&#x8A00;&#x5B89;&#x88C5;</strong></p>
+<ul>
+<li>&#x4ECE;<a href="http://cran.r-project.org" target="_blank" rel="external">CRAN</a> &#x4E2D;&#x4E0B;&#x8F7D;R&#x8BED;&#x8A00;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BE5;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;Windows&#xFF0C;Linux&#x4EE5;&#x53CA;Mac&#x5E73;&#x53F0;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x4ECE;<a href="https://www.rstudio.com/" target="_blank" rel="external">RStudio</a>&#x4E2D;&#x4E0B;&#x8F7D;R&#x8BED;&#x8A00;&#x7F16;&#x8BD1;&#x5668;RStudio&#xFF0C;&#x8BE5;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;Windows, Linux&#x4EE5;&#x53CA;Mac&#x5E73;&#x53F0;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<hr>
+<p><strong>2. R&#x8BED;&#x8A00;&#x4F7F;&#x7528;</strong></p>
+<ul>
+<li>R&#x8BED;&#x8A00;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;help(),Help(),HELP()&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x53EA;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF1B;</li>
+<li>R&#x4F7F;&#x7528; &lt;- &#x4F5C;&#x4E3A;&#x8D4B;&#x503C;&#x7B26;&#x53F7;&#xFF0C;&#x4F46;&#x4E5F;&#x5141;&#x8BB8;&#x4F7F;&#x7528;=&#x4E3A;&#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#xFF0C;&#x4F46;&#x8FD9;&#x4E48;&#x5199;&#x7684;R&#x7A0B;&#x5E8F;&#x4E0D;&#x591A;&#xFF1B;</li>
+<li><p>R&#x8BED;&#x8A00;&#x4E2D;&#x5C06;&#x53CD;&#x659C;&#x6760;&#xFF08;\ &#xFF09;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8F6C;&#x4E49;&#x7B26;&#xFF0C;&#x56E0;&#x6B64;&#x5373;&#x4F7F;&#x5728;Windows&#x4E2D;&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6B63;&#x659C;&#x6760;&#xFF08;/&#xFF09;</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">x &lt;- rnorm(<span class="number">5</span>) #&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;x&#x7684;&#x5411;&#x91CF;&#x5BF9;&#x8C61;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x4F7F;&#x7528;demo()&#x51FD;&#x6570;&#x4E86;&#x89E3;R&#x8BED;&#x8A00;&#x80FD;&#x591F;&#x4F5C;&#x51FA;&#x4F55;&#x79CD;&#x56FE;&#x5F62;</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">demo</span><span class="params">(graphics)</span></span></div></pre></td></tr></table></figure>
+<p><img src="http://ok5v9qf85.bkt.clouddn.com/R2-1.JPG" alt="&#x5728;RStudio&#x4E2D;&#x8FD0;&#x884C;R&#x793A;&#x4F8B;"></p>
+</li>
+<li><p>&#x901A;&#x8FC7;help()&#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">help.start() #&#x6253;&#x5F00;&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x9996;&#x9875;</div><div class="line"><span class="function"><span class="title">help</span><span class="params">(<span class="string">&quot;foo&quot;</span>)</span></span> #&#x67E5;&#x770B;&#x51FD;&#x6570;foo&#x7684;&#x5E2E;&#x52A9;&#xFF08;&#x5F15;&#x53F7;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#xFF09;</div><div class="line">help.search(<span class="string">&quot;foo&quot;</span>) #&#x4EE5;foo&#x4E3A;&#x5173;&#x952E;&#x8BCD;&#x641C;&#x7D22;&#x672C;&#x5730;&#x5E2E;&#x52A9;&#x6587;&#x6863;</div><div class="line"><span class="function"><span class="title">example</span><span class="params">(<span class="string">&quot;foo&quot;</span>)</span></span> #&#x51FD;&#x6570;foo&#x7684;&#x4F7F;&#x7528;&#x793A;&#x4F8B;</div><div class="line"><span class="function"><span class="title">RSiteSearch</span><span class="params">(<span class="string">&quot;foo&quot;</span>)</span></span> #&#x4EE5;foo&#x4E3A;&#x5173;&#x952E;&#x8BCD;&#x641C;&#x7D22;&#x5728;&#x7EBF;&#x6587;&#x6863;&#x548C;&#x90AE;&#x4EF6;&#x5217;&#x8868;&#x5B58;&#x6863;</div><div class="line"><span class="function"><span class="title">apropos</span><span class="params">(<span class="string">&quot;foo&quot;</span>,mode=<span class="string">&quot;function&quot;</span>)</span></span> #&#x5217;&#x51FA;&#x540D;&#x79F0;&#x4E2D;&#x542B;&#x6709;foo&#x7684;&#x6240;&#x6709;&#x53EF;&#x7528;&#x51FD;&#x6570;</div><div class="line"><span class="function"><span class="title">data</span><span class="params">()</span></span> #&#x5217;&#x51FA;&#x5F53;&#x524D;&#x5DF2;&#x52A0;&#x8F7D;&#x5305;&#x4E2D;&#x6240;&#x542B;&#x7684;&#x6240;&#x6709;&#x53EF;&#x7528;&#x793A;&#x4F8B;&#x6570;&#x636E;&#x96C6;</div><div class="line"><span class="function"><span class="title">vignette</span><span class="params">()</span></span> #&#x5217;&#x51FA;&#x5F53;&#x524D;&#x5DF2;&#x5B89;&#x88C5;&#x5305;&#x4E2D;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;vignette&#x6587;&#x6863;</div><div class="line"><span class="function"><span class="title">vignette</span><span class="params">(<span class="string">&quot;foo&quot;</span>)</span></span> #&#x4E3A;&#x4E3B;&#x9898;foo&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7684;vignette&#x6587;&#x6863;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x8BBE;&#x5B9A;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">getwd</span><span class="params">()</span></span> #&#x663E;&#x793A;&#x5F53;&#x524D;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</div><div class="line"><span class="function"><span class="title">setwd</span><span class="params">(<span class="string">&quot;E:/R-learn&quot;</span>)</span></span> #&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x76EE;&#x5F55;</div><div class="line">dir.create(<span class="string">&quot;Test&quot;</span>) #&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Test&#x6587;&#x4EF6;&#x5939;</div><div class="line"><span class="function"><span class="title">ls</span><span class="params">()</span></span> #&#x5217;&#x51FA;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;</div><div class="line"><span class="function"><span class="title">rm</span><span class="params">(objectlist)</span></span> #&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;</div><div class="line"><span class="function"><span class="title">help</span><span class="params">(options)</span></span> #&#x663E;&#x793A;&#x53EF;&#x7528;&#x9009;&#x9879;&#x7684;&#x8BF4;&#x660E;</div><div class="line"><span class="function"><span class="title">options</span><span class="params">()</span></span> #&#x663E;&#x793A;&#x6216;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x9009;&#x9879;</div><div class="line"><span class="function"><span class="title">history</span><span class="params">(<span class="number">20</span>)</span></span> #&#x663E;&#x793A;&#x6700;&#x8FD1;&#x4F7F;&#x7528;&#x7684;<span class="number">20</span>&#x4E2A;&#x547D;&#x4EE4;</div><div class="line"><span class="function"><span class="title">savehistory</span><span class="params">(<span class="string">&quot;myfile&quot;</span>)</span></span> #&#x4FDD;&#x5B58;&#x547D;&#x4EE4;&#x5386;&#x53F2;&#x5230;&#x6587;&#x4EF6;myfile&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<span class="selector-class">.Rhistory</span></div><div class="line"><span class="function"><span class="title">loadhistory</span><span class="params">(<span class="string">&quot;myfile&quot;</span>)</span></span> #&#x8F7D;&#x5165;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x5386;&#x53F2;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<span class="selector-class">.Rhistory</span></div><div class="line">save.image(<span class="string">&quot;myfile&quot;</span>) #&#x4FDD;&#x5B58;&#x56FE;&#x50CF;&#x6587;&#x4EF6;&#x5230;myfile&#x4E2D;&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;.RData&#xFF09;</div><div class="line"><span class="function"><span class="title">save</span><span class="params">(objectlist,file=<span class="string">&quot;myfile&quot;</span>)</span></span> #&#x4FDD;&#x5B58;&#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#x5230;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;</div><div class="line"><span class="function"><span class="title">load</span><span class="params">(<span class="string">&quot;myfile&quot;</span>)</span></span> #&#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x5230;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<span class="selector-class">.RData</span></div><div class="line"><span class="function"><span class="title">q</span><span class="params">()</span></span> #&#x9000;&#x51FA;R&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x6267;&#x884C;&#x811A;&#x672C;</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">source</span><span class="params">(<span class="string">&quot;Rscript.r&quot;</span>)</span></span> #&#x5728;R&#x7684;GUI&#x754C;&#x9762;&#x4E2D;&#x6267;&#x884C;&#x4E00;&#x4E2A;R&#x811A;&#x672C;</div><div class="line">Rscript Rscript<span class="selector-class">.r</span> #&#x5728;Linux&#x7CFB;&#x7EDF;&#x7684;Terminal&#x4E2D;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x811A;&#x672C;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x6587;&#x672C;&#x8F93;&#x51FA;</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sink(<span class="string">&quot;filename&quot;</span>,<span class="keyword">append</span>=<span class="keyword">TRUE</span>,split=<span class="keyword">TRUE</span>) #&#x5C06;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x5230;filename&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;<span class="keyword">append</span>=<span class="keyword">TRUE</span>&#x8868;&#x793A;&#x8FFD;&#x52A0;&#x5230;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8986;&#x76D6;&#x6587;&#x4EF6;&#xFF0C;split=<span class="keyword">TRUE</span>&#x8868;&#x793A;&#x5C06;&#x8F93;&#x51FA;&#x540C;&#x65F6;&#x53D1;&#x9001;&#x5230;&#x5C4F;&#x5E55;&#x548C;&#x8F93;&#x51FA;&#x6587;&#x4EF6;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x56FE;&#x5F62;&#x8F93;&#x51FA;</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">pdf</span><span class="params">(<span class="string">&quot;filename.pdf&quot;</span>)</span></span> #PDF&#x6587;&#x4EF6;</div><div class="line">win.metafile(filename.wmf) #Windows&#x56FE;&#x5143;&#x6587;&#x4EF6;</div><div class="line"><span class="function"><span class="title">png</span><span class="params">(<span class="string">&quot;filename.png&quot;</span>)</span></span> #PNG&#x6587;&#x4EF6;</div><div class="line"><span class="function"><span class="title">jpeg</span><span class="params">(<span class="string">&quot;filename.jpeg&quot;</span>)</span></span> #JPEG&#x6587;&#x4EF6;</div><div class="line"><span class="function"><span class="title">bmp</span><span class="params">(<span class="string">&quot;filename.bmp&quot;</span>)</span></span> #BMP&#x6587;&#x4EF6;</div><div class="line"><span class="function"><span class="title">postscript</span><span class="params">(<span class="string">&quot;filename.ps&quot;</span>)</span></span> #postscript&#x6587;&#x4EF6;</div></pre></td></tr></table></figure>
+</li>
+<li><p>R&#x7A0B;&#x5E8F;&#x5305;</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">install</span>.packages(<span class="string">&quot;ggplot2&quot;</span>) <span class="comment">#&#x5B89;&#x88C5;ggplot2&#x7A0B;&#x5E8F;&#x5305;&#xFF0C;&#x6CE8;&#x610F;&#x5F15;&#x53F7;&#x4E0D;&#x80FD;&#x7701;&#x7565;</span></div><div class="line">library(ggplot2) <span class="comment">#&#x8F7D;&#x5165;&#x7A0B;&#x5E8F;&#x5305;</span></div><div class="line">installed.packages() <span class="comment">#&#x5217;&#x51FA;&#x5B89;&#x88C5;&#x7684;&#x5305;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7B49;&#x4FE1;&#x606F;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x5728;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;&#x9700;&#x8981;&#x52A0;&#x62EC;&#x53F7;&#xFF0C;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x53C2;&#x6570;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">help</span>() <span class="comment">#&#x6B63;&#x5E38;&#x8FD0;&#x884C;</span></div><div class="line"><span class="built_in">help</span> <span class="comment">#&#x62A5;&#x9519;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;1. R&amp;#x8BED;&amp;#x8A00;&amp;#x5B89;&amp;#x88C5;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;#x4ECE;&lt;a href=&quot;http://cran.r-project.org&quot; target=&quot;_blank&quot; rel=&quot;
     
     </summary>
     
@@ -774,38 +803,6 @@
     </summary>
     
       <category term="PAML" scheme="http://www.biopython.club/categories/PAML/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>MPI并行环境的搭建</title>
-    <link href="http://www.biopython.club/2016/12/28/mpich2/"/>
-    <id>http://www.biopython.club/2016/12/28/mpich2/</id>
-    <published>2016-12-27T16:00:00.000Z</published>
-    <updated>2016-12-28T14:23:16.590Z</updated>
-    
-    <content type="html"><![CDATA[<ul>
-<li>&#x8F6F;&#x4EF6;&#xFF1A;MPICH2</li>
-<li>&#x76EE;&#x7684;&#xFF1A;&#x5145;&#x5206;&#x8FD0;&#x7528; PC&#x53CA; Server&#x7684;&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#xFF0C;&#x63D0;&#x9AD8;&#x8BA1;&#x7B97;&#x6548;&#x7387;&#xFF0C;&#x8282;&#x7701;&#x79D1;&#x7814;&#x65F6;&#x95F4;&#xFF1B;<h5 id="&#x5177;&#x4F53;&#x6D41;&#x7A0B;"><a href="#&#x5177;&#x4F53;&#x6D41;&#x7A0B;" class="headerlink" title="&#x5177;&#x4F53;&#x6D41;&#x7A0B;"></a>&#x5177;&#x4F53;&#x6D41;&#x7A0B;</h5><h6 id="1-&#x7F16;&#x8BD1;&#x5B89;&#x88C5;MPICH2"><a href="#1-&#x7F16;&#x8BD1;&#x5B89;&#x88C5;MPICH2" class="headerlink" title="1. &#x7F16;&#x8BD1;&#x5B89;&#x88C5;MPICH2"></a>1. &#x7F16;&#x8BD1;&#x5B89;&#x88C5;MPICH2</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">wget http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.4.1p1/mpich2-1.4.1p1.tar.gz</div><div class="line">tar zxvf mpich2-1.4.1p1.tar.gz</div><div class="line"><span class="built_in">cd</span> mpich2-1.4.1p1.tar.gz</div><div class="line">./configure --prefix=/home/mpi --with-pm=hydra:mpd --with-mpe</div><div class="line">make</div><div class="line">sudo make installx</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h6 id="2-&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a href="#2-&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="headerlink" title="2.&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"></a>2.&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h6><p>&#x5728;&#x4E2A;&#x4EBA;&#x7684;bashrc&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x5185;&#x5BB9;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> MPI_ROOT=/home/mpi</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$MPI_ROOT</span>/bin:<span class="variable">$PATH</span></div><div class="line"><span class="built_in">export</span> MANPATH=<span class="variable">$MPI_ROOT</span>/bin:<span class="variable">$MANPATH</span></div></pre></td></tr></table></figure></p>
-<p>&#x8FD0;&#x884C;source &#x66F4;&#x65B0;&#x73AF;&#x5883;&#x53D8;&#x91CF;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /home/ginsea/.bashrc</div></pre></td></tr></table></figure></p>
-<h6 id="3-&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a href="#3-&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="headerlink" title="3.&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x53D8;&#x91CF;"></a>3.&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">which</span> mpd</div><div class="line"><span class="built_in">which</span> mpicc</div><div class="line"><span class="built_in">which</span> mpiexec</div><div class="line"><span class="built_in">which</span> mpirun</div></pre></td></tr></table></figure>
-<h6 id="4-&#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a href="#4-&#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="headerlink" title="4.&#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"></a>4.&#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h6><p><strong><em>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x7684;&#x662F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5EFA;&#x7ACB;&#x9700;&#x8981;&#x533A;&#x522B; root&#x7528;&#x6237;&#x548C;&#x666E;&#x901A;&#x7528;&#x6237;&#xFF0C;&#x82E5;&#x6CA1;&#x6709;&#x5EFA;&#x7ACB;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5219; mpd&#x8FD0;&#x884C;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;can not find mpd.conf file</em></strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> <span class="variable">$HOME</span></div><div class="line">touch .mpd.conf</div><div class="line">chmod 600 .mpd.conf</div></pre></td></tr></table></figure></p>
-<h6 id="5-&#x89E3;&#x6790;&#x5E76;&#x884C;&#x7248;&#x672C;&#x7684;Mrbayes&#x8F6F;&#x4EF6;"><a href="#5-&#x89E3;&#x6790;&#x5E76;&#x884C;&#x7248;&#x672C;&#x7684;Mrbayes&#x8F6F;&#x4EF6;" class="headerlink" title="5. &#x89E3;&#x6790;&#x5E76;&#x884C;&#x7248;&#x672C;&#x7684;Mrbayes&#x8F6F;&#x4EF6;"></a>5. &#x89E3;&#x6790;&#x5E76;&#x884C;&#x7248;&#x672C;&#x7684;Mrbayes&#x8F6F;&#x4EF6;</h6><p><strong><em>&#x70B9;&#x51FB;<a href="http://mrbayes.sourceforge.net/" target="_blank" rel="external">Mrbayes</a>&#x4E0B;&#x8F7D;&#x8D1D;&#x53F6;&#x65AF;&#x8F6F;&#x4EF6;</em></strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> Mrbayes</div><div class="line">./autoconf</div><div class="line">./configure -enable-mpi=yes -with-beagle=no</div><div class="line">make</div><div class="line">make install</div><div class="line">mpdboot <span class="comment">#&#x542F;&#x52A8; MPI&#x670D;&#x52A1;</span></div><div class="line">mpirun -n 8 mb <span class="comment">#&#x542F;&#x52A8; mb&#x591A;&#x7EBF;&#x7A0B;&#x8FD0;&#x7B97;&#xFF0C;&#x5176;&#x4F59;&#x64CD;&#x4F5C;&#x4E0E;&#x5355;&#x7EBF;&#x7A0B;&#x8FD0;&#x7B97;&#x4E00;&#x81F4;&#x3002;</span></div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;&amp;#x8F6F;&amp;#x4EF6;&amp;#xFF1A;MPICH2&lt;/li&gt;
-&lt;li&gt;&amp;#x76EE;&amp;#x7684;&amp;#xFF1A;&amp;#x5145;&amp;#x5206;&amp;#x8FD0;&amp;#x7528; PC&amp;#x53CA; Server&amp;#x7684;&amp;#x8BA1;&amp;
-    
-    </summary>
-    
-      <category term="Bioinfo" scheme="http://www.biopython.club/categories/Bioinfo/"/>
     
     
   </entry>
