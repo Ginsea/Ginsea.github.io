@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.biopython.club/2017/07/04/java01/</loc>
+    
+    <lastmod>2017-07-04T07:55:57.488Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.biopython.club/2017/06/08/centos_share/</loc>
+    
+    <lastmod>2017-06-08T06:28:20.047Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.biopython.club/2017/06/08/centos_server/</loc>
     
     <lastmod>2017-06-08T06:07:16.516Z</lastmod>
