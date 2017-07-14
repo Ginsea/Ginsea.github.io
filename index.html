@@ -97,6 +97,63 @@
         
           <section id="main">
   
+    <article id="post-shell_cp"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/07/14/shell_cp/">一个shell语句用于将多个文件夹下的同一文件拷贝至另外的目录, 保持目录结构不变</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/07/14/shell_cp/" class="article-date">
+	  <time datetime="2017-07-13T16:00:00.000Z" itemprop="datePublished">July 14, 2017</time>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="&#x5E94;&#x7528;&#x573A;&#x666F;"><a href="#&#x5E94;&#x7528;&#x573A;&#x666F;" class="headerlink" title="&#x5E94;&#x7528;&#x573A;&#x666F;"></a>&#x5E94;&#x7528;&#x573A;&#x666F;</h5><ul>
+<li>&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x6709;&#x591A;&#x4E2A;&#x5B50;&#x6587;&#x4EF6;&#xFF0C;&#x5747;&#x4EE5;test&#x5F00;&#x5934;;</li>
+<li>&#x6BCF;&#x4E2A;&#x5B50;&#x6587;&#x4EF6;&#x4E0B;&#x5747;&#x542B;&#x6709;&#x4E00;&#x4E2A;test&#x7684;&#x5B50;&#x6587;&#x4EF6;&#x5939;&#x548C;&#x5176;&#x4ED6;&#x5B50;&#x6587;&#x4EF6;&#x5939;;</li>
+<li>&#x6BCF;&#x4E2A;test&#x5B50;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x542B;&#x6709;&#x4E00;&#x4E2A;test&#x7684;&#x6587;&#x4EF6;&#x548C;&#x5176;&#x4ED6;&#x6587;&#x4EF6;;</li>
+<li>&#x9700;&#x8981;&#x4EC5;&#x5C06;test&#x6587;&#x4EF6;&#x6309;&#x7167;&#x5F53;&#x524D;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x62F7;&#x8D1D;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E0B;;</li>
+<li>&#x6A21;&#x62DF;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x6240;&#x793A;:</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&#x251C;&#x2500;&#x2500; notest_1</div><div class="line">&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; test</div><div class="line">&#x251C;&#x2500;&#x2500; notest_2</div><div class="line">&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; test</div><div class="line">&#x251C;&#x2500;&#x2500; notest_3</div><div class="line">&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; test</div><div class="line">&#x251C;&#x2500;&#x2500; notest_4</div><div class="line">&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; test</div><div class="line">&#x251C;&#x2500;&#x2500; test_1</div><div class="line">&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; test</div><div class="line">&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; notest<span class="selector-class">.txt</span></div><div class="line">&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; test<span class="selector-class">.txt</span></div><div class="line">&#x251C;&#x2500;&#x2500; test_2</div><div class="line">&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; test</div><div class="line">&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; notest<span class="selector-class">.txt</span></div><div class="line">&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; test<span class="selector-class">.txt</span></div><div class="line">&#x251C;&#x2500;&#x2500; test_3</div><div class="line">&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; test</div><div class="line">&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; notest<span class="selector-class">.txt</span></div><div class="line">&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; test<span class="selector-class">.txt</span></div><div class="line">&#x251C;&#x2500;&#x2500; test_4</div><div class="line">&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; test</div><div class="line">&#x2502;&#xA0;&#xA0;     &#x251C;&#x2500;&#x2500; notest<span class="selector-class">.txt</span></div><div class="line">&#x2502;&#xA0;&#xA0;     &#x2514;&#x2500;&#x2500; test<span class="selector-class">.txt</span></div><div class="line">&#x2514;&#x2500;&#x2500; test_5</div><div class="line">    &#x2514;&#x2500;&#x2500; test</div><div class="line">        &#x251C;&#x2500;&#x2500; notest<span class="selector-class">.txt</span></div><div class="line">        &#x2514;&#x2500;&#x2500; test.txt</div></pre></td></tr></table></figure>
+<ul>
+<li>&#x6A21;&#x62DF;&#x76EE;&#x5F55;&#x7684;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#x6240;&#x793A;:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">seq 5 | xargs -i mkdir -p test{}/test &amp;&amp;</div><div class="line">seq 5 | xargs -i touch test{}/test/test.txt &amp;&amp;</div><div class="line">seq 5 | xargs -i touch test{}/test/notest.txt &amp;&amp;</div><div class="line">seq 4 | xargs -i mkdir -p notest_{}/test</div></pre></td></tr></table></figure>
+<ul>
+<li>&#x62F7;&#x8D1D;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#x6240;&#x793A;:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">find . -type d -name &apos;test_*&apos; | awk -F &quot;/&quot; &apos;{print $2}&apos; | xargs -i mkdir -p $targetdir/{}/test &amp;&amp; find . -type d -name &apos;test_*&apos; | awk -F &quot;/&quot; &apos;{print $2}&apos; | xargs -i cp {}/test/test.txt  $targetdir/{}/test/</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Shell/">Shell</a>
+
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
     <article id="post-pycharm_change_docstring"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -385,50 +442,6 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-leetcode2"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/20/leetcode2/">每天刷LeetCode之第二天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2017/05/20/leetcode2/" class="article-date">
-	  <time datetime="2017-05-19T16:00:00.000Z" itemprop="datePublished">May 20, 2017</time>
-	</a>
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="&#x4EE3;&#x7801;&#x95EE;&#x9898;"><a href="#&#x4EE3;&#x7801;&#x95EE;&#x9898;" class="headerlink" title="&#x4EE3;&#x7801;&#x95EE;&#x9898;:"></a>&#x4EE3;&#x7801;&#x95EE;&#x9898;:</h5><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.<br>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x82E5;&#x5217;&#x8868;&#x4E2D;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x548C;&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6570;&#xFF08;&#x7ED9;&#x5B9A;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7531;&#x8FD9;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;;<br>&#x6CE8;&#x610F;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53EA;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x6B21;;</p>
-<h5 id="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"><a href="#&#x95EE;&#x9898;&#x4E3E;&#x4F8B;" class="headerlink" title="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"></a>&#x95EE;&#x9898;&#x4E3E;&#x4F8B;</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,</div><div class="line"></div><div class="line">Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,</div><div class="line">return [<span class="number">0</span>, <span class="number">1</span>].</div></pre></td></tr></table></figure>
-<h5 id="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"><a href="#&#x89E3;&#x51B3;&#x4EE3;&#x7801;" class="headerlink" title="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"></a>&#x89E3;&#x51B3;&#x4EE3;&#x7801;</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">&quot;&quot;&quot;</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[int]</div><div class="line">        &quot;&quot;&quot;</div><div class="line"></div><div class="line">        list_len = len(nums)</div><div class="line"></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(list_len):</div><div class="line">            annum = target - nums[i]</div><div class="line">            <span class="keyword">if</span> annum <span class="keyword">in</span> nums[i+<span class="number">1</span>:]:</div><div class="line">                <span class="keyword">return</span> [i,i + nums[i+<span class="number">1</span>:].index(annum) + <span class="number">1</span>]</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
     <article id="post-leetcode3"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -474,7 +487,7 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-leetcode1"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-leetcode2"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -482,7 +495,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/16/leetcode1/">524. Longest Word In Dictionary Through Deletion</a>
+      <a class="article-title" href="/2017/05/20/leetcode2/">每天刷LeetCode之第二天</a>
     </h1>
   
 
@@ -490,47 +503,23 @@
     
     <div class="article-meta">
       
-	Posted on <a href="/2017/05/16/leetcode1/" class="article-date">
-	  <time datetime="2017-05-15T16:00:00.000Z" itemprop="datePublished">May 16, 2017</time>
+	Posted on <a href="/2017/05/20/leetcode2/" class="article-date">
+	  <time datetime="2017-05-19T16:00:00.000Z" itemprop="datePublished">May 20, 2017</time>
 	</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x672C;&#x95EE;&#x9898;&#x6E90;&#x81EA;<a href="https://leetcode.com/articles/longest-word-in-dictionary-through-deletion/" target="_blank" rel="external">LeetCode</a>.</p>
-<ul>
-<li><p>&#x95EE;&#x9898;&#x5185;&#x5BB9;:<br>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;s&#x548C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;d&#xFF0C;&#x8981;&#x6C42;&#x5728;&#x5217;&#x8868;&#x4E2D;&#x627E;&#x51FA;&#x4E00;&#x4E2A;&#x6700;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5220;&#x9664;s&#x4E2D;&#x7684;&#x82E5;&#x5E72;&#x5B57;&#x7B26;&#x5F97;&#x5230;&#x3002;&#x82E5;&#x6CA1;&#x6709;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;&#x82E5;&#x6709;&#x591A;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5728;&#x6392;&#x5E8F;&#x4E2D;&#x6700;&#x5C0F;&#x7684;&#x3002;</p>
-</li>
-<li><p>&#x793A;&#x4F8B;1:</p>
-</li>
-</ul>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Input:</span></div><div class="line">s = <span class="string">&quot;abpcplea&quot;</span>, d = [<span class="string">&quot;ale&quot;</span>,<span class="string">&quot;apple&quot;</span>,<span class="string">&quot;monkey&quot;</span>,<span class="string">&quot;plea&quot;</span>]</div><div class="line"></div><div class="line"><span class="symbol">Output:</span></div><div class="line"><span class="string">&quot;apple&quot;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>&#x793A;&#x4F8B;2:</li>
-</ul>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Input:</span></div><div class="line">s = <span class="string">&quot;abpcplea&quot;</span>, d = [<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>]</div><div class="line"></div><div class="line"><span class="symbol">Output:</span></div><div class="line"><span class="string">&quot;a&quot;</span></div></pre></td></tr></table></figure>
-<ul>
-<li>&#x6CE8;&#x610F;<ul>
-<li>&#x6240;&#x6709;&#x5B57;&#x7B26;&#x5747;&#x5C0F;&#x5199;;</li>
-<li>&#x5217;&#x8868;d&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x5C0F;&#x4E8E;1000;</li>
-<li>&#x5B57;&#x7B26;&#x4E32;s&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x5C0F;&#x4E8E;1000;</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li>&#x601D;&#x8DEF;1-&#x7A77;&#x4E3E;&#x6CD5;-&#x65F6;&#x95F4;&#x8D85;&#x9650;<ul>
-<li>&#x7B97;&#x6CD5;</li>
-</ul>
-</li>
-</ul>
+        <h5 id="&#x4EE3;&#x7801;&#x95EE;&#x9898;"><a href="#&#x4EE3;&#x7801;&#x95EE;&#x9898;" class="headerlink" title="&#x4EE3;&#x7801;&#x95EE;&#x9898;:"></a>&#x4EE3;&#x7801;&#x95EE;&#x9898;:</h5><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice.<br>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x82E5;&#x5217;&#x8868;&#x4E2D;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x548C;&#x7B49;&#x4E8E;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6570;&#xFF08;&#x7ED9;&#x5B9A;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF09;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x7531;&#x8FD9;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;;<br>&#x6CE8;&#x610F;&#x540C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x53EA;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x6B21;;</p>
+<h5 id="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"><a href="#&#x95EE;&#x9898;&#x4E3E;&#x4F8B;" class="headerlink" title="&#x95EE;&#x9898;&#x4E3E;&#x4F8B;"></a>&#x95EE;&#x9898;&#x4E3E;&#x4F8B;</h5><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,</div><div class="line"></div><div class="line">Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,</div><div class="line">return [<span class="number">0</span>, <span class="number">1</span>].</div></pre></td></tr></table></figure>
+<h5 id="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"><a href="#&#x89E3;&#x51B3;&#x4EE3;&#x7801;" class="headerlink" title="&#x89E3;&#x51B3;&#x4EE3;&#x7801;"></a>&#x89E3;&#x51B3;&#x4EE3;&#x7801;</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></div><div class="line">        <span class="string">&quot;&quot;&quot;</span></div><div class="line">        :type nums: List[int]</div><div class="line">        :type target: int</div><div class="line">        :rtype: List[int]</div><div class="line">        &quot;&quot;&quot;</div><div class="line"></div><div class="line">        list_len = len(nums)</div><div class="line"></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(list_len):</div><div class="line">            annum = target - nums[i]</div><div class="line">            <span class="keyword">if</span> annum <span class="keyword">in</span> nums[i+<span class="number">1</span>:]:</div><div class="line">                <span class="keyword">return</span> [i,i + nums[i+<span class="number">1</span>:].index(annum) + <span class="number">1</span>]</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="entry-meta entry-footer">
       
 	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/Python/">Python</a>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
 
       
       
@@ -604,7 +593,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/hueman/2/">2</a><a class="page-number" href="/hueman/3/">3</a><a class="page-number" href="/hueman/4/">4</a><a class="extend next" rel="next" href="/hueman/2/">weiter</a>
+    <span class="page-number current">1</span><a class="page-number" href="/hueman/2/">2</a><a class="page-number" href="/hueman/3/">3</a><a class="page-number" href="/hueman/4/">4</a><a class="extend next" rel="next" href="/hueman/2/">Next</a>
   </nav>
 
 </section>
@@ -616,9 +605,9 @@
     <form class="search-form">
         <label style="width: 75%;">
             <span class="screen-reader-text">Search for:</span>
-            <input type="search" class="search-field" style="height: 42px;" placeholder=" Suche…" value="" name="s" title="Search for:">
+            <input type="search" class="search-field" style="height: 42px;" placeholder=" Search…" value="" name="s" title="Search for:">
         </label>
-        <input type="submit" class="search-form-submit" value="Suche">
+        <input type="submit" class="search-form-submit" value="Search">
     </form>
     <div class="ins-search">
     <div class="ins-search-mask"></div>
@@ -705,10 +694,22 @@
     
   <div class="widget_athemes_tabs">
     <ul id="widget-tab" class="clearfix widget-tab-nav">
-      <li class="active"><a>letzter Beitrag</a></li>
+      <li class="active"><a>Recent Posts</a></li>
     </ul>
     <div class="widget">
       <ul>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
+              <h6 style="margin: 0;"><a href="/2017/07/14/shell_cp/">一个shell语句用于将多个文件夹下的同一文件拷贝至另外的目录, 保持目录结构不变</a></h6>
+              <span>July 14, 2017</span>
+            </div>
+
+          </li>
         
           <li class="clearfix">
 
@@ -770,18 +771,6 @@
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2017/05/21/leetcode4/">每天刷LeetCode之第四天</a></h6>
-              <span>May 21, 2017</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -789,9 +778,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Kategorien</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/server/">server</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Bioinfo/">Bioinfo</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ginsea/">Ginsea</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/PAML/">PAML</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/">Shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/server/">server</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -804,10 +793,10 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
