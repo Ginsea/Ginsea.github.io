@@ -3,22 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>在python语言中导入自定义模块 | Ginsea Chen</title>
+  <title>python语言读取大数据 | Ginsea Chen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="&amp;#x5728;Python&amp;#x4EE3;&amp;#x7801;&amp;#x7684;&amp;#x7F16;&amp;#x5199;&amp;#x4E2D;&amp;#xFF0C;&amp;#x5F80;&amp;#x5F80;&amp;#x9700;&amp;#x8981;&amp;#x81EA;&amp;#x5DF1;&amp;#x5B9A;&amp;#x4E49;&amp;#x4E00;&amp;#x4E9B;&amp;#x6A21;&amp;#x5757;&amp;#xFF0C;&amp;#x8FDB;&amp;#x800C;&amp;#x5B9E;&amp;">
+  <meta name="description" content="&amp;#x9700;&amp;#x6C42;&amp;#x4FE1;&amp;#x606F;
+&amp;#x901A;&amp;#x8FC7;.read(), .readline(), .readlines() &amp;#x8BFB;&amp;#x53D6;&amp;#x5927;&amp;#x6587;&amp;#x4EF6;&amp;#x65F6;&amp;#xFF0C;&amp;#x4F1A;&amp;#x5BFC;&amp;#x81F4;&amp;#x673A;&amp;#x5668;&amp;#x5185;&amp;#x5B58;&amp;#x6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Python语言中导入自定义模块">
-<meta property="og:url" content="http://www.biopython.club/2017/05/10/python_custom_module/index.html">
+<meta property="og:title" content="python语言读取大数据">
+<meta property="og:url" content="http://www.biopython.club/2017/08/04/python_hugedata/index.html">
 <meta property="og:site_name" content="Ginsea Chen">
-<meta property="og:description" content="&amp;#x5728;Python&amp;#x4EE3;&amp;#x7801;&amp;#x7684;&amp;#x7F16;&amp;#x5199;&amp;#x4E2D;&amp;#xFF0C;&amp;#x5F80;&amp;#x5F80;&amp;#x9700;&amp;#x8981;&amp;#x81EA;&amp;#x5DF1;&amp;#x5B9A;&amp;#x4E49;&amp;#x4E00;&amp;#x4E9B;&amp;#x6A21;&amp;#x5757;&amp;#xFF0C;&amp;#x8FDB;&amp;#x800C;&amp;#x5B9E;&amp;">
-<meta property="og:updated_time" content="2017-05-10T06:00:26.678Z">
+<meta property="og:description" content="&amp;#x9700;&amp;#x6C42;&amp;#x4FE1;&amp;#x606F;
+&amp;#x901A;&amp;#x8FC7;.read(), .readline(), .readlines() &amp;#x8BFB;&amp;#x53D6;&amp;#x5927;&amp;#x6587;&amp;#x4EF6;&amp;#x65F6;&amp;#xFF0C;&amp;#x4F1A;&amp;#x5BFC;&amp;#x81F4;&amp;#x673A;&amp;#x5668;&amp;#x5185;&amp;#x5B58;&amp;#x6">
+<meta property="og:updated_time" content="2017-08-04T10:09:06.103Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Python语言中导入自定义模块">
-<meta name="twitter:description" content="&amp;#x5728;Python&amp;#x4EE3;&amp;#x7801;&amp;#x7684;&amp;#x7F16;&amp;#x5199;&amp;#x4E2D;&amp;#xFF0C;&amp;#x5F80;&amp;#x5F80;&amp;#x9700;&amp;#x8981;&amp;#x81EA;&amp;#x5DF1;&amp;#x5B9A;&amp;#x4E49;&amp;#x4E00;&amp;#x4E9B;&amp;#x6A21;&amp;#x5757;&amp;#xFF0C;&amp;#x8FDB;&amp;#x800C;&amp;#x5B9E;&amp;">
+<meta name="twitter:title" content="python语言读取大数据">
+<meta name="twitter:description" content="&amp;#x9700;&amp;#x6C42;&amp;#x4FE1;&amp;#x606F;
+&amp;#x901A;&amp;#x8FC7;.read(), .readline(), .readlines() &amp;#x8BFB;&amp;#x53D6;&amp;#x5927;&amp;#x6587;&amp;#x4EF6;&amp;#x65F6;&amp;#xFF0C;&amp;#x4F1A;&amp;#x5BFC;&amp;#x81F4;&amp;#x673A;&amp;#x5668;&amp;#x5185;&amp;#x5B58;&amp;#x6">
   
     <link rel="alternate" href="/atom.xml" title="Ginsea Chen" type="application/atom+xml">
   
@@ -96,7 +99,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-python_custom_module" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-python_hugedata" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -104,7 +107,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      在Python语言中导入自定义模块
+      python语言读取大数据
     </h1>
   
 
@@ -112,24 +115,24 @@
     
     <div class="article-meta">
       
-	Posted on <a href="/2017/05/10/python_custom_module/" class="article-date">
-	  <time datetime="2017-05-09T16:00:00.000Z" itemprop="datePublished">May 10, 2017</time>
+	Posted on <a href="/2017/08/04/python_hugedata/" class="article-date">
+	  <time datetime="2017-08-03T16:00:00.000Z" itemprop="datePublished">August 4, 2017</time>
 	</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>&#x5728;Python&#x4EE3;&#x7801;&#x7684;&#x7F16;&#x5199;&#x4E2D;&#xFF0C;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x6A21;&#x5757;&#xFF0C;&#x8FDB;&#x800C;&#x5B9E;&#x73B0;&#x7279;&#x5B9A;&#x7684;&#x4EFB;&#x52A1;;</li>
-<li>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;Python&#x73AF;&#x5883;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x5C3D;&#x91CF;&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6A21;&#x5757;&#x4E0E;Python&#x81EA;&#x5E26;&#x4EE5;&#x53CA;&#x7B2C;&#x4E09;&#x65B9;&#x5F00;&#x53D1;&#x7684;&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x5206;&#x5F00;&#x5B58;&#x50A8;&#xFF1B;</li>
-<li>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x81EA;&#x5DF1;&#x6CA1;&#x6709;&#x670D;&#x52A1;&#x5668;&#x7684;root&#x6743;&#x9650;&#xFF0C;&#x4E5F;&#x96BE;&#x4EE5;&#x5C06;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x7684;&#x6A21;&#x5757;&#x5BFC;&#x5165;&#x5230;Python&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;</li>
+        <h5 id="&#x9700;&#x6C42;&#x4FE1;&#x606F;"><a href="#&#x9700;&#x6C42;&#x4FE1;&#x606F;" class="headerlink" title="&#x9700;&#x6C42;&#x4FE1;&#x606F;"></a>&#x9700;&#x6C42;&#x4FE1;&#x606F;</h5><ul>
+<li>&#x901A;&#x8FC7;.read(), .readline(), .readlines() &#x8BFB;&#x53D6;&#x5927;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x673A;&#x5668;&#x5185;&#x5B58;&#x6D88;&#x8017;&#x8FC7;&#x5927;;</li>
 </ul>
-<p>&#x9488;&#x5BF9;&#x4E0A;&#x8FF0;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x9700;&#x8981;&#x4E3A;Python&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684;Python&#x6A21;&#x5757;&#xFF0C;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x5982;&#x4E0B;&#x6240;&#x793A;:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span> <span class="string">&quot;export PYTHONPATH=<span class="variable">$PYTHONPATH</span>:{your path}&quot;</span> &gt;&gt; /home/{user}/.bashrc</div><div class="line"><span class="built_in">source</span> /home/{user}/.bashrc</div></pre></td></tr></table></figure>
-<ul>
-<li>{your path} &#x8868;&#x793A;&#x6307;&#x5B9A;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</li>
-<li>{user} &#x8868;&#x793A;&#x7528;&#x6237;&#x540D;</li>
-</ul>
+<h5 id="&#x89E3;&#x51B3;&#x65B9;&#x6CD5;"><a href="#&#x89E3;&#x51B3;&#x65B9;&#x6CD5;" class="headerlink" title="&#x89E3;&#x51B3;&#x65B9;&#x6CD5;"></a>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</h5><ol>
+<li>&#x5C06;&#x5927;&#x6587;&#x4EF6;&#x5206;&#x6210;&#x82E5;&#x5E72;&#x5C0F;&#x6587;&#x4EF6;&#xFF0C;&#x6CA1;&#x5904;&#x7406;&#x5B8C;&#x4E00;&#x4E2A;&#x5C0F;&#x6587;&#x4EF6;&#x540E;&#x91CA;&#x653E;&#x8BE5;&#x90E8;&#x5206;&#x5185;&#x5B58;&#xFF0C;&#x5BF9;&#x5E94;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">subread</span><span class="params">(infile, size=<span class="number">2</span>*<span class="number">1024</span>*<span class="number">1024</span>)</span>:</span></div><div class="line">  inhandle = open(infile)</div><div class="line">  <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">    subdata = inhandle.read(size)</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> subdata:</div><div class="line">      <span class="keyword">break</span></div><div class="line">    <span class="keyword">yield</span> subdata</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</div><div class="line">  <span class="keyword">for</span> subdata <span class="keyword">in</span> subread(infile):</div><div class="line">    process(subdata)</div></pre></td></tr></table></figure>
+<ol>
+<li>&#x901A;&#x8FC7;with&#x8BED;&#x53E5;&#x6253;&#x5F00;&#x548C;&#x5173;&#x95ED;&#x6587;&#x4EF6;</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> open(infile) <span class="keyword">as</span> inf:</div><div class="line">  <span class="keyword">for</span> line <span class="keyword">in</span> inf: <span class="comment">#&#x6CE8;&#x610F;&#x6CA1;&#x6709;read(), readline(), readlines()</span></div><div class="line">    process(line.strip())</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -144,7 +147,7 @@
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2017/05/10/python_custom_module/" data-title="在Python语言中导入自定义模块" data-url="http://www.biopython.club/2017/05/10/python_custom_module/"></div>
+	 <div class="ds-thread" data-thread-key="/2017/08/04/python_hugedata/" data-title="python语言读取大数据" data-url="http://www.biopython.club/2017/08/04/python_hugedata/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -171,19 +174,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/11/python3_bytes/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nuevo</strong>
-      <div class="article-nav-title">
-        
-          解决在Python3中读入二进制文件之后出现TypeError的问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/02/08/R4/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/07/14/pycharm_change_docstring/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Viejo</strong>
-      <div class="article-nav-title">通过R进行两个数据集间的Wilcoxon rank sum test比较</div>
+      <div class="article-nav-title">设置PyCharm中的docstring格式</div>
     </a>
   
 </nav>
@@ -197,7 +191,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav">None</ol>
+      <ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#需求信息"><span class="nav-number">1.</span> <span class="nav-text">需求信息</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li></ol>
     
     </div>
   </aside>
