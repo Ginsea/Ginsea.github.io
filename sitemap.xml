@@ -2,72 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.biopython.club/2017/08/18/perl1/</loc>
+    
+    <lastmod>2017-08-18T10:31:22.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.biopython.club/2017/08/18/perl2/</loc>
+    
+    <lastmod>2017-08-18T10:20:44.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.biopython.club/2017/08/04/python_hugedata/</loc>
     
-    <lastmod>2017-08-04T10:09:06.103Z</lastmod>
+    <lastmod>2017-08-04T10:09:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/07/14/shell_cp/</loc>
     
-    <lastmod>2017-07-14T05:53:03.857Z</lastmod>
+    <lastmod>2017-07-14T05:53:03.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/07/14/pycharm_change_docstring/</loc>
     
-    <lastmod>2017-07-14T02:54:24.497Z</lastmod>
+    <lastmod>2017-07-14T02:54:24.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/07/04/java01/</loc>
     
-    <lastmod>2017-07-04T07:55:57.488Z</lastmod>
+    <lastmod>2017-07-04T07:55:57.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.biopython.club/2017/06/08/centos_share/</loc>
+    <loc>http://www.biopython.club/2017/08/11/centos_share/</loc>
     
-    <lastmod>2017-06-08T06:28:20.047Z</lastmod>
+    <lastmod>2017-06-08T06:28:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/06/08/centos_server/</loc>
     
-    <lastmod>2017-06-08T06:07:16.516Z</lastmod>
+    <lastmod>2017-06-08T06:07:16.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/06/07/leetcode5/</loc>
     
-    <lastmod>2017-06-07T10:19:03.128Z</lastmod>
+    <lastmod>2017-06-07T10:19:03.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/05/21/leetcode4/</loc>
     
-    <lastmod>2017-05-21T02:34:01.048Z</lastmod>
+    <lastmod>2017-05-21T02:34:01.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/05/20/leetcode2/</loc>
     
-    <lastmod>2017-05-20T07:42:22.337Z</lastmod>
+    <lastmod>2017-05-20T07:42:22.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/05/20/leetcode3/</loc>
     
-    <lastmod>2017-05-20T07:41:57.895Z</lastmod>
+    <lastmod>2017-05-20T07:41:57.000Z</lastmod>
     
   </url>
   
@@ -88,77 +102,77 @@
   <url>
     <loc>http://www.biopython.club/2017/05/11/python3_bytes/</loc>
     
-    <lastmod>2017-05-11T02:43:32.340Z</lastmod>
+    <lastmod>2017-05-11T02:43:32.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/05/10/python_custom_module/</loc>
     
-    <lastmod>2017-05-10T06:00:26.678Z</lastmod>
+    <lastmod>2017-05-10T06:00:26.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/02/08/R4/</loc>
     
-    <lastmod>2017-02-08T10:18:20.561Z</lastmod>
+    <lastmod>2017-02-08T10:18:20.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/02/05/R3/</loc>
     
-    <lastmod>2017-02-06T02:33:21.327Z</lastmod>
+    <lastmod>2017-02-06T02:33:21.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/02/05/R2/</loc>
     
-    <lastmod>2017-02-04T18:16:31.848Z</lastmod>
+    <lastmod>2017-02-04T18:16:31.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2016/12/24/python1/</loc>
     
-    <lastmod>2017-01-21T19:48:28.390Z</lastmod>
+    <lastmod>2017-01-21T19:48:28.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.biopython.club/2017/05/11/scholar_search/</loc>
+    <loc>http://www.biopython.club/2017/08/11/scholar_search/</loc>
     
-    <lastmod>2017-01-21T19:45:35.281Z</lastmod>
+    <lastmod>2017-01-21T19:45:35.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2016/12/22/personal/</loc>
     
-    <lastmod>2017-01-21T19:38:31.754Z</lastmod>
+    <lastmod>2017-01-21T19:38:31.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2016/12/26/ncbi/</loc>
     
-    <lastmod>2017-01-21T19:36:38.377Z</lastmod>
+    <lastmod>2017-01-21T19:36:38.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.biopython.club/2017/05/11/mcmctree/</loc>
+    <loc>http://www.biopython.club/2017/08/11/mcmctree/</loc>
     
-    <lastmod>2017-01-21T19:36:21.230Z</lastmod>
+    <lastmod>2017-01-21T19:36:21.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2017/01/20/heatmap/</loc>
     
-    <lastmod>2017-01-21T19:23:16.159Z</lastmod>
+    <lastmod>2017-01-21T19:23:16.000Z</lastmod>
     
   </url>
   
@@ -179,56 +193,56 @@
   <url>
     <loc>http://www.biopython.club/2016/12/29/yn00/</loc>
     
-    <lastmod>2016-12-29T12:18:41.116Z</lastmod>
+    <lastmod>2016-12-29T12:18:41.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2016/12/28/mpich2/</loc>
     
-    <lastmod>2016-12-28T14:23:16.590Z</lastmod>
+    <lastmod>2016-12-28T14:23:16.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2016/12/28/R1/</loc>
     
-    <lastmod>2016-12-28T11:49:16.268Z</lastmod>
+    <lastmod>2016-12-28T11:49:16.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2016/12/27/python3/</loc>
     
-    <lastmod>2016-12-27T14:11:15.199Z</lastmod>
+    <lastmod>2016-12-27T14:11:15.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2016/12/26/python2/</loc>
     
-    <lastmod>2016-12-26T13:03:41.477Z</lastmod>
+    <lastmod>2016-12-26T13:03:41.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.biopython.club/2016/12/24/paml1/</loc>
     
-    <lastmod>2016-12-25T01:57:26.211Z</lastmod>
+    <lastmod>2016-12-25T01:57:26.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.biopython.club/2017/05/11/python_readfasta/</loc>
+    <loc>http://www.biopython.club/2017/08/11/python_readfasta/</loc>
     
-    <lastmod>2016-12-22T14:36:05.924Z</lastmod>
+    <lastmod>2016-12-22T14:36:05.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.biopython.club/2017/05/11/genome/</loc>
+    <loc>http://www.biopython.club/2017/08/11/genome/</loc>
     
-    <lastmod>2016-12-22T13:16:21.435Z</lastmod>
+    <lastmod>2016-12-22T13:16:21.000Z</lastmod>
     
   </url>
   

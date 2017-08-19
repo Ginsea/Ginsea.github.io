@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>测序之后的基因组数据如何共享和存储 | Ginsea Chen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="&amp;#x672C;&amp;#x6587;&amp;#x7FFB;&amp;#x8BD1;&amp;#x81EA;&amp;#x82F1;&amp;#x6587;&amp;#x535A;&amp;#x5BA2;Yourgenome&amp;#xFF0C;&amp;#x67E5;&amp;#x770B;&amp;#x539F;&amp;#x6587;&amp;#x8BF7;&amp;#x70B9;&amp;#x51FB;&amp;#xFF0C;&amp;#x611F;&amp;#x8C22;&amp;#x4F5C;&amp;#x8005;&amp;#x7684;&amp;#x65E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测序之后的基因组数据如何共享和存储">
+<meta property="og:url" content="http://www.biopython.club/2017/08/11/genome/index.html">
+<meta property="og:site_name" content="Ginsea Chen">
+<meta property="og:description" content="&amp;#x672C;&amp;#x6587;&amp;#x7FFB;&amp;#x8BD1;&amp;#x81EA;&amp;#x82F1;&amp;#x6587;&amp;#x535A;&amp;#x5BA2;Yourgenome&amp;#xFF0C;&amp;#x67E5;&amp;#x770B;&amp;#x539F;&amp;#x6587;&amp;#x8BF7;&amp;#x70B9;&amp;#x51FB;&amp;#xFF0C;&amp;#x611F;&amp;#x8C22;&amp;#x4F5C;&amp;#x8005;&amp;#x7684;&amp;#x65E">
+<meta property="og:updated_time" content="2016-12-22T13:16:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="测序之后的基因组数据如何共享和存储">
+<meta name="twitter:description" content="&amp;#x672C;&amp;#x6587;&amp;#x7FFB;&amp;#x8BD1;&amp;#x81EA;&amp;#x82F1;&amp;#x6587;&amp;#x535A;&amp;#x5BA2;Yourgenome&amp;#xFF0C;&amp;#x67E5;&amp;#x770B;&amp;#x539F;&amp;#x6587;&amp;#x8BF7;&amp;#x70B9;&amp;#x51FB;&amp;#xFF0C;&amp;#x611F;&amp;#x8C22;&amp;#x4F5C;&amp;#x8005;&amp;#x7684;&amp;#x65E">
+  
+    <link rel="alternate" href="/atom.xml" title="Ginsea Chen" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Ginsea Chen" rel="home"> Ginsea Chen </a>
+            
+          </h1>
+
+          
+            <div class="site-description">人生苦短，我用python</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-genome" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      测序之后的基因组数据如何共享和存储
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/08/11/genome/" class="article-date">
+	  <time datetime="2017-08-11T13:17:52.000Z" itemprop="datePublished">August 11, 2017</time>
+	</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x672C;&#x6587;&#x7FFB;&#x8BD1;&#x81EA;&#x82F1;&#x6587;&#x535A;&#x5BA2;<a href="http://www.yourgenome.org/" target="_blank" rel="external">Yourgenome</a>&#xFF0C;&#x67E5;&#x770B;&#x539F;&#x6587;&#x8BF7;<a href="http://www.yourgenome.org/facts/how-are-sequenced-genomes-stored-and-shared" target="_blank" rel="external">&#x70B9;&#x51FB;</a>&#xFF0C;&#x611F;&#x8C22;&#x4F5C;&#x8005;&#x7684;&#x65E0;&#x79C1;&#x5949;&#x732E;&#x3002;</p>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x7269;&#x79CD;&#x57FA;&#x56E0;&#x7EC4;&#x7684;&#x6D4B;&#x5E8F;&#x3001;&#x7EC4;&#x88C5;&#x4EE5;&#x53CA;&#x6CE8;&#x91CA;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5176;&#x4EE5;&#x7279;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x5171;&#x4EAB;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x5176;&#x4ED6;&#x7814;&#x7A76;&#x8005;&#x7684;&#x6570;&#x636E;&#x83B7;&#x53D6;&#x3002;&#x8FD9;&#x4E00;&#x5207;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x548C;&#x5171;&#x4EAB;&#x7684;&#x5DE5;&#x4F5C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x8BE5;&#x6570;&#x636E;&#x5E93;&#x4FBF;&#x662F;genome browser&#x3002;</p>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;Genome-Browser&#xFF1F;"><a href="#&#x4EC0;&#x4E48;&#x662F;Genome-Browser&#xFF1F;" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F;Genome Browser&#xFF1F;"></a>&#x4EC0;&#x4E48;&#x662F;Genome Browser&#xFF1F;</h2><ol>
+<li>Genome browser&#x662F;&#x4E00;&#x4E2A;&#x5728;&#x7EBF;&#x7684;&#x56FE;&#x5F62;&#x4EA4;&#x4E92;&#x754C;&#x9762;&#xFF0C;&#x7528;&#x4E8E;&#x5C55;&#x793A;&#x57FA;&#x56E0;&#x7EC4;&#x7684;&#x4FE1;&#x606F;&#xFF1B;</li>
+<li>&#x5F53;&#x79D1;&#x5B66;&#x5BB6;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x57FA;&#x56E0;&#x7EC4;&#x6D4B;&#x5E8F;&#x4EE5;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5176;&#x5BF9;&#x5E94;&#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x4EE5;&#x4FBF;&#x5176;&#x80FD;&#x591F;&#x8F83;&#x4E3A;&#x4FBF;&#x5229;&#x7684;&#x88AB;&#x5168;&#x4E16;&#x754C;&#x7684;&#x5927;&#x591A;&#x6570;&#x79D1;&#x5B66;&#x5BB6;&#x83B7;&#x53D6;&#x3002;&#x8FD9;&#x4E9B;&#x57FA;&#x56E0;&#x7EC4;&#x6570;&#x636E;&#x4E3B;&#x8981;&#x901A;&#x8FC7;Genome Browser&#x67E5;&#x770B;&#xFF1B;</li>
+<li>&#x901A;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x5F97;&#x57FA;&#x56E0;&#x7EC4;&#x6570;&#x636E;&#x5F00;&#x6E90;&#x4E14;&#x5BB9;&#x6613;&#x83B7;&#x53D6;&#xFF0C;&#x8FD9;&#x6781;&#x5927;&#x7684;&#x652F;&#x6301;&#x548C;&#x63A8;&#x52A8;&#x4E86;&#x5168;&#x4E16;&#x754C;&#x79D1;&#x5B66;&#x7814;&#x7A76;&#x7684;&#x5411;&#x524D;&#x53D1;&#x5C55;&#xFF1B;</li>
+<li>&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;Genome Browser&#xFF1A;<ul>
+<li><a href="http://asia.ensembl.org/index.html" target="_blank" rel="external">Ensembl</a>,&#x7531;&#x6B27;&#x6D32;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x4E2D;&#x5FC3;&#xFF08;EBI&#xFF09;&#xFF0C;&#x6B27;&#x6D32;&#x5206;&#x5B50;&#x751F;&#x7269;&#x5B66;&#x5B9E;&#x9A8C;&#x4E2D;&#x5FC3;&#xFF08;EMBL&#xFF09;&#x4EE5;&#x53CA;&#x82F1;&#x56FD;&#x7684;Sanger&#x4E2D;&#x5FC3;&#x5171;&#x540C;&#x5F00;&#x53D1;&#x548C;&#x7EF4;&#x62A4;&#xFF1B;</li>
+<li><a href="https://genome.ucsc.edu/" target="_blank" rel="external">UCSC</a>, &#x7531;&#x7F8E;&#x56FD;&#x897F;&#x6D77;&#x5CB8;&#x7684;&#x52A0;&#x5229;&#x798F;&#x5C3C;&#x4E9A;&#x5927;&#x5B66;&#x5F00;&#x53D1;&#x548C;&#x7EF4;&#x62A4;&#xFF1B;</li>
+<li>&#x7F8E;&#x56FD;&#x56FD;&#x5BB6;&#x751F;&#x7269;&#x4FE1;&#x606F;&#x4E2D;&#x5FC3;&#xFF08;NCBI&#xFF09;&#x7684;<a href="https://www.ncbi.nlm.nih.gov/mapview/" target="_blank" rel="external">map viewer</a>,</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/Bioinfo/">Bioinfo</a>
+
+      
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/08/11/genome/" data-title="测序之后的基因组数据如何共享和存储" data-url="http://www.biopython.club/2017/08/11/genome/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ginsea"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+	<link rel="stylesheet" href="/css/comment.css">
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/11/mcmctree/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          通过mcmctree预测物种分化时间
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/04/python_hugedata/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">python语言读取大数据</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Genome-Browser？"><span class="nav-number">1.</span> <span class="nav-text">什么是Genome Browser？</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2017 Ginsea Chen All Rights Reserved.
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+  
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>
